@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.dylvian.mango.activities" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <permission android:name="com.dylvian.mango.activities.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.dylvian.mango.activities.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.mango.activities.MangoApplication" android:theme="@style/AppTheme">
+        <meta-data android:name="DATABASE" android:value="database.db"/>
+        <meta-data android:name="VERSION" android:value="4"/>
+        <meta-data android:name="QUERY_LOG" android:value="false"/>
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.mango.activities.models"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDNRfe4cKND3P7FHtMs_OJiIDTN4NA0Em8"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivitySplash" android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivitySelectCountry" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.multimarca.BrandedSearchActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivitySelectProvince" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityMain" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityBarcode"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityBarcodeManually" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.account.LoginActivity" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.account.CheckoutNativeActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.account.ForgetPasswordActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.account.PasswordRecoveryActivity" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityShopsList" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityShopsMap" android:theme="@style/AppTheme.WithoutAnimation"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityMap"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityCatalog"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityGalleryClothingWithSection"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityClothingWithClothings"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityClothingDetail" android:theme="@style/AppTheme.SmartphoneTabletDialog"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivitySizeGuide"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityAvailabilityNotice" android:theme="@style/AppTheme.SmartphoneTabletDialog" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityDialog" android:theme="@style/AppTheme.Transparent.WithoutAnimation"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityDialogFullScreen" android:theme="@style/AppTheme.Transparent.FullScreen.WithoutAnimation"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityDialogAutomatic" android:theme="@style/AppTheme.Transparent.WithoutAnimation"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityVideo" android:theme="@style/AppTheme.FullScreen"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityPrivacyPolicy"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityHelp" android:noHistory="true"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.account.RegisterActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.account.MyAccountActivity" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityNoNetworkConnection" android:theme="@style/AppTheme"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityWishlist" android:theme="@style/AppTheme.SmartphoneTabletDialog"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityBag" android:theme="@style/AppTheme.SmartphoneTabletDialog"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityCheckout"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityClothingBagWishlist"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityFiltersSmartphone" android:theme="@style/AppTheme.Modal"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityFiltersTablet" android:theme="@style/AppTheme.Transparent.FullScreen"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityMaintenance" android:theme="@style/AppTheme.FullScreen.Translucent"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.mango.activities.activities.ActivityMessages" android:theme="@style/AppTheme.SmartphoneTabletDialog"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.analytics.AnalyticsReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <provider android:authorities="com.dylvian.mango.activities.FILES-OUT" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/exported_paths"/>
+        </provider>
+        <meta-data android:name="io.fabric.ApiKey" android:value="635e080ccbd6d88d252e173377aee7cbd8b9c31b"/>
+        <meta-data android:name="com.mango.activities.helpers.FILE-AUTH" android:value="com.dylvian.mango.activities.FILES-OUT"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:theme="@style/MediaTheme"/>
+        <activity android:name="com.twitter.sdk.android.tweetui.GalleryActivity" android:theme="@style/MediaTheme"/>
+        <activity android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <service android:enabled="true" android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:icon="@drawable/tw__transparent" android:label="@string/kit_name" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <service android:exported="false" android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmService"/>
+        <receiver android:exported="false" android:name="com.evernote.android.job.v14.PlatformAlarmReceiver">
+            <intent-filter>
+                <action android:name="com.evernote.android.job.v14.RUN_JOB"/>
+                <action android:name="net.vrallev.android.job.v14.RUN_JOB"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.evernote.android.job.JobBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="true" android:name="com.evernote.android.job.gcm.PlatformGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:label="Landing Page" android:name="com.exacttarget.etpushsdk.ETLandingPagePresenter"/>
+        <receiver android:exported="true" android:name="com.exacttarget.etpushsdk.ETPushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="com.exacttarget.etpushsdk.SEND_REGISTRATION"/>
+                <action android:name="com.dylvian.mango.activities.MESSAGE_OPENED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.exacttarget.etpushsdk.ETGcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="SHOW_FENCE_OR_PROXIMITY_MESSAGE"/>
+                <category android:name="com.dylvian.mango.activities"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.exacttarget.etpushsdk.ETGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.exacttarget.etpushsdk.ETPushService"/>
+        <service android:exported="false" android:name="com.exacttarget.etpushsdk.ETInstanceIdListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.exacttarget.etpushsdk.ETLocationReceiver"/>
+        <service android:enabled="true" android:name="com.exacttarget.etpushsdk.ETLocationService"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="org.altbeacon.beacon.startup.StartupBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:isolatedProcess="false" android:label="beacon" android:name="org.altbeacon.beacon.service.BeaconService"/>
+        <service android:enabled="true" android:exported="false" android:name="org.altbeacon.beacon.BeaconIntentProcessor"/>
+    </application>
+</manifest>

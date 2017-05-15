@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.pinterest" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <supports-screens android:smallScreens="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <permission android:name=".permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name=".permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@drawable/app_icon" android:label="@string/app_name" android:largeHeap="true" android:name="com.pinterest.base.Application" android:supportsRtl="false" android:theme="@style/Theme.Pinterest.NoActionbar">
+        <activity android:name="com.pinterest.activity.PinterestActivity" android:noHistory="true" android:theme="@android:style/Theme.Light.NoTitleBar"/>
+        <activity-alias android:label="@string/app_name" android:name="com.pinterest.activity.PinterestActivity" android:noHistory="true" android:targetActivity="com.pinterest.activity.PinterestActivity" android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:label="" android:name="com.pinterest.activity.task.activity.MainActivity" android:theme="@style/Theme.Pinterest.NoActionbar" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.pinterest.activity.nux.NUXActivity" android:theme="@style/Theme.Pinterest.NUX" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="" android:name="com.pinterest.activity.user.UserSetImageActivity" android:theme="@style/Theme.Pinterest.DialogActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="" android:name="com.pinterest.activity.unauth.UnauthActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/com_accountkit_button_log_in" android:launchMode="singleTop" android:name="com.facebook.accountkit.ui.AccountKitActivity" android:theme="@style/PhoneNumberSignupTheme" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="" android:name="com.pinterest.activity.create.CreateActivity" android:theme="@style/Theme.Pinterest.DialogActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="" android:name="com.pinterest.activity.create.RepinActivity" android:theme="@style/Theme.Pinterest.DialogActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/create_pin" android:launchMode="singleTop" android:name="com.pinterest.activity.create.PinItActivity" android:theme="@style/Theme.Pinterest.DialogActivity" android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.pinterest.action.PIN_IT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|screenSize" android:label="" android:name="com.pinterest.activity.commerce.SecureActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Pinterest.NoActionbar" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="" android:name="com.pinterest.activity.web.WebViewActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/camera_gallery" android:name="com.pinterest.activity.create.PhotoGalleryActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/app_name" android:name="com.pinterest.activity.create.CameraActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/create_pin" android:launchMode="singleTop" android:name="com.pinterest.activity.create.PinMarkletResultsActivity" android:theme="@style/Theme.Pinterest.DialogActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.pinterest.activity.webhook.WebhookActivity" android:theme="@style/Theme.Pinterest.DialogActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:host="www.pinterest.com"/>
+                <data android:host="www.pinterest.se"/>
+                <data android:host="www.pinterest.info"/>
+                <data android:host="www.pinterest.pt"/>
+                <data android:host="www.pinterest.de"/>
+                <data android:host="pinterest.com"/>
+                <data android:host="pinterest.se"/>
+                <data android:host="pinterest.info"/>
+                <data android:host="pinterest.pt"/>
+                <data android:host="pinterest.de"/>
+                <data android:host="au.pinterest.com"/>
+                <data android:host="br.pinterest.com"/>
+                <data android:host="cz.pinterest.com"/>
+                <data android:host="co.pinterest.com"/>
+                <data android:host="ar.pinterest.com"/>
+                <data android:host="cl.pinterest.com"/>
+                <data android:host="dk.pinterest.com"/>
+                <data android:host="de.pinterest.com"/>
+                <data android:host="es.pinterest.com"/>
+                <data android:host="fi.pinterest.com"/>
+                <data android:host="fr.pinterest.com"/>
+                <data android:host="uk.pinterest.com"/>
+                <data android:host="gr.pinterest.com"/>
+                <data android:host="hu.pinterest.com"/>
+                <data android:host="id.pinterest.com"/>
+                <data android:host="in.pinterest.com"/>
+                <data android:host="it.pinterest.com"/>
+                <data android:host="jp.pinterest.com"/>
+                <data android:host="kr.pinterest.com"/>
+                <data android:host="nl.pinterest.com"/>
+                <data android:host="no.pinterest.com"/>
+                <data android:host="nz.pinterest.com"/>
+                <data android:host="pl.pinterest.com"/>
+                <data android:host="pt.pinterest.com"/>
+                <data android:host="ro.pinterest.com"/>
+                <data android:host="ru.pinterest.com"/>
+                <data android:host="sk.pinterest.com"/>
+                <data android:host="se.pinterest.com"/>
+                <data android:host="tr.pinterest.com"/>
+                <data android:host="za.pinterest.com"/>
+                <data android:host="post.pinterest.com"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="pinterest"/>
+                <data android:scheme="pinit"/>
+                <data android:scheme="pinterest://http"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:host="open" android:scheme="pinterest://"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.pinterest.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.pinterest.gcm"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.pinterest.gcm.PinterestGcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.pinterest.gcm.PinterestInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.pinterest.gcm.RegistrationIntentService"/>
+        <service android:name="com.pinterest.service.DelayedStartupService"/>
+        <service android:name="com.pinterest.service.PinUploaderService"/>
+        <service android:name="com.pinterest.service.TypeaheadCacheService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@style/Theme.Pinterest.Translucent"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationName" android:value="@string/facebook_app_name"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:exported="true" android:name="com.pinterest.sdk.PinterestOauthActivity" android:theme="@style/Theme.Pinterest.NoActionbar"/>
+        <receiver android:name="com.pinterest.receiver.DeviceStartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pinterest.receiver.SignupNotificationReceiver"/>
+        <receiver android:name="com.pinterest.receiver.GlobalDataUpdateReceiver"/>
+        <receiver android:name="com.pinterest.receiver.MultiDexingAppUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="05a6e8f0efd5cab488c1871e5dd7e03ab597d9ae"/>
+        <meta-data android:name="com.pinterest.mapbox.ApiKey" android:value="sk.eyJ1IjoicGludGVyZXN0IiwiYSI6ImNRLXhJOHMifQ.FCS6VzbiUVLenbkIf6MPRg"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDybBm_hqwipeuJdUDfpMjYdPxGG3jJjAA"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:exported="true" android:name="com.pinterest.receiver.MasterInstallReferrerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pinterest.receiver.CustomTabPinitReceiver"/>
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_eifqPbvhIRnKEb1T0MSFpipgsCenSDRu"/>
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_bmeAQVE5r06EIw2cRsrpNjpetwirnBoO"/>
+        <meta-data android:name="com.facebook.accountkit.ApplicationId" android:value="@string/facebook_accounts_id"/>
+        <meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@string/facebook_accounts_client_token"/>
+        <meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@string/facebook_accounts_name"/>
+        <meta-data android:name="com.facebook.accountkit.FacebookAppEventsEnabled" android:value="false"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="db6cd4496c0177047edafe9b07a7068e776bd3c4"/>
+        <meta-data android:name="asset_statements" android:resource="@string/asset_statements"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="io.card.payment.CardIOActivity"/>
+        <activity android:name="io.card.payment.DataEntryActivity"/>
+        <provider android:authorities="com.pinterest.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <provider android:authorities="com.pinterest.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <activity android:exported="true" android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity" android:noHistory="true"/>
+        <provider android:authorities="com.pinterest.AccountKitInitialization" android:exported="false" android:name="com.facebook.accountkit.internal.AccountKitInitProvider"/>
+        <activity android:name="com.braintreepayments.api.dropin.BraintreePaymentActivity"/>
+        <activity android:name="com.braintreepayments.api.threedsecure.ThreeDSecureWebViewActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.PayPalTouchActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="false" android:name="com.paypal.android.sdk.payments.PayPalService"/>
+        <service android:exported="false" android:name="com.cedexis.androidradar.RadarService"/>
+        <meta-data android:name="RealmEncryptionKey" android:value="324937439"/>
+    </application>
+</manifest>

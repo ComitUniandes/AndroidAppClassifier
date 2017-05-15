@@ -1,0 +1,31 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.facebook.orca.apk
+compressionType: false
+doNotCompress:
+- arsc
+- assets/InboxV2Query_MessengerInboxUnits_Nodes.fbs.md5
+- assets/MessengerBundle.js.meta
+- txt
+- xzs
+- webp
+- json
+- bks
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '23'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '56587100'
+  versionName: 116.0.0.16.70

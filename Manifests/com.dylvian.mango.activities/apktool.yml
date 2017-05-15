@@ -1,0 +1,39 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.dylvian.mango.activities.apk
+compressionType: false
+doNotCompress:
+- arsc
+- META-INF/services/com.fasterxml.jackson.core.JsonFactory
+- META-INF/services/com.fasterxml.jackson.core.ObjectCodec
+- sql
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '15'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '8'
+  model-distance-calculations.json: '8'
+  fabric/com.crashlytics.sdk.android.answers.properties: '8'
+  fabric/com.crashlytics.sdk.android.beta.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
+  fabric/com.twitter.sdk.android.tweet-composer.properties: '8'
+  fabric/com.twitter.sdk.android.tweet-ui.properties: '8'
+  fabric/com.twitter.sdk.android.twitter-core.properties: '8'
+  fabric/com.twitter.sdk.android.twitter.properties: '8'
+  fabric/io.fabric.sdk.android.fabric.properties: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+  org/threeten/bp/format/ChronologyText.properties: '8'
+  templates/release-notes.vm: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '4219'
+  versionName: 4.2.19

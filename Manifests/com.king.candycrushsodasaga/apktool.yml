@@ -1,0 +1,76 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.king.candycrushsodasaga.apk
+compressionType: false
+doNotCompress:
+- arsc
+- ttf
+- csv
+- otf
+- prop
+- txt
+- xml
+- assets/res_output/shared/diorama/diorama11/content.meta.xml
+- assets/res_output/shared/diorama/diorama12/content.meta.xml
+- assets/res_output/shared/diorama/diorama13/content.meta.xml
+- assets/res_output/shared/diorama/diorama14/content.meta.xml
+- assets/res_output/shared/diorama/diorama15/content.meta.xml
+- assets/res_output/shared/diorama/diorama16/content.meta.xml
+- assets/res_output/shared/diorama/diorama17/content.meta.xml
+- assets/res_output/shared/diorama/diorama18/content.meta.xml
+- assets/res_output/shared/diorama/diorama19/content.meta.xml
+- assets/res_output/shared/diorama/diorama20/content.meta.xml
+- assets/res_output/shared/diorama/diorama21/content.meta.xml
+- assets/res_output/shared/diorama/diorama22/content.meta.xml
+- assets/res_output/shared/diorama/diorama23/content.meta.xml
+- assets/res_output/shared/diorama/diorama24/content.meta.xml
+- assets/res_output/shared/diorama/diorama25/content.meta.xml
+- assets/res_output/shared/diorama/diorama26/content.meta.xml
+- assets/res_output/shared/diorama/diorama27/content.meta.xml
+- assets/res_output/shared/diorama/diorama28/content.meta.xml
+- assets/res_output/shared/diorama/diorama29/content.meta.xml
+- assets/res_output/shared/diorama/diorama30/content.meta.xml
+- assets/res_output/shared/diorama/diorama31/content.meta.xml
+- assets/res_output/shared/diorama/diorama32/content.meta.xml
+- assets/res_output/shared/game/diorama11/content.meta.xml
+- assets/res_output/shared/game/diorama12/content.meta.xml
+- assets/res_output/shared/game/diorama13/content.meta.xml
+- assets/res_output/shared/game/diorama15/content.meta.xml
+- assets/res_output/shared/game/diorama16/content.meta.xml
+- assets/res_output/shared/game/diorama17/content.meta.xml
+- assets/res_output/shared/game/diorama18/content.meta.xml
+- assets/res_output/shared/game/diorama19/content.meta.xml
+- assets/res_output/shared/game/diorama20/content.meta.xml
+- assets/res_output/shared/game/diorama21/content.meta.xml
+- assets/res_output/shared/game/diorama22/content.meta.xml
+- assets/res_output/shared/game/diorama23/content.meta.xml
+- assets/res_output/shared/game/diorama24/content.meta.xml
+- assets/res_output/shared/game/diorama25/content.meta.xml
+- assets/res_output/shared/game/diorama26/content.meta.xml
+- assets/res_output/shared/game/diorama27/content.meta.xml
+- assets/res_output/shared/game/diorama28/content.meta.xml
+- assets/res_output/shared/game/diorama29/content.meta.xml
+- assets/res_output/shared/game/diorama30/content.meta.xml
+- assets/res_output/shared/game/diorama31/content.meta.xml
+- assets/res_output/shared/game/diorama32/content.meta.xml
+- json
+- vbl
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '9'
+  targetSdkVersion: '22'
+sharedLibrary: false
+unknownFiles:
+  third_party/java_src/error_prone/project/annotations/Google_internal.gwt.xml: '8'
+  third_party/java_src/error_prone/project/annotations/Annotations.gwt.xml: '8'
+  error_prone/Annotations.gwt.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '10890060'
+  versionName: 1.89.6

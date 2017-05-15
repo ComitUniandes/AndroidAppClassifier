@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.blackboard.android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <permission android:name="com.blackboard.android.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.blackboard.android.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <application android:hardwareAccelerated="true" android:icon="@drawable/blackboard_app_icon" android:label="@string/learn_app_name" android:name="com.blackboard.android.application.LearnApplication" android:theme="@style/LearnTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="4b1d34d7f8306ec68d02a6b929325528037fc701"/>
+        <receiver android:label="@string/recent_activity_label" android:name="com.blackboard.android.learn.widget.RecentActivityWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/recent_activity_widget"/>
+        </receiver>
+        <service android:name="com.blackboard.android.learn.widget.RecentActivityWidget$UpdateService"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/learn_app_name" android:launchMode="singleTop" android:name="com.blackboard.android.activity.SchoolListActivity_old"/>
+        <activity android:label="@string/learn_app_name" android:launchMode="singleTop" android:name="com.blackboard.android.activity.SchoolListActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.blackboard.android.activity.SplashActivity" android:theme="@style/Theme.Sherlock.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.blackboard.android.learn.activity.MenuActivity" android:theme="@style/LearnThemeMenu" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.blackboard.android.learn.activity.ShareItemActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="media/*"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="application/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.blackboard.android.learn.activity.ShareItemHelperActivity"/>
+        <activity android:configChanges="keyboardHidden" android:name="com.blackboard.android.learn.activity.AddPostActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.NewCommentActivity" android:theme="@style/LearnCourseToolTheme" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:name="com.blackboard.android.learn.activity.AnnouncementsActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.BlogJournalActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.dialog.DisabledSchoolDialogActivity" android:theme="@style/AlertDialog"/>
+        <activity android:name="com.blackboard.android.learn.activity.LogoutFromAccountManagerActivity"/>
+        <activity android:name="com.blackboard.android.learn.dialog.NativeLoginDialogActivity" android:theme="@style/NoTitleWithCustomAppButtonForDialog"/>
+        <activity android:name="com.blackboard.android.learn.dialog.NotifyMeDialogActivity" android:theme="@style/AlertDialog"/>
+        <activity android:name="com.blackboard.android.learn.dialog.ConfirmLogoutDialogActivity" android:theme="@style/NoTitleWithCustomAppButtonForDialog"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.blackboard.android.learn.activity.PurchaseWalkthroughActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.blackboard.android.learn.activity.ContentDetailActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.ShortcutCreationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.blackboard.android.learn.activity.CourseMapActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.DashboardActivity" android:theme="@style/LearnCrossCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.DiscussionsActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.GradesActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.GroupsActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.RosterActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.TasksActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity_helper.GenericWebViewActivity" android:theme="@style/LearnTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.GeneralPurposeWebViewActivity" android:theme="@style/LearnTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.LaunchSchoolDialogActivity" android:theme="@style/NoTitleWithCustomAppButtonForDialog"/>
+        <activity android:name="com.blackboard.android.learn.activity.EntryDetailActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="com.blackboard.android.learn.activity.DownloadManagerActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.blackboard.android.learn.activity.LoginWebActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.blackboard.android.learn.activity.LearnAudioPlayerActivity" android:screenOrientation="portrait" android:theme="@style/LearnCourseToolTheme"/>
+        <activity android:label="@string/settings" android:name="com.blackboard.android.learn.activity.SettingsActivity" android:parentActivityName="com.blackboard.android.learn.activity.MenuActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.blackboard.android.learn.activity.MenuActivity"/>
+        </activity>
+        <activity android:name="com.blackboard.android.core.dialog.ReleaseNotesDialogActivity" android:theme="@style/NoTitleWithCustomAppButtonForDialog"/>
+        <activity android:name="com.blackboard.android.learn.activity.AddContentOptionsActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.blackboard.android.learn.activity.LearnVideoPlayerActivity" android:theme="@style/LearnCrossCourseToolTheme"/>
+        <service android:exported="true" android:name="com.blackboard.android.learn.service.AccountAuthenticatorService" android:process=":auth">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+        <service android:name="com.blackboard.android.learn.service.AddUserForPushService"/>
+        <activity android:name=".learn.activity.AssessmentInfoActivity"/>
+        <activity android:name="com.blackboard.android.learn.activity.AssessmentQuestionListActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.blackboard.android.learn.activity.AssessmentAnswerQuestionActivity" android:windowSoftInputMode="adjustPan|stateVisible"/>
+        <activity android:name="com.blackboard.android.learn.activity.NotificationSettingsActivity"/>
+        <activity android:name="com.blackboard.android.learn.activity.LocalFilePickerActivity"/>
+        <activity android:name="com.blackboard.android.learn.activity.DropboxFilePickerActivity" android:theme="@style/LearnDropboxTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|orientation" android:launchMode="singleTask" android:name="com.dropbox.client2.android.AuthActivity">
+            <intent-filter>
+                <data android:scheme="db-s88xnnuq25gizve"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:name="com.blackboard.android.learn.activity.WebFragmentActivity" android:theme="@style/LearnCourseToolWebTheme"/>
+        <activity android:name="com.blackboard.android.learn.activity.LoginActivity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name="com.blackboard.android.activity.ExternalURIHandlerActivity">
+            <intent-filter>
+                <data android:scheme="bblearn"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.blackboard.android.learn.activity.UploadFileActivity" android:theme="@style/LearnCourseToolTheme"/>
+        <receiver android:name="com.blackboard.android.learn.receiver.C2DMRegistrationReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.blackboard.android"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.blackboard.android.learn.receiver.C2DMMessageReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.blackboard.android"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.blackboard.android.database.AnnouncementSearchSuggestionProvider" android:name="com.blackboard.android.learn.database.AnnouncementSearchSuggestionProvider"/>
+        <provider android:authorities="com.blackboard.android.database.CoursesSearchSuggestionProvider" android:name="com.blackboard.android.learn.database.CoursesSearchSuggestionProvider"/>
+        <provider android:authorities="com.blackboard.android.database.CourseMapSearchSuggestionProvider" android:name="com.blackboard.android.learn.database.CourseMapSearchSuggestionProvider"/>
+        <provider android:authorities="com.blackboard.android.database.PostsSearchSuggestionProvider" android:name="com.blackboard.android.learn.database.PostsSearchSuggestionProvider"/>
+        <provider android:authorities="com.blackboard.android.database.RosterSearchSuggestionProvider" android:name="com.blackboard.android.learn.database.RosterSearchSuggestionProvider"/>
+        <provider android:authorities="com.blackboard.android.database.TasksSearchSuggestionProvider" android:name="com.blackboard.android.learn.database.TasksSearchSuggestionProvider"/>
+    </application>
+</manifest>

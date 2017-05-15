@@ -1,0 +1,36 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.facebook.katana.apk
+compressionType: false
+doNotCompress:
+- arsc
+- FBSIG
+- assets/ComponentScriptBundle.js.bytecode.sha1
+- assets/ComponentScriptBundle.js.meta
+- assets/InboxV2Query_MessengerInboxUnits_Nodes.fbs.md5
+- txt
+- js
+- assets/js-modules/UNBUNDLE
+- xzs
+- webp
+- json
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '22'
+  targetSdkVersion: '23'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '8'
+  com/facebook/java2js/annotation/FBGlobalStrings.cpp: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+  templates/release-notes.vm: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '56891642'
+  versionName: 122.0.0.17.71

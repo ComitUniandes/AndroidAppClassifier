@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.claroColombia.contenedor" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+    <permission android:name="com.claroColombia.contenedor.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <permission android:name="com.claroColombia.contenedor.permission.UA_DATA" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.claroColombia.contenedor.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.motorola.container40.permission.WRAPPER"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.claroColombia.contenedor.permission.UA_DATA"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.CONNECTIVITY_INTERNAL"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <permission android:name="com.claroColombia.contenedor.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.claroColombia.contenedor.permission.RECEIVE_ADM_MESSAGE"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <application android:allowBackup="true" android:debuggable="false" android:icon="@drawable/claro" android:label="@string/app_name" android:largeHeap="true" android:name="com.claroColombia.contenedor.appdelegate.AppDelegate" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name="com.urbanairship.actions.ActionActivity"/>
+        <activity android:name="com.urbanairship.CoreActivity"/>
+        <receiver android:exported="false" android:name="com.urbanairship.CoreReceiver">
+            <intent-filter android:priority="-999">
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <category android:name="com.claroColombia.contenedor"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.claroColombia.contenedor.receivers.os.InstalledAppsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.claroColombia.contenedor.receivers.os.WifiReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+                <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.claroColombia.contenedor.receivers.os.InstalledAppsReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.urbanairship.actions.LandingPageActivity" android:theme="@style/LandingPageStyle">
+            <meta-data android:name="com.urbanairship.action.LANDING_PAGE_VIEW" android:resource="@layout/ua_activity_landing_page"/>
+            <meta-data android:name="com.urbanairship.push.iam.EXCLUDE_FROM_AUTO_SHOW" android:value="true"/>
+            <intent-filter>
+                <action android:name="com.urbanairship.actions.SHOW_LANDING_PAGE_INTENT_ACTION"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="message"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:label="Push Notification Service" android:name="com.urbanairship.push.PushService"/>
+        <service android:label="Event Service" android:name="com.urbanairship.analytics.EventService"/>
+        <service android:name="com.urbanairship.actions.ActionService"/>
+        <service android:name="com.urbanairship.richpush.RichPushUpdateService"/>
+        <provider android:authorities="@string/authority.urban" android:exported="false" android:multiprocess="true" android:name="com.urbanairship.UrbanAirshipProvider" android:permission="com.claroColombia.contenedor.permission.UA_DATA"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.claroColombia.contenedor.gui.activities.AppsContainerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="contenedoramx"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_detail_vc" android:name="com.claroColombia.contenedor.ui.app.DetailVC" android:noHistory="true"/>
+        <activity android:clearTaskOnLaunch="true" android:name="com.claroColombia.contenedor.ui.app.HomeVC"/>
+        <activity android:clearTaskOnLaunch="true" android:name="com.claroColombia.contenedor.ui.app.home.HomeActivity"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.IdeasVC"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.RecomenderVC"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.FavoritosVC"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.MusicaVC"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.JuegosVC"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.DetailTopItemVC"/>
+        <activity android:launchMode="singleTask" android:name="com.claroColombia.contenedor.ui.app.HomePagerVC" android:theme="@style/MyNoActionBarShadowTheme"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.help.AboutHelpActivity"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.help.ConfirmHelpActivity"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.help.FailureHelpActivity"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.help.FrequentQuestionsHelpActivity"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.help.HelpMainActivity"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.help.SuggestionHelpActivity"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.TermsWebViewVC"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.help.HelpTutorialActivity" android:theme="@style/Theme.Transparent"/>
+        <activity android:label="@string/title_activity_administrar_favoritos_vc" android:name="com.claroColombia.contenedor.ui.app.AdministrarFavoritosVC"/>
+        <activity android:label="@string/title_activity_actualizaciones_vc" android:name="com.claroColombia.contenedor.ui.app.ActualizacionesVC"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.DetailTopItemTabletVC" android:theme="@style/Theme.Transparent"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.DetailTabletVC" android:noHistory="true" android:theme="@style/Theme.Transparent"/>
+        <activity android:launchMode="singleInstance" android:name="com.claroColombia.contenedor.ui.app.WidgetAlert" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name="com.urbanairship.google.PlayServicesErrorActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.urbanairship.push.GCMPushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.claroColombia.contenedor"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.claroColombia.contenedor.utils.IntentReceiver">
+            <intent-filter>
+                <action android:name="com.urbanairship.push.CHANNEL_UPDATED"/>
+                <action android:name="com.urbanairship.push.OPENED"/>
+                <action android:name="com.urbanairship.push.DISMISSED"/>
+                <action android:name="com.urbanairship.push.RECEIVED"/>
+                <category android:name="com.claroColombia.contenedor"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.claroColombia.contenedor.utils.AlertWidgetReceiver"/>
+        <receiver android:name="com.claroColombia.contenedor.utils.Receiver"/>
+        <receiver android:name="com.claroColombia.contenedor.utils.StatisticsWidgetReceiver"/>
+        <activity android:label="@string/title_activity_notificaciones_vc" android:name="com.claroColombia.contenedor.ui.app.NotificacionesVC"/>
+        <activity android:label="@string/title_activity_search" android:name="com.claroColombia.contenedor.ui.app.Search"/>
+        <activity android:name="com.claroColombia.contenedor.ui.app.DetailWidget"/>
+        <activity android:name="com.speedymovil.dt.contenedor.DTAlertWithoutContext" android:theme="@style/Theme.Transparent"/>
+        <receiver android:label="@string/app_widget" android:name="com.claroColombia.contenedor.widget.WidgetActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_ENABLED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DELETED"/>
+                <action android:name="android.appwidget.action.APPWIDGET_DISABLED"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widgetprovider"/>
+        </receiver>
+        <receiver android:name="com.claroColombia.contenedor.utils.StatisticReceiver"/>
+        <receiver android:name="com.claroColombia.contenedor.utils.ImageDownloader"/>
+        <receiver android:name="com.claroColombia.contenedor.utils.Push2"/>
+        <receiver android:name="com.claroColombia.contenedor.utils.PushProcessor"/>
+        <receiver android:name="com.claroColombia.contenedor.utils.UniqueIdReceiver"/>
+        <receiver android:name="com.claroColombia.contenedor.utils.NoUsedAppsReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.claroColombia.contenedor.utils.CompletePeriodNoUsedApps">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.claroColombia.contenedor.utils.CompletePeriodUniqueId">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.speedymovil.dt.contenedor.receivers.ScheduleStatisticsDTInfo">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.claroColombia.contenedor.widget.UpdateServiceReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.claroColombia.contenedor.utils.RetryManager">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.claroColombia.contenedor.widget.UpdateService"/>
+        <service android:name="com.claroColombia.contenedor.widget.RecommenderService"/>
+        <service android:name="com.claroColombia.contenedor.utils.WaitToGetUniqueUserRegistry"/>
+        <service android:enabled="true" android:exported="false" android:name="com.speedymovil.dt.contenedor.services.StatisticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.speedymovil.dt.contenedor.services.DTprocessService"/>
+        <service android:label="Segments Service" android:name="com.urbanairship.location.LocationService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.digitalturbine.ignite.commonlib.Services.ReporterService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.digitalturbine.ignite.commonlib.Services.OrchestratorService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.digitalturbine.ignite.commonlib.Services.DownloadManagerService"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.digitalturbine.ignite.commonlib.Receivers.FirstLaunchBroadCastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_FIRST_LAUNCH"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.digitalturbine.ignite.commonlib.Receivers.InstallFlowStatusReceiver">
+            <intent-filter>
+                <action android:name="dt.sdk.intent.state.PACKAGE_INSTALLED"/>
+                <action android:name="dt.sdk.intent.state.DOWNLOAD_COMPLETED"/>
+                <action android:name="dt.sdk.intent.EXTRA_APPLICATION_STATUS"/>
+                <action android:name="dt.sdk.intent.state.REPORT_COMPLETE"/>
+                <action android:name="dt.sdk.intent.state.NOTHING_TO_DO"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.speedymovil.dt.contenedor.receivers.SdkStatusReceiver">
+            <intent-filter>
+                <action android:name="dt.sdk.intent.RES_NO_SELFUPDATE_REQUIRED"/>
+                <action android:name="dt.sdk.intent.RES_SELFUPDATE_REQUIRED"/>
+                <action android:name="dt.sdk.intent.RES_SELFUPDATE_ERROR"/>
+                <action android:name="dt.sdk.intent.RES_INSTALL_COMPLETE_OK"/>
+                <action android:name="dt.sdk.intent.RES_INSTALL_COMPLETE_ERROR"/>
+                <action android:name="dt.sdk.intent.RES_UPDATE_COMPLETE_OK"/>
+                <action android:name="dt.sdk.intent.RES_UPDATE_COMPLETE_ERROR"/>
+                <action android:name="dt.sdk.intent.RES_APPLICATION_STATUS"/>
+                <action android:name="dt.sdk.intent.RESULT_ERROR"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:name="com.claroColombia.contenedor.utils.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.claroColombia.contenedor.sectionsdata" android:exported="false" android:name="com.claroColombia.contenedor.ui.app.home.SectionsProvider"/>
+    </application>
+</manifest>

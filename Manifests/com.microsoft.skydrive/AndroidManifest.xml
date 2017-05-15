@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.microsoft.skydrive" platformBuildVersionCode="24" platformBuildVersionName="7.0">
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.permission.PROVIDE_BACKGROUND"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <permission android:name="com.microsoft.skydrive.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.microsoft.skydrive.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.1"/>
+    <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:largeHeap="true" android:logo="@drawable/ic_home" android:name="com.microsoft.skydrive.SkyDriveApplication" android:supportsRtl="true" android:uiOptions="splitActionBarWhenNarrow">
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="com.microsoft.skydrive.mainactivity.action.navigateto"/>
+                <action android:name="com.microsoft.skydrive.mainactivity.action.openpinfolder"/>
+                <action android:name="com.microsoft.skydrive.mainactivity.action.pushnotification"/>
+                <action android:name="com.microsoft.skydrive.mainactivity.action.search"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="ms-onedrive"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.mainactivity.action.showaddnewaccount"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.microsoft.skydrive.navigation.OneDriveLinkHandlerActivity" android:noHistory="true" android:theme="@style/Theme.SkyDrive">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="@string/short_link_domain" android:scheme="http"/>
+                <data android:host="onedrive.live.com" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.skydrive.settings.JoinBetaEULAActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.skydrive.intent.actionsend.ReceiveActionSendActivity" android:taskAffinity="com.microsoft.skydrive.intent.actionsend.ReceiveActionSendActivity" android:theme="@style/Theme.SkyDrive">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="*/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/app_name" android:name="com.microsoft.skydrive.intent.actionsend.ReceiveSdkSaverActivity" android:theme="@style/Theme.SkyDrive">
+            <intent-filter>
+                <action android:name="onedrive.intent.action.SAVER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.intent.actionsend.ModalUploadOperation" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:label="@string/app_name" android:name="com.microsoft.skydrive.intent.getcontent.ReceiveGetContentActivity" android:theme="@style/Theme.SkyDrive">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <data android:mimeType="*/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.microsoft.skydrive.getcontent.RecieveSdkPickerActivity" android:theme="@style/Theme.SkyDrive">
+            <intent-filter>
+                <action android:name="onedrive.intent.action.PICKER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.content.ContentResolverCallOperation" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.odsp.fileopen.upsell.EnhancedOfficeUpsellOperationActivity" android:theme="@style/Theme.SkyDrive.NoActionBar"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.onedrive.operation.officelens.OfficeLensOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.authorization.SignInActivity" android:theme="@style/Theme.SkyDrive.NoActionBar"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.authorization.StartSignInActivity" android:theme="@style/Theme.SkyDrive.NoActionBar"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.album.UpdateAlbumCoverOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.album.AlbumChooserForAddToAlbumActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.album.PhotosOrVideosChooserForAddToAlbumActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.upload.picker.SAFPickerActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.operation.PermissionsChooserOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.operation.ChangePermissionsOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.createfolder.GetFolderNameOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.createfolder.CreateFolderOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.CreateDocument.GetDocumentNameOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.CreateDocument.CreateDocumentOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.CreateDocument.LaunchCreateDocumentPickerOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.officelens.ScanOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.AbdicateConfirmActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.AbdicateOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.DeleteConfirmActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.DeleteOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.DeleteFromRecycleBinConfirmActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.EmptyRecycleBinConfirmActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.DeleteFromRecycleBinOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.EmptyRecycleBinOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.RemoveItemsFromAlbumOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.delete.RestoreOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.mount.MountConfirmActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.mount.MountOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.mount.UnMountConfirmActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.mount.UnMountOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.navigation.OneDriveUrlHandlerOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.fileopen.DownloadAndExportOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.fileopen.DownloadAndOpenFileOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.fileopen.UrlFileOpenOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:name="com.microsoft.skydrive.navigation.UrlFileIntentHandlerActivity" android:theme="@style/Theme.SkyDrive.OperationDialog">
+            <intent-filter android:label="@string/manifest_intent_view_onedrive_url">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*" android:mimeType="*/*" android:pathPattern=".*url" android:scheme="file"/>
+                <data android:host="*" android:mimeType="*/*" android:pathPattern=".*URL" android:scheme="file"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.operation.SendFilesOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.fileopen.OfficeProtocolOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.odsp.fileopen.OpenFileOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.fileopen.OpenStreamingFileOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.ReturnGetContentOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.intent.getcontent.ReceiveGetContentLinkOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.save.SaveOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.rename.GetFileNameOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.odb.dlp.GetOverrideJustificationOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.odb.dlp.OverrideDlpOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.rename.RenameOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.settings.UpdateUserPreferencesActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.album.GetAlbumNameOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.album.CreateOrAddToAlbumOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.tags.EditTagsOperationActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.DialogWhenLarge" android:windowSoftInputMode="adjustResize|stateVisible">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.tags.UpdateTagsOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.navigation.OdbUrlProcessActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.navigation.UrlProcessActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.InvitePeopleActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.DialogWhenLarge" android:windowSoftInputMode="adjustResize|stateVisible">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.operation.InvitePeopleOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.operation.ShareALinkOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.operation.CustomizedShareALinkOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.share.TargetAppChooserActivity" android:theme="@style/Theme.SkyDrive.BottomSheetDialogWhenLarge"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.sort.SortOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.SimpleDialogActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.move.MoveOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.sites.FollowUnfollowOperationActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.move.AsyncMoveConfirmActivity" android:theme="@style/Theme.SkyDrive.OperationDialog"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.move.FolderChooserForMoveActivity" android:theme="@style/Theme.SkyDrive"/>
+        <activity android:exported="true" android:label="@string/progress_title" android:name="com.microsoft.skydrive.upload.FileUploadManagementActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.Tabs">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:name="com.microsoft.skydrive.photoviewer.PhotoStripActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.PhotoView">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.microsoft.skydrive.videoviewer.VideoPlayerActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.MediaView">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:name="com.microsoft.skydrive.officelens.CaptureScanImagesActivity" android:screenOrientation="landscape" android:theme="@style/Theme.AppCompat.NoActionBar.FullScreen"/>
+        <activity android:name="com.microsoft.skydrive.officelens.ConfirmScanImagesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.NoActionBar.FullScreen"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.cleanupspace.CleanUpSpaceUpsellActivity" android:theme="@style/Theme.SkyDrive.NoActionBar"/>
+        <activity android:name="com.microsoft.skydrive.pdfviewer.PdfIntentHandlerActivity" android:theme="@style/Theme.SkyDrive.OperationDialog">
+            <intent-filter android:label="@string/manifest_intent_view_onedrive_pdf">
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.EDIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="application/pdf"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:host="*"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="" android:name="com.microsoft.skydrive.pdfviewer.PdfViewerActivity" android:theme="@style/Theme.SkyDrive.DarkActionBar" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/settings_activity" android:launchMode="singleTop" android:name="com.microsoft.skydrive.settings.SkydriveAppSettings" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.Settings">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="Test Hook" android:name="com.microsoft.skydrive.settings.testhook.TestHookSettings" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettings" android:theme="@style/Theme.SkyDrive.Settings">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettings"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.fre.FirstRunExperienceActivity" android:theme="@style/Theme.SkyDrive.NoActionBar"/>
+        <activity android:launchMode="singleTask" android:name="com.microsoft.skydrive.fre.OnboardingExperienceActivity" android:theme="@style/Theme.SkyDrive.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/third_party_notice_Page_title" android:name="com.microsoft.skydrive.settings.ThirdPartyNoticeActivity" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettings" android:theme="@style/Theme.SkyDrive">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.settings.ThirdPartyNoticeActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettings"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/settings_sign_in_activity" android:name="com.microsoft.skydrive.settings.SkydriveAppSettingsAccount" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettings" android:theme="@style/Theme.SkyDrive.Settings">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettings"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/settings_camera_backup_activity" android:name="com.microsoft.skydrive.settings.SkydriveAppSettingsCameraBackup" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettings" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettings"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.nokia.intent.category.GALLERY_MEDIA_PROVIDER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.settings.SkydriveAppSettingsCameraBackup"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/settings_additional_folders" android:name="com.microsoft.skydrive.settings.SkydriveAppSettingsBackupFolders" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettingsCameraBackup" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettingsCameraBackup"/>
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.settings.SkydriveAppSettingsBackupFolders"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/clean_up_space_title" android:name="com.microsoft.skydrive.settings.SkyDriveAppSettingsCleanUpSpace" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettings" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettings"/>
+        </activity>
+        <activity android:label="@string/settings_passcode_to_use_app_activity" android:name="com.microsoft.skydrive.settings.SkydriveAppSettingsRequireCodeToSignUp" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettings" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettings"/>
+        </activity>
+        <activity android:label="@string/enter_code_to_use_app_title" android:launchMode="singleTop" android:name="com.microsoft.skydrive.settings.SkydriveAppSettingsEnterCode" android:parentActivityName="com.microsoft.skydrive.settings.SkydriveAppSettings" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.microsoft.skydrive.settings.SkydriveAppSettings"/>
+        </activity>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name="com.microsoft.skydrive.devicecontentpicker.localfiles.LocalFolderBrowserActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:label="@string/menu_view_properties" android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.propertypage.ViewPropertiesActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.NoActionMode">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.skydrive.operation.propertypage.ViewDlpTipsActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.DialogWhenLarge">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:name="com.microsoft.skydrive.widget.OneDriveWidgetConfigure" android:theme="@style/Theme.SkyDrive">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="com.microsoft.skydrive.chromecast.LaunchCastControllerActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.OperationDialog">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/menu_send_to_chromecast" android:launchMode="singleTask" android:name="com.microsoft.skydrive.chromecast.MediaCastControllerActivity" android:parentActivityName="com.microsoft.skydrive.MainActivity" android:theme="@style/Theme.SkyDrive.MediaView">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:label="@string/settings_upgrade_account" android:launchMode="singleTask" android:name="com.microsoft.skydrive.iap.InAppPurchaseActivity" android:theme="@style/Theme.SkyDrive.DialogWhenLarge"/>
+        <activity android:name="com.microsoft.skydrive.onerm.OneRMCampaignActivity" android:theme="@style/Theme.SkyDrive.DialogWhenLarge"/>
+        <service android:exported="false" android:name="com.microsoft.authorization.cloudaccounts.UpdateCloudAccountsService">
+            <intent-filter>
+                <action android:name="com.microsoft.onedrive.authorization.cloudaccounts.UpdateCloudAccountsService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.skydrive.updateuserinfo.UpdateUserInfoService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.updateuserinfo.UpdateUserInfoService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.skydrive.streamcache.service.UpdateMetadataForOfflineFilesService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.streamcache.UpdateSyncRootsService"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.microsoft.skydrive.receiver.AccountChangedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.receiver.LowMemoryBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.widget.OneDriveWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/folder_shortcut_appwidget_info"/>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.widget.OneDriveActionsWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/actions_appwidget_info"/>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.chromecast.OneDriveCastIntentReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+                <action android:name="com.google.android.libraries.cast.companionlibrary.action.toggleplayback"/>
+                <action android:name="com.google.android.libraries.cast.companionlibrary.action.stop"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.libraries.cast.companionlibrary.cast.reconnection.ReconnectionService"/>
+        <service android:exported="false" android:name="com.google.android.libraries.cast.companionlibrary.notification.VideoCastNotificationService">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.cast.companionlibrary.action.toggleplayback"/>
+                <action android:name="com.google.android.libraries.cast.companionlibrary.action.stop"/>
+                <action android:name="com.google.android.libraries.cast.companionlibrary.action.notificationvisibility"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.skydrive.CleanupService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.CleanupService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.skydrive.upload.ManualUploadService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.upload.ManualUploadService"/>
+                <action android:name="com.microsoft.skydrive.upload.CLEAR"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.skydrive.upload.ModalUploadService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.upload.ModalUploadService"/>
+                <action android:name="com.microsoft.skydrive.upload.CLEAR"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.skydrive.upload.AutoUploadService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.upload.AutoUploadService"/>
+                <action android:name="com.microsoft.skydrive.upload.CLEAR"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.microsoft.skydrive.upload.AsyncMoveService"/>
+        <service android:exported="true" android:name="com.microsoft.skydrive.camerabackup.CameraRollSyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter"/>
+        </service>
+        <service android:name="com.microsoft.skydrive.camerabackup.CameraRollJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.microsoft.crossplaform.interop.NetworkChangedJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.microsoft.skydrive.cleanupspace.CleanUpSpaceNotificationService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.cleanupspace.YES_TAPPED"/>
+                <action android:name="com.microsoft.skydrive.cleanupspace.NO_TAPPED"/>
+                <action android:name="com.microsoft.skydrive.cleanupspace.DISMISSED"/>
+                <action android:name="com.microsoft.skydrive.cleanupspace.NEVER_TAPPED"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.microsoft.skydrive.pushnotification.GcmIntentService"/>
+        <service android:exported="false" android:name="com.microsoft.skydrive.pushnotification.NotificationsIntentService"/>
+        <service android:exported="false" android:name="com.microsoft.skydrive.camerabackup.CameraRollIntentService"/>
+        <service android:exported="false" android:name="com.microsoft.skydrive.pushnotification.SubscriptionRefreshService">
+            <intent-filter>
+                <action android:name="com.microsoft.skydrive.pushnotification.REFRESH_SUBSCRIPTION"/>
+                <action android:name="com.microsoft.skydrive.pushnotification.CLEAR_SUBSCRIPTION"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.microsoft.skydrive.content.external" android:exported="true" android:multiprocess="false" android:name="com.microsoft.skydrive.content.ExternalContentProvider"/>
+        <provider android:authorities="com.microsoft.skydrive.content.metadata" android:exported="false" android:multiprocess="false" android:name="com.microsoft.skydrive.content.MetadataContentProvider"/>
+        <provider android:authorities="com.microsoft.skydrive.content.autoupload" android:exported="false" android:multiprocess="false" android:name="com.microsoft.skydrive.upload.AutoUploadContentProvider"/>
+        <provider android:authorities="com.microsoft.skydrive.content.manualupload" android:exported="false" android:multiprocess="false" android:name="com.microsoft.skydrive.upload.ManualUploadContentProvider"/>
+        <provider android:authorities="com.microsoft.skydrive.content.modalupload" android:exported="false" android:multiprocess="false" android:name="com.microsoft.skydrive.upload.ModalUploadContentProvider"/>
+        <provider android:authorities="com.microsoft.skydrive.content.move" android:exported="false" android:multiprocess="false" android:name="com.microsoft.skydrive.upload.AsyncMoveContentProvider"/>
+        <receiver android:exported="true" android:name="com.microsoft.skydrive.InstallReferrerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.upload.SdCardMountReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.receiver.BatteryConnectivityPowerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.receiver.NewPictureBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.android.camera.NEW_PICTURE"/>
+                <action android:name="android.hardware.action.NEW_PICTURE"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.upload.AlarmReceiverForAsyncMoveOperation"/>
+        <receiver android:name="com.microsoft.skydrive.streamcache.service.AlarmReceiverForUpdateSyncRootService"/>
+        <receiver android:name="com.microsoft.skydrive.receiver.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.microsoft.skydrive"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.skydrive.receiver.SubscriptionRefreshAlarmReceiver"/>
+        <receiver android:name="com.microsoft.skydrive.receiver.OfferExpirationNotificationAlarmReceiver"/>
+        <receiver android:name="com.microsoft.tokenshare.AccountChangeReceiver">
+            <intent-filter>
+                <data android:scheme="package"/>
+                <action android:name="com.microsoft.tokenshare.SIGNIN_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.microsoft.skydrive.content.StorageAccessProvider" android:enabled="@bool/isAtLeastKitKat" android:exported="true" android:grantUriPermissions="true" android:multiprocess="false" android:name="com.microsoft.skydrive.content.StorageAccessProvider" android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider android:authorities="com.microsoft.skydrive.powerlift.provider" android:enabled="true" android:exported="false" android:name="com.microsoft.powerlift.android.internal.provider.PowerLiftContentProvider" android:syncable="true"/>
+        <meta-data android:name="com.microsoft.intune.mam.aad.ClientID" android:value="b26aadf8-566f-4478-926f-589f601d9c74"/>
+        <meta-data android:name="com.microsoft.intune.mam.MAMMultiIdentity" android:value="true"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="8eeacbf2100759564b8a78688a755f1bca78e9d1"/>
+        <meta-data android:name="com.microsoft.authorization.supportedAccountTypes" android:resource="@array/authentication_supported_account_types"/>
+        <meta-data android:name="com.microsoft.authorization.teamsites" android:value="false"/>
+        <meta-data android:name="com.microsoft.authorization.mysite" android:value="false"/>
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.pspdfkit.document.printing.PrintActivity"/>
+        <provider android:authorities="com.microsoft.skydrive.pdf.assets" android:exported="false" android:name="com.pspdfkit.media.AssetsContentProvider"/>
+        <provider android:authorities="com.microsoft.skydrive.pdf.share" android:exported="true" android:grantUriPermissions="true" android:name="com.pspdfkit.document.sharing.DocumentSharingProvider"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.odsp.operation.feedback.FeedbackChooserActivity" android:theme="@style/AppBaseTheme.OperationDialog"/>
+        <activity android:label="@string/feedback_report_a_problem" android:launchMode="singleTop" android:name="com.microsoft.odsp.operation.feedback.FeedbackComposerActivity" android:parentActivityName="com.microsoft.odsp.operation.feedback.FeedbackChooserActivity" android:theme="@style/AppTheme.DialogWhenLarge" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.microsoft.odsp.action.FEEDBACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.odsp.operation.feedback.FeedbackOperationActivity" android:theme="@style/AppBaseTheme.OperationDialog"/>
+        <activity android:launchMode="singleTop" android:name="com.microsoft.odsp.operation.feedback.UserVoiceActivity" android:theme="@style/AppBaseTheme.OperationDialog"/>
+        <activity android:hardwareAccelerated="false" android:label="@string/settings_whats_new" android:launchMode="singleTask" android:name="com.microsoft.odsp.whatsnew.WhatsNewActivity" android:theme="@style/AppTheme.DialogWhenLarge" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.microsoft.odsp.whatsnew.WhatsNewActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.microsoft.odsp.operation.feedback.powerlift.RemediationActivity" android:theme="@style/AppTheme.DialogWhenLarge"/>
+        <service android:exported="false" android:name="com.microsoft.odsp.task.TaskService">
+            <intent-filter>
+                <action android:name="com.microsoft.odsp.task.TaskService"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.microsoft.odsp.instrumentation.saralogging.SaRaLoggingReceiver">
+            <intent-filter>
+                <action android:name="com.microsoft.SEND_DIAGNOSTICS"/>
+                <action android:name="com.microsoft.SEND_DIAGNOSTICS_STATUS"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.microsoft.powerlift.android.internal.service.PowerLiftService"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.microsoft.aad.adal.AuthenticationActivity"/>
+        <service android:exported="true" android:name="com.microsoft.authorization.AuthenticationService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+        <service android:exported="true" android:label="" android:name="com.microsoft.intune.mam.client.notification.MAMNotificationReceiverService"/>
+        <service android:exported="false" android:label="" android:name="com.microsoft.intune.mam.client.notification.CompanyPortalInstallHandler"/>
+        <service android:exported="false" android:label="" android:name="com.microsoft.intune.mam.client.service.MAMBackgroundService"/>
+        <receiver android:name="com.microsoft.intune.mam.client.service.MAMBackgroundReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.microsoft.intune.mam.client.app.offline.OfflineStartupBlockedActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:exported="false" android:name="com.microsoft.intune.mam.client.app.offline.OfflineRestartRequiredActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:exported="false" android:name="com.microsoft.intune.mam.client.app.startup.MAMStartupActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:exported="false" android:name="com.microsoft.intune.mam.client.app.resolver.MAMResolverActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:exported="false" android:name="com.microsoft.intune.mam.client.app.data.WipeUserDataActivity" android:noHistory="true"/>
+        <activity android:exported="false" android:name="com.microsoft.intune.mam.client.app.offline.OfflineInstallCompanyPortalDialogActivity" android:theme="@android:style/Theme.Dialog"/>
+        <service android:enabled="true" android:exported="true" android:name="com.microsoft.tokenshare.TokenSharingService">
+            <intent-filter>
+                <action android:name="com.microsoft.tokenshare.TokenSharingService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="token_share_sdk_version" android:value="2"/>
+        <meta-data android:name="token_share_build_version" android:value="1.3.1"/>
+        <meta-data android:name="token_share_parcelable_version" android:value="2"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

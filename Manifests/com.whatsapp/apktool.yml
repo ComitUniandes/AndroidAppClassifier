@@ -1,0 +1,24 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.whatsapp.apk
+compressionType: false
+doNotCompress:
+- arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '451756'
+  versionName: 2.17.146

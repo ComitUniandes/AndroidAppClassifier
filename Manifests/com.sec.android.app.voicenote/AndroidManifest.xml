@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sec.android.app.voicenote" platformBuildVersionCode="24" platformBuildVersionName="7.0">
+    <permission android:label="VoiceNotePermission" android:name="com.sec.android.app.voicenote.Controller" android:protectionLevel="signatureOrSystem"/>
+    <permission android:label="VoiceNotePermission" android:name="com.sec.android.app.voicenote.common.util.VNProvider.permission.read" android:protectionLevel="signatureOrSystem"/>
+    <permission android:label="VoiceNotePermission" android:name="com.sec.android.app.voicenote.common.util.VNProvider.permission.write" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.samsung.svoice.sync.READ_DATABASE"/>
+    <uses-permission android:name="com.samsung.svoice.sync.ACCESS_SERVICE"/>
+    <uses-permission android:name="com.samsung.svoice.sync.WRITE_DATABASE"/>
+    <uses-permission android:name="com.sec.android.app.voicenote.Controller"/>
+    <uses-permission android:name="com.sec.android.permission.VOIP_INTERFACE"/>
+    <uses-permission android:name="com.sec.android.permission.LAUNCH_PERSONAL_PAGE_SERVICE"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_RECORD_AUDIO"/>
+    <uses-permission android:name="com.sec.android.settings.permission.SOFT_RESET"/>
+    <uses-permission android:name="sec.android.permission.READ_MSG_PREF"/>
+    <uses-permission android:name="com.samsung.android.scloud.backup.lib.read"/>
+    <uses-permission android:name="com.samsung.android.scloud.backup.lib.write"/>
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS"/>
+    <uses-feature android:name="com.samsung.android.feature.resopt" android:required="false"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@drawable/voice_recorder" android:label="@string/app_name" android:largeHeap="true" android:name="com.sec.android.app.voicenote.uicore.VoiceNoteApplication" android:supportsRtl="true" android:theme="@style/Theme.VoiceNote.Default.NoActionBar">
+        <service android:name="com.sec.android.app.voicenote.service.VoiceNoteService"/>
+        <uses-library android:name="com.samsung.device" android:required="true"/>
+        <uses-library android:name="secmediarecorder" android:required="false"/>
+        <meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="true"/>
+        <meta-data android:name="backup_name" android:resource="@xml/backup_item"/>
+        <meta-data android:name="backup_content_uri" android:value="content://com.sec.android.app.voicenote.backup"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.sec.android.app.voicenote.main.VNMainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="voicenote.intent.action.privatebox"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="voicenote.intent.action.edge_start_record"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.samsung.android.support.executable"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable_local"/>
+        </activity>
+        <activity android:configChanges="screenLayout|screenSize" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.sec.android.app.voicenote.activity.SimpleActivity" android:noHistory="true" android:resizeableActivity="false" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.provider.MediaStore.RECORD_SOUND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="voicenote.intent.action.accessibility"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable_sfinder"/>
+        </activity>
+        <activity android:label="@string/language" android:launchMode="singleTop" android:name="com.sec.android.app.voicenote.activity.SelectLanguageActivity" android:screenOrientation="portrait" android:theme="@style/Theme.VoiceNote.Default.Light"/>
+        <activity android:configChanges="locale|fontScale|layoutDirection" android:launchMode="singleTop" android:name="com.sec.android.app.voicenote.activity.WebTosActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.Light"/>
+        <activity android:excludeFromRecents="true" android:label="@string/write_to_nfc_tag" android:launchMode="singleTop" android:name="com.sec.android.app.voicenote.activity.NFCWritingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.VoiceNote.Default.NoTitleBar"/>
+        <activity android:label="@string/play" android:name="com.sec.android.app.voicenote.activity.NFCPlaySoundActivity" android:theme="@style/TransparentStyle">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="voice/path"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/action_settings" android:launchMode="singleTop" android:name="com.sec.android.app.voicenote.activity.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.VoiceNote.Default.Light"/>
+        <activity android:label="" android:launchMode="singleTop" android:name="com.sec.android.app.voicenote.activity.AboutActivity" android:screenOrientation="portrait" android:theme="@style/Theme.VoiceNote.Default.NoTitleBar"/>
+        <activity android:label="" android:launchMode="singleTop" android:name="com.sec.android.app.voicenote.activity.RecordStereoActivity" android:screenOrientation="portrait" android:theme="@style/Theme.VoiceNote.Default.NoTitleBar"/>
+        <provider android:authorities="com.sec.android.app.voicenote.common.util.VNProvider" android:exported="true" android:name="com.sec.android.app.voicenote.common.util.VNProvider" android:readPermission="com.sec.android.app.voicenote.common.util.VNProvider.permission.read" android:writePermission="com.sec.android.app.voicenote.common.util.VNProvider.permission.write">
+            <path-permission android:pathPrefix="/search_suggest_regex_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
+            <path-permission android:pathPrefix="/search_suggest_tag_query" android:readPermission="android.permission.GLOBAL_SEARCH"/>
+        </provider>
+        <provider android:authorities="com.sec.android.app.voicenote.backup" android:enabled="true" android:exported="true" android:name="com.samsung.android.scloud.oem.lib.ClientProvider" android:readPermission="com.samsung.android.scloud.backup.lib.read" android:syncable="false" android:writePermission="com.samsung.android.scloud.backup.lib.write"/>
+        <receiver android:name="com.sec.android.app.voicenote.receiver.SettingResetReceiver" android:permission="com.sec.android.settings.permission.SOFT_RESET">
+            <intent-filter>
+                <action android:name="com.samsung.intent.action.SETTINGS_SOFT_RESET"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.samsung.android.support.executable" android:resource="@xml/executable"/>
+        <meta-data android:name="SPDE.build.signature" android:value="3119072/9517579/common-release/VoiceNote-2017000-20.1.83"/>
+        <meta-data android:name="SPDE.env.version" android:value="2.1.3/G24.2.16/24.2.9"/>
+    </application>
+</manifest>

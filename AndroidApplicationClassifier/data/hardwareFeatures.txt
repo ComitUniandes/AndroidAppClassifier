@@ -1,0 +1,16 @@
+AUDIO;audio.low_latency,audio.output,audio.pro,microphone
+BLUETOOTH;bluetooth,bluetooth_le
+CAMERA;camera,camera.any,camera.autofocus,camera.capability.manual_post_processing,camera.capability.manual_sensor,camera.capability.raw,camera.external,camera.flash,camera.front,camera.level.full
+IU;type.automotive,type.watch
+FINGERPRINT;fingerprint
+GAMEPAD;gamepad
+INFRARED;infrared
+LOCATION;location,location.gps,location.network
+NFC;nfc,nfc.hce
+OPENGL;opengles.aep
+SENSOR;sensor.accelerometer,sensor.ambient_temperature,sensor.barometer,sensor.compass,sensor.gyroscope,sensor.hifi_sensors,sensor.heartrate,sensor.heartrate.ecg,sensor.light,sensor.proximity,sensor.relative_humidity,sensor.stepcounter,sensor.stepdetector
+SCREEN;screen.landscape,screen.portrait
+TELEPHONY;telephony,telephony.cdma,telephony.gsm
+TACTILE;faketouch,faketouch.multitouch.distinct,faketouch.multitouch.jazzhand,touchscreen,touchscreen.multitouch,touchscreen.multitouch.distinct,touchscreen.multitouch.jazzhand
+USB;usb.accessory,usb.host
+WI-FI;wifi,wifi-direct

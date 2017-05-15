@@ -1,0 +1,29 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.google.android.tts.apk
+compressionType: false
+doNotCompress:
+- arsc
+- pb
+- output_mean_std_dev
+- assets/voices/en-us-x-hol/lstm/voice_metadata
+- fst
+- assets/voices/en-us-x-sfg/lstm/voice_metadata
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '0'
+  com/google/api/client/repackaged/org/apache/commons/codec/language/dmrules.txt: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '210311121'
+  versionName: 3.11.12

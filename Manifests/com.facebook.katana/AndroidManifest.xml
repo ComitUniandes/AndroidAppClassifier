@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.facebook.katana" platformBuildVersionCode="23" platformBuildVersionName="6.0-2166767">
+    <compatible-screens>
+        <screen android:screenDensity="xhdpi" android:screenSize="small"/>
+        <screen android:screenDensity="xhdpi" android:screenSize="normal"/>
+        <screen android:screenDensity="xhdpi" android:screenSize="large"/>
+        <screen android:screenDensity="xhdpi" android:screenSize="xlarge"/>
+    </compatible-screens>
+    <uses-permission-sdk-m android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission-sdk-m android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission-sdk-m android:name="android.permission.BLUETOOTH"/>
+    <uses-permission-sdk-m android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission-sdk-m android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="com.facebook.katana.provider.ACCESS"/>
+    <uses-permission android:name="com.facebook.orca.provider.ACCESS"/>
+    <uses-permission android:name="com.facebook.mlite.provider.ACCESS"/>
+    <uses-permission android:name="com.facebook.pages.app.provider.ACCESS"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <permission android:name="com.facebook.katana.provider.ACCESS" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission android:name="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.permission.prod.FB_APP_COMMUNICATION"/>
+    <permission android:name="com.facebook.permission.prod.SYSTEM_COMMUNICATION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.permission.prod.SYSTEM_COMMUNICATION"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <permission android:name="com.facebook.katana.permission.CROSS_PROCESS_BROADCAST_MANAGER" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.katana.permission.CROSS_PROCESS_BROADCAST_MANAGER"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <permission android:name="com.facebook.receiver.permission.ACCESS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.receiver.permission.ACCESS"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.facebook.home.permission.WRITE_BADGES"/>
+    <uses-permission-sdk-m android:name="android.permission.BLUETOOTH"/>
+    <uses-permission-sdk-m android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <permission android:name="com.facebook.katana.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.katana.permission.RECEIVE_ADM_MESSAGE"/>
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.facebook.katana.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.facebook.katana.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.nokia.pushnotifications.permission.RECEIVE"/>
+    <application android:allowBackup="false" android:debuggable="false" android:hardwareAccelerated="true" android:icon="@drawable/icon_katana" android:label="@string/fb4a_app_name" android:largeHeap="true" android:name="com.facebook.katana.app.FacebookApplication" android:supportsRtl="true" android:theme="@style/Theme.Facebook" android:vmSafeMode="true">
+        <meta-data android:name="com.facebook.fd" android:value="true"/>
+        <meta-data android:name="com.facebook.build_rule" android:value="fbandroid_art_staticdi_dextr_downloadable_str_xzso_xhdpi_armv7_release_fbsign"/>
+        <meta-data android:name="com.facebook.package_type" android:value="release"/>
+        <meta-data android:name="com.facebook.build_time" android:value="1493669689000L"/>
+        <meta-data android:name="com.facebook.versioncontrol.branch" android:value="master"/>
+        <meta-data android:name="com.facebook.versioncontrol.revision" android:value="MASTER"/>
+        <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDqS-bTXpuKeqDzK6fbCuRtHFAJZTvGZ5w"/>
+        <meta-data android:name="com.facebook.rti.fbns.FB_SHARED_VERSION" android:value="4.0"/>
+        <meta-data android:name="asset_statements" android:resource="@string/asset_statements"/>
+        <meta-data android:name="android.max_aspect" android:value="3.0"/>
+        <provider android:authorities="com.facebook.katana.provider.BookmarkProvider" android:exported="true" android:name="com.facebook.bookmark.provider.BookmarkProvider" android:readPermission="com.facebook.katana.provider.ACCESS"/>
+        <provider android:authorities="com.facebook.katana.provider.ContactsConnectionsProvider" android:exported="true" android:name="com.facebook.contacts.provider.ContactsConnectionsProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <provider android:authorities="com.facebook.katana.provider.AttributionIdProvider" android:exported="true" android:name="com.facebook.katana.provider.AttributionIdProvider"/>
+        <provider android:authorities="com.facebook.katana.provider.PlatformProvider" android:exported="true" android:name="com.facebook.platform.common.provider.PlatformProviderBase"/>
+        <provider android:authorities="com.facebook.katana.messages" android:exported="false" android:name="com.facebook.messaging.database.threads.MessagesDbContentProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <provider android:authorities="com.facebook.katana.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.facebook.content.FbFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/fileprovider"/>
+        </provider>
+        <service android:name="com.facebook.attribution.AttributionIdService"/>
+        <service android:name="com.facebook.katana.RemoveRawContactsService"/>
+        <service android:name="com.facebook.common.errorreporting.memory.MemoryDumpUploadService"/>
+        <service android:exported="false" android:name="com.facebook.globallibrarycollector.GlobalLibraryCollectorService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.browser.lite.BrowserLiteActivity" android:process=":browser" android:theme="@style/Theme.Facebook.BrowserLite" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.browser.lite.BrowserLiteFallbackActivity" android:theme="@style/Theme.Facebook.BrowserLite" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.browser.liteclient.rapidfeedback.BrowserLiteRapidFeedbackActivity" android:windowSoftInputMode="adjustResize"/>
+        <service android:name="com.facebook.browser.lite.BrowserLiteIntentService" android:process=":browser"/>
+        <service android:exported="false" android:name="com.facebook.browser.lite.BrowserLiteFallbackIntentService"/>
+        <service android:exported="false" android:name="com.facebook.browser.liteclient.BrowserLiteCallbackService">
+            <intent-filter>
+                <action android:name="com.facebook.browser.lite.BrowserLiteCallback"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.katana.dbl.activity.FacebookLoginActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:theme="@style/Theme.FBUi.Login" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.account.switcher.nux.ActivateDeviceBasedLoginNuxActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.katana.dbl.activity.DeviceBasedLoginActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:screenOrientation="portrait" android:theme="@style/Theme.FBUi.Login" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.account.switcher.settings.DBLLoginSettingsActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.account.switcher.settings.DBLAccountSettingsActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.account.switcher.settings.DBLPinSettingsActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.account.switcher.settings.DBLLoggedInAccountSettingsActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:excludeFromRecents="true" android:exported="true" android:icon="@drawable/icon_katana" android:launchMode="singleInstance" android:name="com.facebook.katana.platform.FacebookAuthenticationActivity" android:noHistory="true" android:taskAffinity="" android:theme="@style/Theme.FacebookDark"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.messaging.professionalservices.booking.activities.AppointmentActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.messaging.professionalservices.booking.activities.RejectAppointmentActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.LogoutActivity" android:theme="@style/Theme.FBUi.Login"/>
+        <activity android:name="com.facebook.katana.app.FacebookSplashScreenActivity" android:theme="@style/Theme.FBUi.SplashScreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.account.twofac.codegenerator.ui.CodeGeneratorActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.account.twofac.codegenerator.ui.CodeGeneratorManualProvisionSecretActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.account.twofac.codegenerator.ui.CodeGeneratorAutoProvisionSecretActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.account.twofac.codegenerator.ui.ActivateCodeGeneratorWithCodeActivity"/>
+        <activity android:autoRemoveFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.account.twofac.push.LoginApprovalsPushActivity" android:screenOrientation="portrait" android:taskAffinity="com.facebook.account.twofac.push" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.bugreporter.activity.BugReportActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.activity.photos.PhotosTabActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.pandora.ui.PandoraTabPagerActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.video.creatorchannel.CreatorChannelsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.activity.media.photoset.PhotoSetActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.messaging.media.mediapicker.MediaPickerActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.facebook.katana.activity.media.ViewVideoActivity"/>
+        <service android:exported="false" android:name="com.facebook.rtc.fbwebrtc.WebrtcIncallNotificationService" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION"/>
+        <activity android:clearTaskOnLaunch="false" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:launchMode="singleTop" android:name="com.facebook.katana.activity.FbMainTabActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:theme="@style/Theme.FacebookFadeInOutFast" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:clearTaskOnLaunch="false" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.activity.ImmersiveActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:theme="@style/Theme.FacebookSlideRightLeft" android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.VIEW_PERMALINK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:clearTaskOnLaunch="false" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.katana.activity.ImmersiveTransparentActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:theme="@style/Theme.FacebookSlideRightLeft.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.katana.activity.PlatformFacewebActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.pages.common.platform.activity.PlatformFirstPartyFlowActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:clearTaskOnLaunch="false" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.activity.react.ImmersiveReactActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:theme="@style/Theme.FacebookSlideRightLeft" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.facebook.katana.activity.FbMainTabFinisherActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Transparent"/>
+        <activity-alias android:exported="true" android:icon="@drawable/icon_katana" android:name="com.facebook.katana.LoginActivity" android:targetActivity="com.facebook.katana.activity.FbMainTabActivity">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:name="com.facebook.nearby.fallback.NearbyPlacesFallbackActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.facebook.offers.activity.OfferRedirectToWebActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.katana.activity.nearby.NearbyPlacesActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.katana.activity.nearby.SubcategorySelectionActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.katana.activity.nearby.NearbySearchActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.widget.friendselector.CaspianFriendSelectorActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.maps.GoogleEmbeddableMapActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/home_settings" android:name="com.facebook.katana.settings.activity.SettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/data_settings_title" android:name="com.facebook.datasensitivity.DataSavingsModeSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/settings_notifications_title" android:name="com.facebook.katana.NotificationSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/settings_fbot_title" android:name="com.facebook.katana.FacebookOverTorSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Onion"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/home_settings" android:name="com.facebook.katana.internsettingsactivity.InternSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:exported="false" android:name="com.facebook.mobileconfig.ui.MobileConfigPreferenceActivity" android:theme="@style/Theme.MobileConfig"/>
+        <activity android:exported="true" android:name="com.facebook.mobileconfig.ui.MobileConfigSyncActivity"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.facebook.mobileconfig.init.MobileConfigEnableReceiver"/>
+        <activity android:name="com.facebook.feed.prefs.NativeFeedSettingsActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:exported="false" android:name="com.facebook.feed.prefs.NewsfeedEventLogActivity" android:theme="@style/Theme.Facebook.Preferences" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:name="com.facebook.feed.prefs.FeedDataActivity" android:theme="@style/Theme.Facebook.Preferences" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.facebook.video.settings.VideoAutoPlaySettingsActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:name="com.facebook.zero.activity.ZeroInternSettingsActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:name="com.facebook.runtimepermissions.RuntimePermissionsInternalActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:name="com.facebook.rapidfeedback.debug.RapidFeedbackPreferencesActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.katana.view.LoggedOutWebViewActivity" android:theme="@style/Theme.FBUi.Login" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.notifications.tray.service.SystemTrayLogWrapperActivity" android:taskAffinity="com.facebook.notifications.tray.service.SystemTrayLogWrapperActivity" android:theme="@android:style/Theme.NoDisplay" exported="false"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.activity.contactpoints.AddContactpointFacewebActivity"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:launchMode="singleInstance" android:name="com.facebook.katana.GoogleNowIntentHandler" android:theme="@style/Theme.FacebookDialogTransparent">
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.facebook.katana.IntentUriHandler" android:taskAffinity="com.facebook.task.IntentUriHandler" android:theme="@style/Theme.FacebookDialogTransparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="facebook"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fb"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/donate" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/donate" android:scheme="https"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/events" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/events" android:scheme="https"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/fundraisers" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/fundraisers" android:scheme="https"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/groups" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/groups" android:scheme="https"/>
+                <data android:host="m.facebook.com" android:pathPattern="/.*/videos/.*" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPattern="/.*/videos/.*" android:scheme="https"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/ads/experience/confirmation" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/ads/experience/confirmation" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/groups" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/groups" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPattern="/.*/videos/.*" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPattern="/.*/videos/.*" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/donate" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/donate" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/events" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/events" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/fundraisers" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/fundraisers" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/ads/experience/confirmation" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/ads/experience/confirmation" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/pages/create/" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/pages/create/" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/pages/creation/" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/pages/creation/" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/pages/place_claim/redirect_email_invite" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/pages/place_claim/redirect_email_invite" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/safetycheck" android:scheme="https"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/safetycheck" android:scheme="https"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/safetycheck" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/safetycheck" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:scheme="http"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPrefix="/page_select_cta/"/>
+                <data android:pathPrefix="/page_config_cta/"/>
+                <data android:pathPrefix="/custom_cta/mobile_admin/destination_types/"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:scheme="http"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPrefix="/iw/"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="dialtone"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:name="com.facebook.katana.SSOIntentUriHandler" android:taskAffinity="com.facebook.task.SSOIntentUriHandler" android:theme="@style/Theme.FacebookDialogTransparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fbsso"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:enabled="true" android:exported="true" android:name="com.facebook.deeplinking.activity.DeepLinkingLegacyAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/n/" android:scheme="http"/>
+                <data android:host="www.facebook.com" android:pathPrefix="/n/" android:scheme="https"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/n/" android:scheme="http"/>
+                <data android:host="m.facebook.com" android:pathPrefix="/n/" android:scheme="https"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:name="com.facebook.deeplinking.activity.PagesDeepLinkingAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPattern="/pg/.*/home"/>
+                <data android:pathPattern="/pg/.*/home/"/>
+                <data android:pathPattern="/pg/.*/about"/>
+                <data android:pathPattern="/pg/.*/about/"/>
+                <data android:pathPattern="/pg/.*/events"/>
+                <data android:pathPattern="/pg/.*/events/"/>
+                <data android:pathPattern="/pg/.*/locations"/>
+                <data android:pathPattern="/pg/.*/locations/"/>
+                <data android:pathPattern="/pg/.*/photos"/>
+                <data android:pathPattern="/pg/.*/photos/"/>
+                <data android:pathPattern="/pg/.*/posts"/>
+                <data android:pathPattern="/pg/.*/posts/"/>
+                <data android:pathPattern="/pg/.*/reviews"/>
+                <data android:pathPattern="/pg/.*/reviews/"/>
+                <data android:pathPattern="/pg/.*/shop"/>
+                <data android:pathPattern="/pg/.*/shop/"/>
+                <data android:pathPattern="/pg/.*/services"/>
+                <data android:pathPattern="/pg/.*/services/"/>
+                <data android:pathPattern="/pg/.*/videos"/>
+                <data android:pathPattern="/pg/.*/videos/"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:name="com.facebook.deeplinking.activity.PagesJobsDeepLinkingAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPattern="/pg/.*/jobs/.*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:name="com.facebook.deeplinking.activity.JobsBrowserDeepLinkingAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPattern="/job.*"/>
+                <data android:pathPattern="/jobs.*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:name="com.facebook.deeplinking.activity.LoyaltyDeepLinkingAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPrefix="/loyalty_home/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:name="com.facebook.deeplinking.activity.MarketplaceDeepLinkingAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPrefix="/marketplace"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:name="com.facebook.deeplinking.activity.DeepLinkingAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPattern="/places/..*/..*"/>
+                <data android:pathPattern="/.*/posts/.*"/>
+                <data android:path="/permalink.php"/>
+                <data android:path="/story.php"/>
+                <data android:path="/home.php"/>
+                <data android:path="/photo.php"/>
+                <data android:path="/video.php"/>
+                <data android:pathPrefix="/commerce/products/"/>
+                <data android:pathPrefix="/retail_product/"/>
+                <data android:pathPrefix="/fbrdr/2048/"/>
+                <data android:pathPrefix="/fbrdr/274/"/>
+                <data android:pathPrefix="/n/"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:host="fb.com"/>
+                <data android:pathPrefix="/l/"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:name="com.facebook.katana.urimap.LinkSharingNativeComposerAliasActivity" android:targetActivity="com.facebook.katana.IntentUriHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:host="facebook.com"/>
+                <data android:pathPrefix="/dialog/share"/>
+                <data android:pathPrefix="/dialog/share_open_graph"/>
+                <data android:pathPrefix="/dialog/feed"/>
+                <data android:pathPrefix="/sharer.php"/>
+                <data android:pathPrefix="/sharer/sharer.php"/>
+                <data android:pathPattern="/v.*\\..*/dialog/share"/>
+                <data android:pathPattern="/v.*\\..*/dialog/share_open_graph"/>
+                <data android:pathPattern="/v.*\\..*/dialog/feed"/>
+                <data android:pathPattern="/v.*\\..*/sharer.php"/>
+                <data android:pathPattern="/v.*\\..*/sharer/sharer.php"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="m.facebook.com"/>
+                <data android:path="/sharer"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.deeplinking.activity.StoryDeepLinkLoadingActivity" android:theme="@style/Theme.FacebookSlideRightLeft" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="true" android:name="com.facebook.katana.UriAuthHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fblogin"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="Events" android:name="com.facebook.events.eventcollections.EventCollectionsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.RichDocument" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="Articles" android:name="com.facebook.instantarticles.InstantArticlesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.RichDocument" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="Articles" android:name="com.facebook.instantarticles.InstantArticleActivity" android:screenOrientation="portrait" android:theme="@style/Theme.RichDocument" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="Shopping" android:name="com.facebook.instantshopping.InstantShoppingRichDocumentActivity" android:screenOrientation="portrait" android:theme="@style/Theme.RichDocument" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="Notes" android:name="com.facebook.notes.NotesActivity" android:screenOrientation="portrait" android:theme="@style/Theme.RichDocument" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="Notes" android:name="com.facebook.notes.NoteActivity" android:screenOrientation="portrait" android:theme="@style/Theme.RichDocument" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="Editions" android:name="com.facebook.tarot.MainActivity" android:screenOrientation="portrait" android:theme="@style/Theme.RichDocument" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="leadgen" android:name="com.facebook.leadgen.deeplink.LeadGenActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="groupcommerce" android:name="com.facebook.groupcommerce.deep_link.ForSalePostSellComposerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.facebook.katana.ContactUriHandler" android:taskAffinity="com.facebook.task.ContactUriHandler" android:theme="@style/Theme.FacebookDialogTransparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="com.android.contacts" android:mimeType="vnd.android.cursor.item/vnd.facebook.profile"/>
+                <data android:host="com.android.contacts" android:mimeType="vnd.android.cursor.item/vnd.facebook.presence"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.platform.common.activity.PlatformActivity" android:theme="@style/Theme.TransparentNoAnimation"/>
+        <activity android:name="com.facebook.platform.common.activity.PlatformWrapperActivity" android:theme="@style/Theme.FBUi.Transparent">
+            <intent-filter>
+                <action android:name="com.facebook.platform.PLATFORM_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.platform.PlatformCanonicalProfileIdActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:name="com.facebook.intent.thirdparty.ThirdPartyUriActivity" android:theme="@style/Theme.TransparentNoAnimation"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:name="com.facebook.photos.pandora.ui.PandoraAlbumMediaSetActivity" android:theme="@style/Theme.WhiteText" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:name="com.facebook.photos.pandora.ui.mediaset.PandoraMediaSetActivity" android:theme="@style/Theme.WhiteText" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.photoset.ui.permalink.edit.EditAlbumPermalinkActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.photoset.ui.permalink.edit.EditSharedAlbumPrivacyActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.albums.video.VideoAlbumPermalinkActivity" android:theme="@style/Theme.WhiteText" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.pages.composer.pagesintegration.PageSelectorActivity" android:theme="@style/Theme.WhiteText" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.privacy.edit.EditStoryPrivacyActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.orca.threadview.ThreadViewVideoActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:excludeFromRecents="true" android:finishOnTaskLaunch="true" android:launchMode="singleInstance" android:name="com.facebook.rtc.activities.RtcCallPermissionActivity" android:taskAffinity="com.facebook.orca.notification.dialog" android:theme="@style/Theme.Transparent.OrcaDialogNeue"/>
+        <receiver android:name="com.facebook.prefetch.feed.scheduler.NewsFeedPrefetchBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.prefetch.feed.scheduler.NewsFeedPrefetchBroadcastReceiver.INITIATE_BACKGROUND_FETCH"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/fb4a_app_name" android:name="com.facebook.katana.FacebookAccountReceiver">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.facebook.katana.platform.FacebookAuthenticationService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/authenticator"/>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.facebook.katana.platform.TokenRefreshService"/>
+        <service android:enabled="true" android:exported="true" android:name="com.facebook.platform.common.service.PlatformService">
+            <intent-filter>
+                <action android:name="com.facebook.platform.PLATFORM_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.facebook.adinterfaces.service.BoostLiveService">
+            <intent-filter>
+                <action android:name="com.facebook.adinterfaces.service.BOOST_LIVE"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.orca.threadview.ThreadViewActivity" android:theme="@style/Theme.Orca" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.orca.threadview.AddMembersActivity" android:theme="@style/Theme.Orca" android:windowSoftInputMode="stateAlwaysVisible|adjustResize"/>
+        <activity android:name="com.facebook.messaging.threadview.iconpicker.ThreadIconPickerActivity" android:theme="@style/Theme.Orca"/>
+        <activity android:name="com.facebook.messaging.camerautil.CropImage"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.orca.DiodeMessengerActivity" android:theme="@style/Theme.Orca"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:name="com.facebook.stickers.store.StickerStoreActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.adinterfaces.AdInterfacesObjectiveActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:scheme="http"/>
+                <data android:host="www.facebook.com"/>
+                <data android:host="m.facebook.com"/>
+                <data android:pathPrefix="/page_promotions/create"/>
+                <data android:pathPrefix="/page_promotions/edit"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.adinterfaces.MapAreaPickerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.adexpress.AdExpressActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.storelocator.StoreLocatorActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.facebook.adinterfaces.ui.selector.TargetingSelectorActivity"/>
+        <service android:name="com.facebook.orca.notify.MessagesNotificationService"/>
+        <receiver android:name="com.facebook.orca.notify.MessagesNotificationBroadcastReceiver" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="com.facebook.orca.notify.ACTION_NEW_MESSAGE"/>
+                <action android:name="com.facebook.orca.notify.ACTION_FAILED_SEND"/>
+                <action android:name="com.facebook.orca.notify.ACTION_NEW_FRIEND_INSTALL"/>
+                <action android:name="com.facebook.orca.notify.ACTION_P2P_PAYMENT"/>
+                <action android:name="com.facebook.orca.notify.ACTION_READ_THREAD"/>
+                <action android:name="com.facebook.orca.notify.ACTION_NEW_BUILD"/>
+                <action android:name="com.facebook.orca.notify.ACTION_LOGGED_OUT_MESSAGE"/>
+                <action android:name="com.facebook.orca.notify.ACTION_CLEAR_THREAD"/>
+                <action android:name="com.facebook.orca.notify.ACTION_CLEAR_FRIEND_INSTALL"/>
+                <action android:name="com.facebook.orca.notify.ACTION_CLEAR_NEW_BUILD_NOTIFICATION"/>
+                <action android:name="com.facebook.orca.notify.ACTION_CLEAR_ALL_NOTIFICATIONS"/>
+                <action android:name="com.facebook.orca.notify.ACTION_INTERNAL_MESSAGE"/>
+                <action android:name="com.facebook.orca.notify.ACTION_PRE_REG_PUSH_MESSAGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.common.init.OnAppUpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.facebook.messaging.prefs.notifications.NotificationPrefsSyncService"/>
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
+        <activity android:name="com.facebook.survey.activities.SurveyDialogActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <service android:name="com.facebook.contacts.service.ContactLocaleChangeService"/>
+        <receiver android:name="com.facebook.contacts.service.ContactLocaleChangeReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.facebook.http.prefs.delaybasedqp.DelayBasedHttpQPActivity"/>
+        <activity android:exported="false" android:name="com.facebook.adinterfaces.AdInterfacesTermsOfServiceActivity"/>
+        <activity android:exported="false" android:name="com.facebook.pages.common.actionchannel.actions.promotepage.NativePromotePageActivity"/>
+        <activity android:exported="false" android:name="com.facebook.pages.comparison.ComparisonCardsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.FBUi.ComparisonOverlay"/>
+        <receiver android:exported="true" android:name="com.facebook.http.onion.impl.OrbotInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.facebook.watson.WatsonBroadcastReceiver"/>
+        <service android:name="com.facebook.friending.jewel.FriendRequestsPrivacySettingService"/>
+        <service android:exported="false" android:name="com.facebook.video.chromecast.notification.CastNotificationActionService">
+            <intent-filter>
+                <action android:name="com.facebook.video.chromecast.CAST_DISCONNECT_ACTION"/>
+                <action android:name="com.facebook.video.chromecast.CAST_PLAY_PAUSE_ACTION"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="io.card.payment.CardIOActivity"/>
+        <activity android:name="io.card.payment.DataEntryActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.facebook.about.AboutActivity" android:theme="@style/Theme.Facebook"/>
+        <provider android:authorities="com.facebook.katana.experiments" android:name="com.facebook.abtest.qe.db.QuickExperimentContentProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.abtest.qe.settings.QuickExperimentListActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.abtest.qe.settings.QuickExperimentViewActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.abtest.gkprefs.GkSettingsListActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.account.recovery.AccountRecoveryActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <service android:name="com.facebook.account.twofac.protocol.LoginApprovalNotificationService"/>
+        <activity android:name="com.facebook.adpreview.activity.AdPreviewActivity"/>
+        <activity android:name="com.facebook.adsexperiencetool.AdsInjectConfirmationActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.adspayments.activity.AddPaymentCardActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.adspayments.activity.EditPaymentCardActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.adspayments.activity.BrazilianTaxIdActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.adspayments.activity.BrazilianAddressActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.adspayments.activity.PrepayFlowFundingActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:exported="false" android:name="com.facebook.adspayments.activity.AddressActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:exported="false" android:name="com.facebook.adspayments.activity.SelectPaymentOptionActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:exported="false" android:name="com.facebook.adspayments.activity.PaymentStatusActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.aldrin.transition.activity.AldrinTransitionActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.aldrin.prefs.AldrinInternSettingsActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustPan"/>
+        <service android:label="EventService" android:name="com.facebook.analytics.service.AnalyticsService"/>
+        <service android:exported="true" android:name="com.facebook.analytics2.logger.LollipopUploadService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="false" android:name="com.facebook.analytics2.logger.AlarmBasedUploadService"/>
+        <service android:exported="true" android:name="com.facebook.analytics2.logger.GooglePlayUploadService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.facebook.api.feedcache.resync.NewsFeedCacheInvalidationGCMService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.appinvites.activity.AppInvitesActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.appinvites.sdk.AppInviteDialogActivity"/>
+        <activity android:exported="false" android:name="com.facebook.appupdate.WaitForInitActivity"/>
+        <service android:exported="false" android:name="com.facebook.appupdate.AppUpdateService"/>
+        <receiver android:exported="true" android:name="com.facebook.appupdate.DownloadNotificationClickReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.facebook.appupdate.DownloadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:name="com.facebook.appupdate.activity.DefaultAppUpdateActivity"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.audience.direct.app.DirectStoryviewerActivity" android:screenOrientation="portrait" android:theme="@style/SnackReplyThreadActivityStyle" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.audience.snacks.storyviewer.app.SnacksStoryActivity" android:screenOrientation="portrait" android:theme="@style/SnackReplyThreadActivityStyle" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.auth.reauth.ReauthActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.backgroundlocation.nux.BackgroundLocationOnePageNuxActivity" android:screenOrientation="portrait" android:theme="@style/Theme.BackgroundLocationNux.OnePage"/>
+        <service android:exported="false" android:name="com.facebook.backgroundlocation.reporting.GeofenceLocationTracker$GeofenceLocationMonitorService"/>
+        <service android:exported="true" android:name="com.facebook.backgroundlocation.reporting.BackgroundLocationReportingGcmUploadTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.backgroundlocation.reporting.BackgroundLocationReportingService">
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_LOCATION_UPDATE_FROM_LOCATION_PROVIDER"/>
+                <action android:name="com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_UPLOAD_LOCATION"/>
+                <action android:name="com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_SCHEDULE_LOCATION_UPLOAD"/>
+                <action android:name="com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_ACTIVITY_RECOGNITION_UPDATE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.backgroundlocation.reporting.UserActivityDetector$UserActivitySamplingService"/>
+        <receiver android:name="com.facebook.backgroundlocation.reporting.BackgroundLocationReportingBroadcastReceiver" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_SETTINGS_REQUEST_REFRESH_ACTION"/>
+                <action android:name="com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_SETTINGS_CHANGED_ACTION"/>
+                <action android:name="com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_LOCATION_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.backgroundlocation.reporting.BackgroundLocationReportingDeviceSettingsBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.backgroundlocation.reporting.monitors.SpeedChangeMonitorReceiver"/>
+        <service android:exported="true" android:name="com.facebook.backgroundlocation.reporting.wifi.WifiCollectorGCMTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_ambient_wifi_collection_service_ids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.backgroundlocation.reporting.wifi.WifiCollectorJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_ambient_wifi_collection_service_ids"/>
+        </service>
+        <receiver android:enabled="false" android:name="com.facebook.backgroundlocation.reporting.monitors.PowerConnectionMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.backgroundlocation.reporting.monitors.PhotographyMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.action.NEW_PICTURE"/>
+                <action android:name="com.android.camera.NEW_PICTURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.backgroundlocation.reporting.monitors.DataSetMonitorReceiver"/>
+        <service android:exported="true" android:name="com.facebook.backgroundlocation.reporting.monitors.DatasetUploadGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_location_dataset_upload_service_ids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.backgroundlocation.reporting.monitors.DatasetUploadJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_location_dataset_upload_service_ids"/>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.backgroundlocation.settings.BackgroundLocationSettingsActivity" android:theme="@style/Theme.BackgroundLocationSettings" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.backgroundlocation.upsell.BackgroundLocationResurrectionActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.backgroundlocation.upsell.UpsellContainerActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook.LocationUpsellDialog.Activity"/>
+        <receiver android:name="com.facebook.battery.monitor.ContinuousBatteryMonitorService$BroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.facebook.battery.monitor.ContinuousBatteryMonitorService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.hotspotui.hotspot.HotspotMobileDataWarningActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.hotspotui.hotspot.HotspotConnectionActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.hotspotui.client.WifiClientConnectionActivity"/>
+        <service android:exported="false" android:name="com.facebook.beam.hotspotui.hotspot.HotspotService"/>
+        <service android:exported="false" android:name="com.facebook.beam.hotspotui.client.WifiClientService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.sender.BeamReceiverActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.sender.BeamReceiverTransferActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.sender.activity.BeamSenderActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.sender.activity.BeamSenderTransferActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.beam.sender.activity.BeamSenderMobileDataWarningActivity"/>
+        <service android:exported="false" android:name="com.facebook.beam.sender.BeamSenderService"/>
+        <service android:exported="false" android:name="com.facebook.beam.sender.BeamReceiverService"/>
+        <receiver android:exported="false" android:name="com.facebook.blescan.BleScanBroadcastReceiver" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.BLE_SCAN_ACTION_BLE_UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.browserextensions.common.autofill.SaveAutofillDataActivity" android:theme="@style/Theme.FBUi.Transparent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.browserextensions.common.identity.RequestUserInfoActivity" android:theme="@style/Theme.FBUi.Transparent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.browserextensions.common.identity.BrowserExtensionsLoginActivity" android:theme="@style/Theme.FBUi.Transparent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.browserextensions.common.location.RequestCurrentPositionActivity" android:theme="@style/Theme.FBUi.Transparent" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.browserextensions.common.menuitems.BrowserExtensionsManageSettingsActivity" android:theme="@style/Theme.Facebook.Preferences" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="true" android:name="com.facebook.browserextensions.core.navigation.InstantExperienceShortcutExternalActivity" android:taskAffinity="com.facebook.browserextensions.core.navigation.InstantExperienceShortcutExternalActivity"/>
+        <service android:exported="true" android:name="com.facebook.bugreporter.scheduler.GCMBugReportService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/job_scheduler_bugreporterretry_alljobs"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.facebook.bugreporter.scheduler.LollipopBugReportService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/job_scheduler_bugreporterretry_alljobs"/>
+        </service>
+        <receiver android:name="com.facebook.bugreporter.scheduler.AlarmsBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.bugreporter.scheduler.AlarmsBroadcastReceiver.RETRY_UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.facebook.camera.activity.CameraActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.com.facebook.katana.OPEN_DEFAULT_CAMERA"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.facebook.camera.activity.CameraFallbackActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.facebook.cameracore.activity.CameraCoreSingleCaptureActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.facebook.cameracore.camerasettings.CameraSettingsPreferenceActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:exported="false" android:name="com.facebook.checkin.socialsearch.conversion.SocialSearchConversionActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:exported="false" android:name="com.facebook.checkin.socialsearch.conversion.SocialSearchAddEditLocationActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:exported="false" android:name="com.facebook.checkin.socialsearch.dashboard.RecommendationDashboardActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:exported="false" android:name="com.facebook.checkin.socialsearch.invitefriends.SocialSearchInviteFriendsActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:exported="false" android:name="com.facebook.checkin.socialsearch.lightweight.LightweightRecommendationActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:exported="false" android:name="com.facebook.checkin.socialsearch.recommendationsview.SocialSearchRecommendationsViewActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:exported="false" android:name="com.facebook.civicengagement.elections.ui.ElectionHubActivity"/>
+        <activity android:name="com.facebook.clashmanagement.debug.ClashManagementSettingsActivity" android:theme="@style/Theme.Facebook.Preferences" exported="false"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.commerce.productdetails.intent.ProductDetailsActivity"/>
+        <service android:label="Dex optimization service" android:name="com.facebook.common.dextricks.DexOptimization$Service" android:process=":optsvc"/>
+        <activity android:name="com.facebook.common.init.DefaultSplashScreenActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:launchMode="singleTop" android:name="com.facebook.composer.activity.ComposerActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.composer.ui.publishmode.PublishModeSelectorActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.composer.album.activity.AlbumSelectorActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.composer.datepicker.DatePickerActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:launchMode="singleTop" android:name="com.facebook.composer.events.EventsCreationAndSelectionActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.composer.lifeevent.type.ComposerLifeEventTypeActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.composer.lifeevent.interstitial.ComposerLifeEventInterstitialActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.composer.lifeevent.interstitial.ComposerLifeEventIconsActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.facebook.composer.minutiae.activity.MinutiaeTabbedPickerActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.facebook.composer.minutiae.activity.MinutiaeObjectSelectorActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.composer.minutiae.iconpicker.MinutiaeIconPickerActivity" android:theme="@style/Theme.MinutiaeIconPicker"/>
+        <service android:name="com.facebook.composer.publish.ComposerPublishService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.composer.shareintent.ImplicitShareIntentHandler" android:theme="@style/Theme.Facebook.Transparent"/>
+        <activity-alias android:name="com.facebook.composer.shareintent.ImplicitShareIntentHandlerDefaultAlias" android:targetActivity="com.facebook.composer.shareintent.ImplicitShareIntentHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="application/instant-games"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:label="@string/composer_share_intent_label" android:name="com.facebook.composer.shareintent.ImplicitShareIntentHandlerAlphabeticalAlias" android:targetActivity="com.facebook.composer.shareintent.ImplicitShareIntentHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="application/instant-games"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.composer.shareintent.prefill.PrefilledComposerLauncherActivity" android:noHistory="true" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="minutiae" android:pathPrefix="/composer/" android:scheme="fbinternal"/>
+                <data android:host="composer" android:pathPrefix="/launch/" android:scheme="fbinternal"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.composer.ui.underwood.modal.ModalUnderwoodActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <service android:exported="false" android:name="com.facebook.compost.service.CompostNotificationService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.facebook.compost.ui.CompostActivity" android:theme="@style/Theme.Facebook"/>
+        <service android:name="com.facebook.conditionalworker.ConditionalWorkerService"/>
+        <service android:exported="true" android:name="com.facebook.conditionalworker.LollipopConditionalWorkerService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/job_scheduler_conditionalworker_alljobs"/>
+        </service>
+        <service android:exported="true" android:name="com.facebook.conditionalworker.GooglePlayConditionalWorkerService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/job_scheduler_conditionalworker_alljobs"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.confirmation.activity.SimpleConfirmAccountActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <receiver android:name="com.facebook.contacts.background.AddressBookPeriodicRunner$LocalBroadcastReceiver"/>
+        <provider android:authorities="com.facebook.katana.contacts" android:exported="false" android:name="com.facebook.contacts.data.FbContactsContentProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <receiver android:name="com.facebook.contacts.database.AddressBookPeriodicRunner$LocalBroadcastReceiver"/>
+        <receiver android:exported="true" android:name="com.facebook.credentials.AuthTokenDebugLogger">
+            <intent-filter>
+                <action android:name="com.facebook.credentials.AuthTokenDebugLogger.Trigger"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.facebook.crowdsourcing.feather.activity.FeatherActivity" android:screenOrientation="portrait" android:theme="@style/Theme.FBUi.Overlay"/>
+        <activity android:exported="false" android:name="com.facebook.crowdsourcing.grapheditor.activity.GraphEditorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.customsettings.CustomSettingsActivity" android:theme="@style/Theme.FacebookSlideRightLeft"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.customsettings.AccountSettingsActivity" android:theme="@style/Theme.FacebookSlideRightLeft"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:launchMode="singleTask" android:name="com.facebook.customsettings.SecuritySettingsActivity" android:theme="@style/Theme.FacebookSlideRightLeft"/>
+        <activity android:name="com.facebook.debug.debugoverlay.DebugOverlaySettingsActivity"/>
+        <service android:name="com.facebook.delayedworker.DelayedWorkerService"/>
+        <receiver android:exported="true" android:name="com.facebook.device.storage.event.StorageEventBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.device_id.UniqueIdSupplier" android:permission="com.facebook.receiver.permission.ACCESS">
+            <intent-filter>
+                <action android:name="com.facebook.GET_UNIQUE_ID"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.facebook.device_id.DefaultPhoneIdRequestReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.GET_PHONE_ID"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.facebook.katana.provider.phoneid" android:exported="true" android:name="com.facebook.device_id.DefaultPhoneIdProvider"/>
+        <activity android:exported="false" android:name="com.facebook.devicerequests.DeviceRequestUtils$DeviceRequestNotificationHandlerActivity" android:theme="@style/Theme.FBUi.Transparent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.dialtone.activity.DialtoneModeTransitionInterstitialActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.dialtone.activity.DialtoneModeSelectionActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.facebook.dialtone.activity.DialtoneWifiInterstitialActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTop" android:name="com.facebook.dialtone.activity.DialtoneUnsupportedCarrierInterstitialActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.dialtone.activity.DialtoneIntentInterstitialActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.facebook.dialtone.activity.DialtoneUriIntentHandlerActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.dialtone.switcher.DialtoneManualSwitcherNuxActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:name="com.facebook.dialtone.zerobalance.ZeroBalanceInternSettingsActivity"/>
+        <activity android:name="com.facebook.directinstall.feed.InstallDialogActivity" android:theme="@style/InstallDialogActivity"/>
+        <activity android:exported="true" android:name="com.facebook.directinstall.appdetails.AppDetailsActivity"/>
+        <activity android:name="com.facebook.directinstall.appdetails.ScreenshotFullscreenActivity"/>
+        <service android:exported="false" android:name="com.facebook.directinstall.feed.progressservice.ProgressService"/>
+        <service android:exported="false" android:name="com.facebook.directinstall.feed.progressservice.InstallNotificationService"/>
+        <service android:exported="false" android:name="com.facebook.directinstall.shortcut.ShortcutInstallerService"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.facebook.entitycards.intent.EntityCardsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook.Overlay" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="screenSize" android:exported="false" android:name="com.facebook.entitycardsplugins.discoverycuration.typeahead.CurationTagsTypeaheadActivity"/>
+        <activity android:name="com.facebook.events.campaign.EventsCampaignActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.create.EventCreationNikumanActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.create.EventEditNikumanActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.create.EventPublishAndScheduleActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:authorities="com.facebook.katana.provider.EventsProvider" android:exported="false" android:name="com.facebook.events.data.EventsProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.invite.EventsInviteFriendsSelectorActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.invite.EventsExtendedInviteActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.events.invite.EventsExtendedInviteAddNoteActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.messagefriends.EventsMessageFriendsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.events.permalink.cohost.EventCohostRequestListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.tickets.modal.EventTicketsOrdersActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:launchMode="singleInstance" android:name="com.facebook.events.tickets.modal.EventStartSelectTicketsActivity" android:theme="@style/Subtheme.Payments.Transparent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.events.ui.date.EventsCalendarDatePickerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.facebook.events.ui.themeselector.ThemeSelectorActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:launchMode="singleTask" android:name="com.facebook.facecast.FacecastActivity" android:theme="@style/Theme.Facecast" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:exported="false" android:name="com.facebook.facecast.plugin.commercialbreak.onboarding.FacecastCommercialBreakOnboardingPayoutActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.facebook.facecast.broadcast.nux.FacecastBroadcastNuxActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facecast"/>
+        <service android:name="com.facebook.facecast.display.debugoverlay.FacecastDebugOverlayService"/>
+        <activity android:exported="false" android:name="com.facebook.facecast.launcher.FacecastUnsupportedActivity" android:theme="@style/Theme.Facecast"/>
+        <service android:exported="true" android:name="com.facebook.fbreact.autoupdater.fbhttp.Fb4aHttpUpdateGCMService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_ota_jobids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.fbreact.autoupdater.fbhttp.Fb4aHttpUpdateLollipopService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_ota_jobids"/>
+        </service>
+        <service android:exported="false" android:name="com.facebook.fbreact.autoupdater.fbhttp.FbHttpUpdateService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.fbreact.autoupdater.fbprefs.ReactOTATestInternalSettingsActivity" android:noHistory="true" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="fbreact" android:scheme="fbinternal"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.fbreact.fragment.ReactActivity" android:theme="@style/ReactActivity"/>
+        <activity android:name="com.facebook.fbreact.fragment.TransparentReactActivity" android:theme="@style/TransparentReactActivity"/>
+        <service android:name="com.facebook.fbservice.service.DefaultBlueService"/>
+        <activity android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.facebook.video.player.FullScreenCastActivity" android:taskAffinity=""/>
+        <service android:enabled="true" android:exported="false" android:name="com.facebook.feed.notifier.LoggedNotificationService"/>
+        <service android:exported="true" android:name="com.facebook.feed.notifier.InventoryNotifGCMService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/inventory_notifier_job_ids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.feed.notifier.InventoryNotifLollipopService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/inventory_notifier_job_ids"/>
+        </service>
+        <activity android:exported="false" android:name="com.facebook.feed.oneway.nux.OneWayFeedFullscreenNuxActivity" android:screenOrientation="portrait"/>
+        <receiver android:name="com.facebook.feed.platformads.AppInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.facebook.feed.platformads.AppInstallService"/>
+        <activity android:configChanges="screenSize" android:exported="false" android:name="com.facebook.friending.newuserpromotion.NewUserPromotionActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook.Transparent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.facebook.friendsharing.achievements.ui.AchievementsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook"/>
+        <activity android:exported="false" android:name="com.facebook.friendsharing.birthdaystickers.BirthdayStickerPickerActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.friendsharing.gif.activity.GifPickerActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.friendsharing.inspiration.activity.InspirationCameraActivity" android:screenOrientation="portrait" android:theme="@style/InspirationModalCamera" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="true" android:name="com.facebook.friendsharing.inspiration.shortcut.InspirationCameraExternalLaunchActivity"/>
+        <activity android:enabled="false" android:exported="true" android:label="@string/camera_shortcut_icon_text" android:name="com.facebook.friendsharing.inspiration.shortcut.InspirationCameraExternalShareActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.friendsharing.meme.activity.MemePickerActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.friendsnearby.detailview.FriendsNearbyDetailViewActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.gametime.ui.GametimeActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.gametime.ui.GametimeDashboardActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.gametime.ui.GametimeLeagueActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.gdp.LightWeightProxyAuthActivity" android:theme="@style/gdp_dialog" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.goodwill.feed.rows.ThrowbackFriendsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.goodwill.composer.GoodwillComposerActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.goodwill.composer.GoodwillVideoComposerLauncher"/>
+        <service android:exported="false" android:name="com.facebook.googleplay.GooglePlayInstallRefererService"/>
+        <receiver android:exported="true" android:name="com.facebook.googleplay.GooglePlayInstallReferrerReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.facebook.groupcommerce.ui.SelectCategoryActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.groups.community.activities.JoinCollegeCommunityActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.groups.fb4a.create.GroupsCreateReactActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.groups.fb4a.memberpicker.GroupsMemberPickerReactActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.groups.fb4a.react.activity.GroupsFeedReactActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.growth.nux.UserAccountNUXActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.growth.nux.NuxProfilePhotoWrapperActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:name="com.facebook.growth.nux.CILegalNuxActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.growth.contactimporter.StepInviteActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:name="com.facebook.growth.friendfinder.FriendFinderStartActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.growth.friendfinder.FriendFinderHostingActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.growth.friendfinder.FriendFinderLearnMoreActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.facebook.growth.promotion.FriendingPossibilitiesActivity"/>
+        <activity android:name="com.facebook.growth.promotion.NativeNameActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.growth.addcontactpoint.AddContactpointActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="Heisman" android:name="com.facebook.heisman.ProfilePictureOverlayCameraActivity" android:screenOrientation="portrait"/>
+        <activity android:label="Heisman" android:launchMode="singleTask" android:name="com.facebook.heisman.ProfilePictureOverlayPivotActivity" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:exported="false" android:label="Heisman" android:name="com.facebook.heisman.category.CategoryBrowserActivity" android:windowSoftInputMode="stateUnchanged"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.heisman.BirthdayFrameStagingGroundDummyActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.facebook.heisman.ProfilePictureOverlayUrlHandler"/>
+        <service android:exported="false" android:name="com.facebook.installnotifier.InstallNotifierService"/>
+        <receiver android:exported="false" android:name="com.facebook.installnotifier.InstallNotifierReceiver"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.instantexperiences.ui.InstantExperiencesBrowserActivity" android:theme="@style/Theme.Facebook.InstantExperiencesBrowser" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.instantexperiences.identity.InstantExperiencesLoginActivity" android:theme="@style/Theme.Facebook.InstantExperiencesDialog" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.instantexperiences.identity.RequestUserInfoActivity" android:theme="@style/Theme.Facebook.InstantExperiencesDialog" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.instantexperiences.location.RequestCurrentPositionActivity" android:theme="@style/Theme.Facebook.InstantExperiencesDialog" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.instantexperiences.settings.InstantExperiencesSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.facebook.instantexperiences.demo.InstantExperiencesUrlDemoActivity" android:noHistory="true" android:theme="@style/Theme.FBUi.Transparent"/>
+        <activity android:exported="false" android:name="com.facebook.instantexperiences.autofill.ui.InstantExperiencesAutofillSheetActivity" android:theme="@style/Theme.FBUi.Transparent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:name="com.facebook.interstitial.debug.InterstitialDebugActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:name="com.facebook.ipc.composer.launch.ComposerLaunchActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.ipc.friendsharing.inspiration.url.InspirationCameraUrlLauncherActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:authorities="com.facebook.katana.threads_properties" android:exported="false" android:name="com.facebook.messaging.database.threads.ThreadsDbPropertiesContentProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.facebook.katana.ProxyAuth" android:theme="@style/Theme.FBUi.Transparent">
+            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.intent.action.PROXYAUTH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.katana.dbl.activity.FirstBootActivity" android:theme="@style/Theme.FBUi.Login"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.katana.activity.profilelist.FriendMultiSelectorActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.katana.activity.profilelist.FriendSingleSelectorActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.katana.activity.profilelist.GroupSelectorActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.katana.gdp.ProxyAuthDialog" android:theme="@style/Theme.FBUi.Transparent" android:windowSoftInputMode="adjustResize">
+            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+        </activity>
+        <activity android:configChanges="locale|keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.katana.gdp.WebViewProxyAuth" android:theme="@style/Theme.FBUi.Transparent">
+            <meta-data android:name="instantapps.clients.allowed" android:value="true"/>
+        </activity>
+        <provider android:authorities="com.facebook.katana.provider.UserValuesProvider" android:exported="true" android:name="com.facebook.katana.provider.UserValuesProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <provider android:authorities="com.facebook.katana.provider.FirstPartyUserValuesProvider" android:exported="true" android:name="com.facebook.katana.provider.FirstPartyUserValuesProvider"/>
+        <provider android:authorities="com.facebook.katana.provider.KeyValueProvider" android:exported="true" android:name="com.facebook.katana.provider.KeyValueProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <provider android:authorities="com.facebook.katana.provider.ConnectionsProvider" android:exported="true" android:name="com.facebook.katana.provider.ConnectionsProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <provider android:authorities="com.facebook.katana.provider.GraphQLNotificationsProvider" android:exported="true" android:name="com.facebook.katana.provider.GraphQLNotificationsContentProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <provider android:authorities="com.facebook.katana.provider.CacheProvider" android:exported="true" android:name="com.facebook.katana.provider.CacheProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <activity android:name="com.facebook.languages.switcher.activity.LanguageSwitcherActivity"/>
+        <activity android:name="com.facebook.languages.switcher.activity.LanguageSwitcherBookmarksActivity"/>
+        <activity android:exported="false" android:name="com.facebook.languages.switcher.LanguageSwitchActivity"/>
+        <activity android:exported="false" android:name="com.facebook.languages.switcher.LanguageSwitchPromotionActivity" android:noHistory="true" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="languages" android:scheme="fbinternal"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.facebook.local.surface.LocalSurfaceFragmentActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.localcontent.menus.PhotoMenuUploadActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.localcontent.menus.admin.manager.MenuManagementPreviewActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.maps.HereMapsUpsellDialogActivity" android:theme="@style/Theme.Facebook.Transparent"/>
+        <service android:exported="false" android:name="com.facebook.media.localstore.UpdateLocalMediaStoreJobService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_update_local_media_store_ids"/>
+        </service>
+        <service android:exported="true" android:name="com.facebook.media.localstore.UpdateLocalMediaStoreGcmTaskService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_update_local_media_store_ids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/contact_upload_upsell_learn_more" android:name="com.facebook.messaging.contactsync.learn.ContactSyncLearnMoreActivity"/>
+        <activity android:exported="false" android:name="com.facebook.messaging.games.GamesSelectionActivity" android:screenOrientation="portrait"/>
+        <receiver android:name="com.facebook.messaging.login.RemoteLogoutBroadcastReceiver" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="ACTION_MQTT_NO_AUTH"/>
+            </intent-filter>
+        </receiver>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.facebook.moments.install.ui.MomentsInstallActivity"/>
+        <service android:enabled="true" android:exported="false" android:label="MessagingService" android:name="com.facebook.mqttlite.MqttService"/>
+        <activity android:exported="false" android:name="com.facebook.nativetemplates.fb.shell.NativeTemplatesShellActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.facebook.negativefeedback.ui.NegativeFeedbackHostActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.facebook.neko.getgamesneko.GetGamesNekoActivity" android:theme="@style/Theme.GetGames.Neko"/>
+        <receiver android:exported="false" android:name="com.facebook.nobreak.CrashLoop$LastState">
+            <meta-data android:name="crash.loop.exclude" android:value="true"/>
+        </receiver>
+        <service android:name="com.facebook.notifications.tray.service.SystemTrayLogService"/>
+        <receiver android:exported="false" android:name="com.facebook.notifications.jewel.JewelCountFetcher$JewelCountBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.notifications.jewel.JewelCountFetcher.INITIATE_BACKGROUND_FETCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.facebook.notifications.systemnotifications.SystemNotificationService"/>
+        <service android:name="com.facebook.notifications.service.SystemTrayInlineLikingService"/>
+        <service android:exported="false" android:name="com.facebook.notifications.tray.actions.PushNotificationsActionService"/>
+        <activity android:enabled="false" android:exported="false" android:name="com.facebook.notifications.settings.NotificationSettingsLauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.facebook.notifications.lockscreenservice.LockScreenService">
+            <intent-filter android:priority="499">
+                <action android:name="com.facebook.notifications.lockscreen.ACTION_LAUNCH_LOCKSCREEN_NOTIFICATIONS"/>
+            </intent-filter>
+        </service>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.facebook.notifications.lockscreenservice.LockScreenDismissKeyguardActivity" android:noHistory="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.facebook.notifications.push.loggedoutpush.interstitial.NotificationsLoggedOutPushInterstitialActivity" android:screenOrientation="portrait"/>
+        <service android:exported="false" android:name="com.facebook.notifications.push.loggedoutpush.NotificationsLoggedOutPushIntentService"/>
+        <receiver android:exported="false" android:name="com.facebook.offlinemode.executor.OfflineMutationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.offlinemode.executor.OfflineMutationBroadcastReceiver.RETRY_MUTATIONS"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:label="@string/settings_app_updates" android:name="com.facebook.oxygen.preloads.integration.appupdates.fb4a.AppUpdateSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian.AppUpdates"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.oxygen.preloads.integration.dogfooding.AuthListener$EmployeeLoggedInMarkerReceiver"/>
+        <provider android:authorities="com.facebook.katana.integration.appmanager.sso" android:exported="true" android:name="com.facebook.oxygen.preloads.integration.dogfooding.AppManagerSsoProvider" android:permission="com.facebook.appmanager.ACCESS"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.oxygen.preloads.integration.tosacceptance.TosAcceptedFlagComponent"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.oxygen.preloads.sdk.firstparty.settings.TosAcceptedFlag"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.pages.common.brandedcontent.BrandedContentSuggestionAndSelectionActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.facebook.pages.common.foodanddrink.FoodAndDrinkFragmentActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:name="com.facebook.pages.common.photos.PagesCreateAlbumFlowActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.pages.common.preview.ui.PagesManagerPreviewActivity" android:theme="@style/PagesPreview" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.facebook.payments.auth.pin.newpin.PaymentPinActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.facebook.payments.auth.settings.PaymentPinSettingsActivity"/>
+        <activity android:exported="false" android:name="com.facebook.payments.cardio.downloadablecardio.ui.DownloadableCardIOActivity"/>
+        <activity android:exported="false" android:name="com.facebook.payments.cart.PaymentsCartActivity" android:screenOrientation="portrait" android:theme="@style/Subtheme.Payments.Transparent"/>
+        <activity android:exported="false" android:name="com.facebook.payments.checkout.CheckoutActivity" android:theme="@style/Subtheme.Payments.Transparent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:name="com.facebook.payments.confirmation.ConfirmationActivity" android:theme="@style/Subtheme.Payments.Transparent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:name="com.facebook.payments.contactinfo.form.ContactInfoFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:name="com.facebook.payments.form.PaymentsFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:name="com.facebook.payments.paymentmethods.bankaccount.BankAccountActivity"/>
+        <activity android:name="com.facebook.payments.paymentmethods.cardform.CardFormActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:name="com.facebook.payments.paymentmethods.provider.PaymentProviderActivity"/>
+        <activity android:name="com.facebook.payments.picker.PickerScreenActivity" android:theme="@style/Subtheme.Payments.Transparent"/>
+        <activity android:exported="false" android:name="com.facebook.payments.receipt.PaymentsReceiptActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:exported="false" android:name="com.facebook.payments.sample.PaymentsFlowSampleActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:name="com.facebook.payments.selector.PaymentsSelectorScreenActivity" android:theme="@style/Subtheme.Payments.Transparent"/>
+        <activity android:exported="false" android:name="com.facebook.payments.settings.PaymentsSettingActivity" android:theme="@style/Subtheme.Payments.Transparent"/>
+        <activity android:name="com.facebook.payments.shipping.form.ShippingAddressActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="false" android:name="com.facebook.payments.simplescreen.PaymentsSimpleScreenActivity" android:theme="@style/Subtheme.Payments.Transparent" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.albumcreator.activity.AlbumCreatorActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.albumcreator.activity.AlbumCreateAndEditActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.albumcreator.privacy.AlbumCreatorContributorAudiencePickerActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.photos.creativecam.activity.CreativeEditingCameraActivity" android:screenOrientation="portrait" android:theme="@style/Theme.CreativeEditingFullscreen" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.photos.editgallery.EditGalleryActivity" android:theme="@style/Theme.FBUi" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.photos.mediagallery.ui.MediaGalleryActivity" android:theme="@style/Theme.FBUi.Transparent"/>
+        <provider android:authorities="com.facebook.katana.provider.PhotosProvider" android:name="com.facebook.photos.provider.PhotosProvider" android:permission="com.facebook.katana.provider.ACCESS"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.simplepicker.launcher.SimplePickerLauncherActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.taggablegallery.TaggableGalleryActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustPan"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.photos.taggablegallery.ProductionVideoGalleryActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustPan"/>
+        <service android:name="com.facebook.photos.upload.service.PhotosUploadHelperService"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.facebook.photos.upload.dialog.UploadDialogsActivity" android:theme="@style/UploadTheme.Transparent"/>
+        <receiver android:enabled="false" android:name="com.facebook.photos.upload.receiver.ConnectivityChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="true" android:name="com.facebook.pkg.event.PackageEventBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:name="com.facebook.places.checkin.activity.SelectAtTagActivity" android:theme="@style/Theme.Facebook"/>
+        <activity android:name="com.facebook.places.checkin.PlaceCrowdsourcePhotoActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.places.common.SelectPageTopicActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.places.create.NewPlaceCreationActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.places.create.PlaceCreationDupActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.places.create.PlaceCreationCategoryPickerActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:name="com.facebook.places.create.PlaceCreationCityPickerActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:name="com.facebook.places.create.citypicker.CityPickerActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:name="com.facebook.places.create.home.HomeCreationActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:name="com.facebook.places.create.home.HomeEditActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout" android:name="com.facebook.places.create.privacypicker.PrivacyPickerActivity" android:windowSoftInputMode="adjustResize"/>
+        <service android:name="com.facebook.places.suggestions.common.SuggestProfilePicUploadService"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.places.suggestions.MarkAsDuplicatesActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <receiver android:name="com.facebook.placetips.gpscore.PlaceTipsGpsLocationReceiver" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.FOREGROUND_LOCATION_AVAILABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.FOREGROUND_LOCATION_CHECK_SKIPPED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.FOREGROUND_LOCATION_CHECK_FAILED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.placetips.pulsarcore.service.PulsarService"/>
+        <receiver android:enabled="false" android:name="com.facebook.placetips.pulsarcore.service.BluetoothScanFinishedReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.placetips.settings.ui.PlaceTipsBlacklistFeedbackActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.platform.auth.activity.AccountKitConfirmationCodeActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.platform.camera.PlatformInspirationCameraUrlLauncherActivity" android:theme="@style/Theme.TransparentNoAnimation" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.platform.composer.composer.PlatformComposerActivity" android:theme="@style/Theme.PlatformComposerActivity" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.platform.webdialogs.PlatformWebDialogsActivity" android:theme="@style/Theme.TransparentNoAnimation" android:windowSoftInputMode="adjustResize"/>
+        <service android:exported="true" android:name="com.facebook.prefetch.feed.scheduler.NewsFeedPrefetchGCMService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/job_scheduler_news_feed_prefetcher_alljobs"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.facebook.prefetch.feed.scheduler.NewsFeedPrefetchLollipopService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/job_scheduler_news_feed_prefetcher_alljobs"/>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.privacy.selector.AudiencePickerActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:launchMode="singleTask" android:name="com.facebook.privacy.checkup.photofeed.PerObjectPrivacyPhotoCheckupActivity" android:theme="@style/Theme.PrivacyCheckupDialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="orientation|screenSize" android:launchMode="singleTask" android:name="com.facebook.privacy.checkup.ui.PrivacyCheckupActivity" android:theme="@style/Theme.PrivacyCheckupDialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="screenSize" android:launchMode="singleTask" android:name="com.facebook.privacy.checkup.ui.PrivacyCheckupSingleStepActivity" android:theme="@style/Theme.PrivacyCheckupDialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="screenSize" android:launchMode="singleTask" android:name="com.facebook.privacy.checkup.ui.PrivacyAlignmentRoadblockActivity" android:theme="@style/Theme.PrivacyCheckupDialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="com.facebook.privacy.checkup.ui.PrivacyGenericCheckupActivity" android:theme="@style/Theme.PrivacyCheckupDialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.facebook.privacy.educator.AudienceEducatorActivity" android:theme="@style/Theme.AudienceEducatorDialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.facebook.privacy.educator.AudienceEducatorLearnMoreActivity" android:theme="@style/Theme.AudienceEducatorDialog" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.productionprompts.common.PromptsInternalSettingsActivity" android:noHistory="true" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="productionprompts" android:scheme="fbinternal"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:name="com.facebook.professionalratertool.activity.RatingMainActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="screenSize" android:exported="false" android:name="com.facebook.profile.discovery.DiscoveryCardsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="screenSize" android:exported="false" android:name="com.facebook.profile.discovery.DiscoveryDashboardActivity"/>
+        <activity android:configChanges="screenSize" android:exported="false" android:name="com.facebook.profile.discovery.list.PeopleListActivity"/>
+        <activity android:configChanges="screenSize" android:exported="false" android:name="com.facebook.profile.discovery.seeall.DiscoveryListSeeAllActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.facebook.profile.insight.ProfileInsightActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook.Overlay" android:windowSoftInputMode="stateAlwaysHidden" exported="true"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.profilelist.ProfilesListActivity" android:windowSoftInputMode="adjustResize"/>
+        <receiver android:exported="false" android:name="com.facebook.pulse.BootCompleteBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.pulse.WakeupService$WakeupBroadcastReceiver"/>
+        <service android:exported="false" android:name="com.facebook.pulse.WakeupService"/>
+        <receiver android:name="com.facebook.push.PushInitializer$LocalBroadcastReceiver"/>
+        <service android:exported="false" android:name="com.facebook.push.registration.RegistrarHelperService"/>
+        <receiver android:exported="false" android:name="com.facebook.push.registration.RegistrarHelperReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.push.registration.ACTION_TOKEN_REQUEST_RETRY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.push.registration.FacebookPushServerRegistrar$LocalBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.push.registration.ACTION_ALARM"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.facebook.push.registration.FacebookPushServerRegistrarGCMService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_push_server_register_jobids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.push.registration.FacebookPushServerRegistrarLollipopService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_push_server_register_jobids"/>
+        </service>
+        <receiver android:enabled="true" android:name="com.facebook.push.crossapp.PackageFullyRemovedBroadcastReceiver">
+            <intent-filter>
+                <data android:scheme="package" android:sspPrefix="com.facebook"/>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.facebook.push.crossapp.PackageRemovedReporterService"/>
+        <service android:exported="false" android:name="com.facebook.push.registration.FBPushServerRegisterIntentService"/>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.push.adm.ADMRegistrarService"/>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.push.adm.ADMService"/>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.push.adm.ADMBroadcastReceiver"/>
+        <uses-library android:name="com.amazon.device.messaging" android:required="false"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.facebook.push.adm.ADMBroadcastReceiver$MessageAlertReceiver" android:permission="com.amazon.device.messaging.permission.SEND">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.REGISTRATION"/>
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE"/>
+                <category android:name="com.facebook.katana"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.push.c2dm.C2DMService"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.facebook.push.c2dm.C2DMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.facebook.katana"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.facebook.push.fbnslite.FbnsLitePushNotificationHandler"/>
+        <receiver android:exported="true" android:name="com.facebook.push.fbnslite.FbnsLitePushNotificationHandler$FbnsLiteCallbackReceiver">
+            <intent-filter>
+                <category android:name="com.facebook.katana"/>
+                <action android:name="com.facebook.rti.fbns.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.facebook.push.fbpushdata.FbPushDataHandlerService"/>
+        <receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.facebook.katana"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.facebook.push.gcmv3.GcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.facebook.push.gcmv3.InstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.facebook.push.gcmv3.GCMRegistrarIntentService"/>
+        <service android:name="com.facebook.push.mqtt.service.MqttPushHelperService"/>
+        <receiver android:name="com.facebook.push.mqtt.receiver.BootCompleteBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.push.nna.NNAService"/>
+        <receiver android:enabled="false" android:exported="true" android:name="com.facebook.push.nna.NNABroadcastReceiver" android:permission="com.nokia.pushnotifications.permission.SEND">
+            <intent-filter>
+                <action android:name="com.nokia.pushnotifications.intent.RECEIVE"/>
+                <action android:name="com.nokia.pushnotifications.intent.REGISTRATION"/>
+                <category android:name="com.facebook.katana"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.qrcode.QRCodeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.facebook.quickpromotion.debug.QuickPromotionSettingsActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:name="com.facebook.quickpromotion.debug.QuickPromotionFiltersActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.facebook.quickpromotion.ui.QuickPromotionInterstitialActivity" android:theme="@style/Theme.Facebook.Overlay"/>
+        <activity android:name="com.facebook.quickpromotion.debug.SeguePreviewSettingsActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:name="com.facebook.quickpromotion.debug.QuickPromotionTriggersActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:hardwareAccelerated="true" android:minSdkVersion="21" android:name="com.facebook.quicksilver.QuicksilverActivity" android:theme="@style/QuicksilverActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="true" android:minSdkVersion="21" android:name="com.facebook.quicksilver.QuicksilverShortcutExternalActivity"/>
+        <provider android:authorities="com.facebook.katana.quicksilver.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/sharedfilepaths"/>
+        </provider>
+        <activity android:name="com.facebook.rapidfeedback.debug.DebugRapidFeedbackActivity"/>
+        <activity android:exported="false" android:name="com.facebook.rapidfeedback.debug.DebugIntegrationPointStatusActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.rapidreporting.RapidReportingHostActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.reaction.activity.ReactionDialogActivity" android:theme="@style/Theme.Facebook.Reaction.Activity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.registration.activity.AccountRegistrationActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:exported="true" android:name="com.facebook.registration.activity.RegistrationCampaignActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fb-register"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.registration.activity.RegistrationLoginActivity"/>
+        <service android:name="com.facebook.registration.notification.RegistrationNotificationService"/>
+        <service android:exported="false" android:name="com.facebook.reportaproblem.base.bugreport.BugReportUploadService"/>
+        <activity android:name="com.facebook.resources.impl.WaitingForStringsActivity"/>
+        <service android:enabled="false" android:exported="true" android:label="NotificationService" android:name="com.facebook.rti.push.service.FbnsService" android:process=":notification"/>
+        <receiver android:exported="true" android:name="com.facebook.rti.push.service.idsharing.FbnsSharingStateReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.rti.fbns.intent.SHARE_IDS"/>
+                <action android:name="com.facebook.rti.intent.SHARED_QE_FLAG_REQUEST"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.rti.orca.UpdateQeBroadcastReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.facebook.rti.orca.FbnsLiteBroadcastReceiver" android:process=":notification">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE"/>
+                <action android:name="com.facebook.rti.mqtt.intent.ACTION_WAKEUP"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="false" android:name="com.facebook.rti.config.ConfigProxyService"/>
+        <service android:enabled="true" android:exported="false" android:label="FacebookMainService" android:name="com.facebook.rti.orca.MainService"/>
+        <provider android:authorities="com.facebook.katana.mqttsharedprefs" android:exported="false" android:multiprocess="false" android:name="com.facebook.rti.common.sharedprefs.SharedPreferencesContentProvider" android:process=":notification"/>
+        <activity android:name="com.facebook.search.debug.SearchDebugActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:name="com.facebook.search.debug.SearchAwarenessTutorialNuxDebugActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.facebook.search.quickpromotion.SearchAwarenessTutorialNuxActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize" android:exported="false" android:name="com.facebook.securitycheckup.SecurityCheckupMainActivity" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION" android:screenOrientation="portrait" android:theme="@style/Theme.FBUi.SecurityCheckup">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="securitycheckup" android:scheme="fbinternal"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.selfupdate.SelfUpdateForegroundActivity"/>
+        <activity android:name="com.facebook.selfupdate.SelfUpdateInstallActivity"/>
+        <service android:name="com.facebook.selfupdate.SelfUpdateFetchService"/>
+        <activity android:name="com.facebook.selfupdate.SelfUpdateSettingsActivity"/>
+        <activity android:exported="false" android:launchMode="singleTop" android:name="com.facebook.selfupdate2.SelfUpdateActivity"/>
+        <receiver android:exported="false" android:name="com.facebook.selfupdate2.SelfUpdateCallbackReceiver"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.selfupdate2.SelfUpdatePluggedInReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="false" android:name="com.facebook.selfupdate2.SelfUpdateConnectivityChangedReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.facebook.sideloading.SideloadingInstallActivity"/>
+        <activity android:exported="false" android:name="com.facebook.slideshow.SlideshowEditActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.facebook.socialgood.ui.FundraiserCreationCharitySearchActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateHidden"/>
+        <activity android:exported="false" android:name="com.facebook.socialgood.triggers.FundraiserCuratedCharityPickerActivity" android:screenOrientation="portrait" android:theme="@style/FundraiserCuratedCharityPicker"/>
+        <activity android:exported="false" android:name="com.facebook.socialgood.create.beneficiaryselector.FundraiserCreationBeneficiarySelectorActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:name="com.facebook.sosource.bsod.BSODActivity" android:process=":bsod" android:theme="@style/Theme.Facebook"/>
+        <activity android:name="com.facebook.storygallerysurvey.activity.StoryGallerySurveyWithStoryActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.facebook.storyline.fb4a.activity.StorylineActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.tagging.conversion.FriendSuggestionsAndSelectorActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.tagging.product.ProductTagSelectorActivity" android:theme="@style/Theme.Facebook" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.timeline.coverphoto.activity.CoverPhotoRepositionActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.facebook.timeline.favmediapicker.ui.FavoriteMediaPickerActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.timeline.funfacts.FunFactPromptsActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.timeline.funfacts.create.FunFactPromptCreateActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.timeline.header.intro.bio.edit.TimelineBioEditActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.facebook.timeline.header.intro.favphotos.edit.TimelineEditFavPhotosActivity"/>
+        <activity android:name="com.facebook.timeline.inforeview.typeahead.fragment.ProfileInfoTypeaheadActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="false" android:name="com.facebook.timeline.legacycontact.RememberMemorializedActivity"/>
+        <activity android:exported="false" android:name="com.facebook.timeline.legacycontact.BeingLegacyContactActivity"/>
+        <activity android:exported="false" android:name="com.facebook.timeline.legacycontact.MemorialFriendRequestsActivity"/>
+        <activity android:exported="false" android:name="com.facebook.timeline.legacycontact.MemorialProfilePictureActivity"/>
+        <activity android:exported="false" android:name="com.facebook.timeline.legacycontact.MemorialCoverPhotoActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.timeline.profilenux.ProfileNuxModalActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.facebook.timeline.profilevideo.ProfileVideoPreviewActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.facebook.timeline.profilevideo.CreateProfileVideoActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:exported="true" android:name="com.facebook.timeline.profilevideo.ExistingProfileVideoActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:icon="@drawable/profile_facebook" android:label="@string/set_as_profile_video_label" android:name="com.facebook.timeline.profilevideo.ProfileVideoShareActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="facebook.intent.action.PROFILE_MEDIA_CREATE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:enabled="false" android:icon="@drawable/profile_facebook" android:label="@string/set_as_profile_video_label" android:name="com.facebook.timeline.profilevideo.ProfileVideoShareActivityAlias" android:targetActivity="com.facebook.timeline.profilevideo.ProfileVideoShareActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="screenLayout|screenSize" android:name="com.facebook.timeline.refresher.ProfileRefresherActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.timeline.refresher.ProfileRefresherProfileStepActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:icon="@drawable/profile_facebook" android:name="com.facebook.timeline.sets.SetsTabPagerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.facebook.timeline.stagingground.StagingGroundActivity"/>
+        <activity android:icon="@drawable/profile_facebook" android:label="@string/set_as_profile_picture_label" android:name="com.facebook.timeline.stagingground.ProfilePictureShareActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="facebook.intent.action.PROFILE_MEDIA_CREATE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/heisman_default_to_current_profile_picture" android:name="com.facebook.timeline.stagingground.ProfilePictureOverlayDefaultImageActivity"/>
+        <activity-alias android:enabled="false" android:icon="@drawable/profile_facebook" android:label="@string/set_as_profile_picture_label" android:name="com.facebook.timeline.stagingground.ProfilePictureShareActivityAlias" android:targetActivity="com.facebook.timeline.stagingground.ProfilePictureShareActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:exported="false" android:name="com.facebook.timeline.tempprofilepic.EditEndTimeActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.transliteration.TransliterationActivity" android:theme="@style/Theme.FBUi" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.transliteration.TransliterationQPActivity" android:theme="@style/Theme.FBUi" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.universalfeedback.debug.DebugUniversalFeedbackActivity" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.video.activity.FullScreenVideoPlayerActivity" android:textColorPrimary="@android:color/primary_text_dark" android:windowSoftInputMode="adjustResize"/>
+        <service android:enabled="true" android:exported="false" android:name="com.facebook.video.backgroundplay.control.ControlNotificationService"/>
+        <activity android:name="com.facebook.video.backgroundplay.settings.BackgroundPlaySettingsActivity" android:theme="@style/Theme.Facebook.Preferences"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.video.channelfeed.activity.ChannelFeedActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.video.downloadmanager.intern.AutodownloadPlaybackActivity"/>
+        <service android:exported="true" android:name="com.facebook.video.downloadmanager.scheduler.OfflineVideoDownloaderServiceGCM" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_offline_video_downloader_ids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.facebook.video.downloadmanager.scheduler.OfflineVideoDownloaderService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_offline_video_downloader_ids"/>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:launchMode="singleTop" android:name="com.facebook.video.downloadmanager.view.AutoDownloadFullscreenNuxActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook.Overlay"/>
+        <activity android:configChanges="keyboard|keyboardHidden|screenSize" android:name="com.facebook.video.insight.VideoInsightActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Facebook.Overlay"/>
+        <service android:name="com.facebook.video.vps.VideoPlayerService" android:process=":videoplayer">
+            <intent-filter>
+                <action android:name="com.facebook.video.vps.VideoPlayerService"/>
+            </intent-filter>
+        </service>
+        <service android:configChanges="orientation" android:exported="false" android:name="com.facebook.video.watchandgo.service.WatchAndGoService">
+            <intent-filter>
+                <action android:name="com.facebook.video.watchandgo.service.WatchAndGoService"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="orientation" android:exported="false" android:name="com.facebook.video.watchandgo.ui.views.WatchAndGoFullscreenActivity"/>
+        <activity android:name="com.facebook.voltron.ui.AppModuleDownloadActivity" android:noHistory="true"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:name="com.facebook.wem.watermark.WatermarkActivity" android:theme="@style/Theme.FBUi"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:name="com.facebook.wem.watermark.AddOverlayActivity" android:theme="@style/Theme.FBUi"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:exported="false" android:name="com.facebook.wem.watermark.ChangePhotoActivity" android:theme="@style/Theme.FBUi"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:launchMode="singleTop" android:name="com.facebook.zero.activity.ZeroIntentInterstitialActivity" android:taskAffinity="" android:theme="@style/ZeroIntentInterstitialActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.zero.upsell.activity.ZeroUpsellBuyConfirmInterstitialActivity" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.zero.activity.NativeOptinInterstitialActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.facebook.zero.activity.NativeTermsAndConditionsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.ZeroOptinInterstitialActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.DialtoneOptinInterstitialActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.DialtoneOptinInterstitialActivityNew" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.LightswitchOptinInterstitialActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.LightswitchOptinInterstitialActivityNew" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.MessengerOptinInterstitialActivityOld" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.MessengerOptinInterstitialActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.MessengerOptinInterstitialActivityNew" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.TimeBasedOptinInterstitialActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTop" android:name="com.facebook.zero.activity.TimeBasedOptinInterstitialActivityNew" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.facebook.zero.activity.ZeroDogfoodingAppActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.facebook.zero.activity.ZeroInternStatusActivity"/>
+        <activity android:name="com.facebook.zero.activity.ZeroUrlDebugActivity"/>
+        <service android:exported="false" android:name="com.facebook.zero.messenger.MessageCapMqttResetService"/>
+        <receiver android:exported="false" android:name="com.facebook.zero.iptest.ZeroIPTestBroadcastReceiver" android:permission="com.facebook.permission.prod.FB_APP_COMMUNICATION">
+            <intent-filter>
+                <action android:name="com.facebook.intent.action.prod.ZERO_IP_TEST_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.facebook.zero.offpeakdownload.ZeroJobSchedulerDownloadService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_zerodownload_jobids"/>
+        </service>
+        <service android:exported="true" android:name="com.facebook.zero.offpeakdownload.ZeroGCMDownloadService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <meta-data android:name="com.facebook.common.jobscheduler.compat.jobIds" android:resource="@array/jobscheduler_zerodownload_jobids"/>
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="false" android:name="com.facebook.zero.offpeakdownload.ZeroOffpeakAlarmBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.zero.offpeakdownload.ZERO_OFFPEAK_DOWNLOAD_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.zero.onboarding.FbLinkIncentiveActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.facebook.zero.onboarding.FbInviteIncentiveActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.zero.settings.FreeFacebookSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.facebook.zero.settings.FlexSettingsActivity" android:theme="@style/Theme.Facebook.Preferences.Caspian"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

@@ -1,0 +1,29 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.google.android.apps.translate.apk
+compressionType: false
+doNotCompress:
+- arsc
+- META-INF/services/com.google.protobuf.GeneratedExtensionRegistryLoader
+- der
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '17'
+  targetSdkVersion: '24'
+sharedLibrary: false
+unknownFiles:
+  android-support-multidex.version.txt: '0'
+  HACKED-META-INF/services/io.grpc.NameResolverProvider: '0'
+  com/google/api/client/googleapis/google.jks: '0'
+  com/google/api/client/repackaged/org/apache/commons/codec/language/dmrules.txt: '0'
+  org/codehaus/jackson/impl/VERSION.txt: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '58001662'
+  versionName: 5.8.1.RC16.153533264

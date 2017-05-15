@@ -1,0 +1,5 @@
+COMMUNICATION;sip,sip.voip,webview
+PERSONALIZED_INPUT;input_methods
+DEVICE;backup,device_admin,managed_users,securely_removes_users,verified_boot
+MEDIA;midi,print,leanback,live_tv
+SCREEN_INTERFACES;app_widgets,home_screen,live_wallpaper

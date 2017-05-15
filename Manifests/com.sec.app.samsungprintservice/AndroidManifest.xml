@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sec.app.samsungprintservice" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <permission android:description="@string/scp_permission_description" android:label="@string/scp_permission_label" android:name="com.sec.cloudprint.permission.SHARE_DATA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="com.sec.cloudprint.permission.SHARE_DATA"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi.direct" android:required="false"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:name="android.hardware.usb.host" android:required="false"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.sec.app.samsungprintservice.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.sec.app.samsungprintservice.permission.C2D_MESSAGE"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/sps_name" android:name="com.sec.mobileprint.core.App" android:theme="@style/AppBaseTheme">
+        <activity android:exported="true" android:label="@string/sps_name" android:name="com.sec.mobileprint.printservice.plugin.ui.launcher.view.LauncherActivity" android:theme="@style/LauncherTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:name="com.sec.mobileprint.printservice.plugin.ui.ActivityPluginSettings" android:permission="android.permission.START_PRINT_SERVICE_CONFIG_ACTIVITY" android:theme="@style/SettingsTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:icon="@drawable/ic_launcher" android:name="com.sec.mobileprint.printservice.plugin.ui.ActivityAdvancedPrintSettings" android:permission="android.permission.START_PRINT_SERVICE_CONFIG_ACTIVITY" android:theme="@style/SettingsTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.sec.mobileprint.core.PermissionActivity" android:theme="@style/TranclucentTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.sec.mobileprint.printservice.plugin.ui.approvals.view.ApprovalsActivity" android:theme="@style/TranclucentTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.sec.mobileprint.printservice.plugin.ui.overlay_permission.OverlayPermissionActivity" android:theme="@style/TranclucentTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.sec.mobileprint.printservice.plugin.ui.SCPDialogActivity" android:theme="@style/TranclucentTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:enabled="true" android:excludeFromRecents="true" android:exported="true" android:name="com.sec.mobileprint.printservice.plugin.ui.ActivityAddPrinter" android:permission="android.permission.START_PRINT_SERVICE_CONFIG_ACTIVITY" android:theme="@style/SettingsTheme" android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.sec.mobileprint.printservice.plugin.ui.About" android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.sec.mobileprint.printservice.plugin.ui.LicenceViewActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:name="com.sec.mobileprint.printservice.plugin.ui.webview.WebViewActivity" android:theme="@style/LauncherTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/sps_legal_information" android:name="com.sec.mobileprint.printservice.plugin.ui.LegalInfoActivity" android:theme="@style/SettingsTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:icon="@drawable/ic_launcher" android:label="@string/sps_name" android:name="com.sec.mobileprint.printservice.plugin.ui.DocumentRenderingActivity" android:theme="@style/TranclucentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="application/pdf"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="application/pdf"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.sec.mobileprint.samsung.galaxy.plugin.SPrintPrintingService">
+            <intent-filter>
+                <action android:name="com.sec.intent.action.PRINT_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.sec.mobileprint.intentsdk.print.SamsungIntentPrintSerivce">
+            <intent-filter>
+                <action android:name="com.sec.print.plugin.intent.ACTION_GET_PRINT_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.sec.mobileprint.intentsdk.scan.SamsungIntentScanSerivce">
+            <intent-filter>
+                <action android:name="com.sec.print.plugin.intent.ACTION_GET_SCAN_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.sec.mobileprint.printservice.plugin.SamsungPrintService" android:permission="android.permission.BIND_PRINT_SERVICE">
+            <intent-filter>
+                <action android:name="android.printservice.PrintService"/>
+            </intent-filter>
+            <meta-data android:name="android.printservice" android:resource="@xml/printservice"/>
+        </service>
+        <service android:exported="false" android:name="com.sec.print.mobileprint.dm.DeviceManagerService"/>
+        <service android:exported="false" android:name="com.sec.print.mobileprint.printingservice.PrintingService"/>
+        <service android:exported="false" android:name="com.sec.print.mobileprint.df.MFPDiscoveryService"/>
+        <service android:enabled="true" android:exported="false" android:name="org.mopria.printservice.WPrintService" android:process=":wfdsprint">
+            <intent-filter>
+                <action android:name="org.androidprinting.intent.ACTION_GET_PRINT_SERVICE"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.sec.app.samsungprintservice"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.sec.app.samsungprintservice.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

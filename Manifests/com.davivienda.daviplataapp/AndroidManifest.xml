@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.davivienda.daviplataapp" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.davivienda.daviplataapp.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.davivienda.daviplataapp.permission.C2D_MESSAGE"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.davivienda.daviplataapp.x" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <meta-data android:name="io.fabric.ApiKey" android:value="9ceae6496d80efb79490b134bc49f5706acd52d5"/>
+        <activity android:label="@string/title_activity_splash" android:name="com.davivienda.daviplataapp.presentation.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/label_activity_inicio" android:name="com.davivienda.daviplataapp.p_" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.davivienda.daviplataapp.gf" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pasarplata" android:name="com.davivienda.daviplataapp.qt" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pasarplata" android:name="com.davivienda.daviplataapp._4" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_register_simple" android:name="com.davivienda.daviplataapp._f" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.davivienda.daviplataapp.o9" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:label="@string/title_activity_hable_con_nosotros" android:name="com.davivienda.daviplataapp.nz" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hable_con_nosotros" android:name="com.davivienda.daviplataapp.xx" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_que_hacer_con_nosotros" android:name="com.davivienda.daviplataapp.zp" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_olvido_de_clave" android:name="com.davivienda.daviplataapp.ni" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_cuanto_tengo" android:name="com.davivienda.daviplataapp.ze" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pasar_plata_destino" android:name="com.davivienda.daviplataapp.xe" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pasar_plata_destino" android:name="com.davivienda.daviplataapp.di" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_agrevar_favoritos" android:name="com.davivienda.daviplataapp.xy" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pasar_plata_destino" android:name="com.davivienda.daviplataapp.ck" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.y1" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.kp" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.tk" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.kq" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.sq" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.ki" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_agrevar_favoritos" android:name="com.davivienda.daviplataapp.eb" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.rc" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.pm" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_sacar_plata" android:name="com.davivienda.daviplataapp.qo" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_sacar_plata" android:name="com.davivienda.daviplataapp.y7" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_cambiar_clave" android:name="com.davivienda.daviplataapp.k6" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_cambiar_clave" android:name="com.davivienda.daviplataapp.xp" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_cambiar_correo" android:name="com.davivienda.daviplataapp.zr" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_hacer_pagos" android:name="com.davivienda.daviplataapp.sd" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_cuanto_tengo" android:name="com.davivienda.daviplataapp.kw" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_recarga_prepago" android:name="com.davivienda.daviplataapp.x5" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_recarga_prepago" android:name="com.davivienda.daviplataapp.fg" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_agrevar_favoritos" android:name="com.davivienda.daviplataapp.uh" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_recarga_prepago" android:name="com.davivienda.daviplataapp.an" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_recarga_prepago" android:name="com.davivienda.daviplataapp.wv" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_recarga_prepago" android:name="com.davivienda.daviplataapp.w2" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pagos_qr" android:name="com.davivienda.daviplataapp.p9" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pagos_qr" android:name="com.davivienda.daviplataapp.ra" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pagos_qr" android:name="com.davivienda.daviplataapp.x4" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pagos_qr" android:name="com.davivienda.daviplataapp.j3" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pagos_qr" android:name="com.davivienda.daviplataapp.eg" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_agrevar_favoritos" android:name="com.davivienda.daviplataapp.ji" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pagos_qr" android:name="com.davivienda.daviplataapp.y_" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_pagos_qr" android:name="com.davivienda.daviplataapp.mt" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_chat" android:name="com.davivienda.daviplataapp.np" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_chat" android:name="com.davivienda.daviplataapp.zw" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_puntos" android:name="com.davivienda.daviplataapp.n8" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_puntos" android:name="com.davivienda.daviplataapp.kx" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_notificaciones" android:name="com.davivienda.daviplataapp.y4" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_notificaciones" android:name="com.davivienda.daviplataapp.f6" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_movimientos" android:name="com.davivienda.daviplataapp.dh" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_movimientos" android:name="com.davivienda.daviplataapp.ct" android:screenOrientation="portrait"/>
+        <activity android:name="com.davivienda.daviplataapp.zn"/>
+        <activity android:label="@string/title_activity_telefono" android:name="com.davivienda.daviplataapp.ix" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_telefono" android:name="com.davivienda.daviplataapp.ip" android:screenOrientation="portrait"/>
+        <activity android:name="com.davivienda.daviplataapp.sb" android:screenOrientation="portrait"/>
+        <activity android:name="com.davivienda.daviplataapp.go" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="org.paykey.PayKeySettingsActivity" android:theme="@style/PayKeySettingsActivityTheme"/>
+        <service android:label="@string/english_ime_name" android:name="org.paykey.LatinIME" android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/method"/>
+        </service>
+        <activity android:exported="false" android:name="org.paykey.keyboard.library.latin.permissions.PermissionsActivity" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="org.paykey.LanguagesActivity"/>
+        <receiver android:name="org.paykey.keyboard.library.latin.SystemBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_INITIALIZE"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <activity android:exported="true" android:name="com.google.android.gms.appinvite.PreviewActivity" android:theme="@style/Theme.AppInvite.Preview">
+            <intent-filter>
+                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver"/>
+        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService"/>
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService"/>
+        <service android:name="com.google.firebase.crash.internal.service.FirebaseCrashReceiverService" android:process=":background_crash"/>
+        <service android:name="com.google.firebase.crash.internal.service.FirebaseCrashSenderService" android:process=":background_crash"/>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.tagmanager.TagManagerService"/>
+        <activity android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity" android:noHistory="true">
+            <intent-filter>
+                <data android:scheme="tagmanager.c.com.davivienda.daviplataapp"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.davivienda.daviplataapp"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.davivienda.daviplataapp.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

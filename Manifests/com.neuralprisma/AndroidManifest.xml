@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.neuralprisma" platformBuildVersionCode="25" platformBuildVersionName="7.1.1">
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.0"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.neuralprisma.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.neuralprisma.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <application android:allowBackup="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.prisma.PrismaApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <provider android:authorities="com.facebook.app.FacebookContentProvider582433738573752" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/map_api_key"/>
+        <meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@string/app_name"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@string/account_kit_client_token"/>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_notification"/>
+        <provider android:authorities="com.neuralprisma.provider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:launchMode="singleTop" android:name="com.prisma.ui.starter.StarterActivity" android:screenOrientation="portrait" android:theme="@style/StarterTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="prisma"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:exported="true" android:name="com.prisma.activity.CameraActivity" android:targetActivity="com.prisma.ui.starter.StarterActivity"/>
+        <activity android:name="com.prisma.camera.ui.ProfileCameraActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.ui.home.HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.profile.ui.ProfileFeedDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.feed.newpost.FeedNewPostActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.prisma.feed.ui.FeedDiscoverGalleryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.ui.FeedSinglePostActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.feed.ui.FeedDiscoverDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.ui.FeedForLocationGalleryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.ui.FeedForLocationDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.feed.ui.FeedRecentDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.feed.ui.FeedStyleGalleryActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.feed.ui.FeedStyleDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.ui.FeedItemCommentsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.likemap.PostLikesMapActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.followers.FollowingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.followers.FollowersActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.feed.discover.FeedDiscoverActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.suggestedfriends.SuggestedFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.feed.likes.PostLikesActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.camera.ui.ExternalImportActivity" android:screenOrientation="portrait" android:theme="@style/StarterTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.prisma.profile.ui.CropProfilePictureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name="com.prisma.login.ui.SetupProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.profile.ui.UserProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.profile.ui.MyProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.profile.blockedaccount.BlockedAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.profile.ui.UserProfileDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.styles.ui.StylesActivity"/>
+        <activity android:name="com.prisma.store.ui.StoreActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.store.mystyles.MyStylesActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.store.mystyles.RemovedStylesActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.store.collections.StoreStyleActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.store.collections.StoreItemActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.ui.gallery.GalleryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.prisma.ui.gallery.ProfileGalleryActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
+        <activity android:name="com.prisma.crop2.StyleCropActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/com_accountkit_button_log_in" android:launchMode="singleTop" android:name="com.facebook.accountkit.ui.AccountKitActivity" android:theme="@style/LoginTheme" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/ak_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="false" android:name="com.prisma.services.bootstrap.BootstrapIntentService"/>
+        <service android:exported="false" android:name="com.prisma.profile.jobs.RedirectProfileIntentService"/>
+        <service android:exported="false" android:name="com.prisma.services.styles.StylesLoadAndroidService"/>
+        <service android:exported="false" android:name="com.prisma.analytics.AnalyticsService"/>
+        <service android:exported="false" android:name="com.prisma.notifications.PrismaFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.prisma.notifications.PrismaFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="io.fabric.ApiKey" android:value="8e17945e7d29d1c775f321348caef29075f5ab9a"/>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.neuralprisma"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.neuralprisma.firebaseperfprovider" android:exported="false" android:initOrder="101" android:name="com.google.firebase.perf.provider.FirebasePerfProvider"/>
+        <provider android:authorities="com.neuralprisma.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:exported="true" android:name="com.facebook.accountkit.ui.AccountKitEmailRedirectActivity" android:noHistory="true"/>
+    </application>
+</manifest>

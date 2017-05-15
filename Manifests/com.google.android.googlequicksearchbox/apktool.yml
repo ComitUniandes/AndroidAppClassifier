@@ -1,0 +1,32 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.google.android.googlequicksearchbox.apk
+compressionType: false
+doNotCompress:
+- arsc
+- META-INF/services/com.fasterxml.jackson.core.JsonFactory
+- META-INF/services/com.google.protobuf.GeneratedExtensionRegistryLoader
+- res/raw/ep_acoustic_model
+- apk
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  android-support-multidex.version.txt: '0'
+  build-data.properties: '0'
+  services_list.bzl: '0'
+  HACKED-META-INF/services/io.grpc.ManagedChannelProvider: '0'
+  HACKED-META-INF/services/io.grpc.NameResolverProvider: '0'
+  com/google/api/client/repackaged/org/apache/commons/codec/language/dmrules.txt: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '300736384'
+  versionName: 7.0.13.21.arm

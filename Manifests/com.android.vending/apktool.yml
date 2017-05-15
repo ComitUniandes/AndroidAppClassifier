@@ -1,0 +1,30 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.android.vending.apk
+compressionType: false
+doNotCompress:
+- arsc
+- META-INF/services/com.google.protobuf.GeneratedExtensionRegistryLoader
+- webp
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  android-support-multidex.version.txt: '0'
+  build-data.properties: '0'
+  org/keyczar/i18n/messages.properties: '0'
+  org/keyczar/i18n/messages_hi.properties: '0'
+  org/keyczar/i18n/messages_jp.properties: '0'
+  org/keyczar/i18n/messages_pt.properties: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '80773100'
+  versionName: 7.7.31.O-all [0] [PR] 153394623

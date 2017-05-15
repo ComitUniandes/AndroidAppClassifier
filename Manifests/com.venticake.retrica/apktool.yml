@@ -1,0 +1,143 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.venticake.retrica.apk
+compressionType: false
+doNotCompress:
+- arsc
+- assets/lookup_50_at3.png.enc
+- assets/lookup_50_ed.png.enc
+- assets/lookup_50_ev3.png.enc
+- assets/lookup_50_fm1.png.enc
+- assets/lookup_50_fm2.png.enc
+- assets/lookup_50_os1.png.enc
+- assets/lookup_50_os2.png.enc
+- assets/lookup_50_os3.png.enc
+- assets/lookup_50_ps1.png.enc
+- assets/lookup_50_s_cold.png.enc
+- assets/lookup_90p-RetroMorning.png.enc
+- assets/lookup_FT0001.png.enc
+- assets/lookup_FT0002.png.enc
+- assets/lookup_FT0003.png.enc
+- assets/lookup_FT0004.png.enc
+- assets/lookup_FT0007.png.enc
+- assets/lookup_a1_2923.png.enc
+- assets/lookup_a1_2939.png.enc
+- assets/lookup_a1_2942.png.enc
+- assets/lookup_a1_2944.png.enc
+- assets/lookup_a1_2968.png.enc
+- assets/lookup_a5.png.enc
+- assets/lookup_bw_infrared.png.enc
+- assets/lookup_cn_2strip.png.enc
+- assets/lookup_cn_hacker.png.enc
+- assets/lookup_cn_horror.png.enc
+- assets/lookup_cn_ktmax.png.enc
+- assets/lookup_cn_process2.png.enc
+- assets/lookup_cn_spartan.png.enc
+- assets/lookup_cn_t_hc.png.enc
+- assets/lookup_cn_t_lc.png.enc
+- assets/lookup_cn_vintageromance.png.enc
+- assets/lookup_f_cool.png.enc
+- assets/lookup_ff_am.png.enc
+- assets/lookup_ff_hudson.png.enc
+- assets/lookup_ff_inkwell.png.enc
+- assets/lookup_ff_kelvin.png.enc
+- assets/lookup_ff_lfhp5.png.enc
+- assets/lookup_ff_px_100uvcold.png.enc
+- assets/lookup_ff_px_100uvwarm.png.enc
+- assets/lookup_ff_px_680.png.enc
+- assets/lookup_ff_px_680cold.png.enc
+- assets/lookup_ff_px_680coldalt.png.enc
+- assets/lookup_ff_px_680warm.png.enc
+- assets/lookup_ff_px_70.png.enc
+- assets/lookup_ff_px_70cold.png.enc
+- assets/lookup_ff_px_70warm.png.enc
+- assets/lookup_ff_toaster.png.enc
+- assets/lookup_ff_tzp-expired1.png.enc
+- assets/lookup_ff_walden.png.enc
+- assets/lookup_gb_0207.png.enc
+- assets/lookup_gb_0208.png.enc
+- assets/lookup_gb_0209.png.enc
+- assets/lookup_gb_0210.png.enc
+- assets/lookup_gb_0212.png.enc
+- assets/lookup_gb_0214.png.enc
+- assets/lookup_gb_0216.png.enc
+- assets/lookup_gg_0176.png.enc
+- assets/lookup_gg_0177.png.enc
+- assets/lookup_gg_0179.png.enc
+- assets/lookup_gg_0180.png.enc
+- assets/lookup_gg_0181.png.enc
+- assets/lookup_gg_0183.png.enc
+- assets/lookup_gg_0184.png.enc
+- assets/lookup_gg_0185.png.enc
+- assets/lookup_gg_0186.png.enc
+- assets/lookup_gi_0188.png.enc
+- assets/lookup_gi_0190.png.enc
+- assets/lookup_gi_0192.png.enc
+- assets/lookup_gi_0193.png.enc
+- assets/lookup_gi_0194.png.enc
+- assets/lookup_gi_0198.png.enc
+- assets/lookup_gi_0200.png.enc
+- assets/lookup_gi_0205.png.enc
+- assets/lookup_gi_0206.png.enc
+- assets/lookup_jj-20.png.enc
+- assets/lookup_m1_2867.png.enc
+- assets/lookup_pw_2854.png.enc
+- assets/lookup_pxg_1064nm.png.enc
+- assets/lookup_pxg_chloroplast.png.enc
+- assets/lookup_pxg_electrolumine.png.enc
+- assets/lookup_pxg_majoris.png.enc
+- assets/lookup_pxg_psychedelia.png.enc
+- assets/lookup_pxg_uranus.png.enc
+- assets/lookup_pxg_valis.png.enc
+- assets/lookup_saturn-rings-9-1.png.enc
+- assets/lookup_saturn-rings-9-2.png.enc
+- assets/lookup_sv_rol_oo.png.enc
+- assets/lookup_ttt_polaroid.png.enc
+- assets/lookup_uf_bonsai.png.enc
+- assets/lookup_uf_caramel.png.enc
+- assets/lookup_uf_cufflink.png.enc
+- assets/lookup_uf_deutan.png.enc
+- assets/lookup_uf_fridge.png.enc
+- assets/lookup_uf_frontpage.png.enc
+- assets/lookup_uf_goldie.png.enc
+- assets/lookup_uf_hibiscus.png.enc
+- assets/lookup_uf_iris.png.enc
+- assets/lookup_uf_lemonpeel.png.enc
+- assets/lookup_uf_qouzi.png.enc
+- assets/lookup_uf_scarlet.png.enc
+- assets/lookup_uf_verdial.png.enc
+- assets/lookup_ull_bw_faded.png.enc
+- assets/lookup_ull_bw_standard.png.enc
+- assets/lookup_vintage_breeze.png.enc
+- assets/lookup_w_st.png.enc
+- assets/lookup_wd_momentous.png.enc
+- assets/lookup_wi_classic.png.enc
+- assets/lookup_wi_green.png.enc
+- assets/lookup_wi_i_dr.png.enc
+- assets/lookup_wi_red.png.enc
+- assets/lookup_wi_s_im.png.enc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '15'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '8'
+  fabric/com.crashlytics.sdk.android.answers.properties: '8'
+  fabric/com.crashlytics.sdk.android.beta.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
+  fabric/com.zendesk.sdk.properties: '8'
+  fabric/io.fabric.sdk.android.fabric.properties: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+  org/threeten/bp/format/ChronologyText.properties: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '104'
+  versionName: 3.12.1

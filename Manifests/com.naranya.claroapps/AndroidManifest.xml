@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.naranya.claroapps" platformBuildVersionCode="23" platformBuildVersionName="6.0-2704002">
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <permission android:name="com.naranya.claroapps.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.naranya.claroapps.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <meta-data android:name="android.max_aspect" android:value="2.1"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@xml/global_tracker"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <application android:allowBackup="true" android:icon="@drawable/icn_launcher" android:label="@string/app_name" android:name="com.naranya.claroapps.ClaroApplication" android:supportsRtl="true" android:theme="@style/AppTheme.NoActionBar">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.LaunchActivity" android:screenOrientation="portrait" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/activity_name_error_session" android:name="com.naranya.claroapps.ui.ErrorSessionActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.HelpActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.FAQSActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.ReportIssueActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.SuggestionsActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.AboutActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.ContactUsActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.TermsActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.SearchActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.AppsFiltersActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/activity_name_my_account" android:name="com.naranya.claroapps.ui.AccountActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/activity_name_edit_account" android:name="com.naranya.claroapps.ui.EditAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.SuscripcionesActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.PurchasingHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.pushwoosh.richpages.RichPageActivity"/>
+        <activity android:name="com.pushwoosh.MessageActivity"/>
+        <activity android:name="com.pushwoosh.PushHandlerActivity"/>
+        <receiver android:exported="true" android:name="com.google.android.gms.gcm.GcmReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.naranya.claroapps"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.pushwoosh.GCMListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.pushwoosh.GCMInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.pushwoosh.GCMRegistrationService"/>
+        <meta-data android:name="PW_APPID" android:value="392A2-B33E7"/>
+        <meta-data android:name="PW_PROJECT_ID" android:value="A263894053988"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/title_activity_home_subscription" android:name="com.naranya.claroapps.ui.HomeSubscriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/title_activity_subscription" android:name="com.naranya.claroapps.ui.SubscriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/title_activity_subscription" android:name="com.naranya.claroapps.ui.VerifyPinSubscriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/title_activity_activity_cancel_subscription" android:name="com.naranya.claroapps.ui.CancelSubscriptionActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/title_activity_apps_groups" android:name="com.naranya.claroapps.ui.AppsGroups" android:screenOrientation="portrait"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.naranya.claroapps.listeners.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.naranya.claroapps.listeners.PushReceiver"/>
+        <meta-data android:name="PW_NOTIFICATION_RECEIVER" android:value="com.naranya.claroapps.listeners.PushReceiver"/>
+        <meta-data android:name="AA_MODELS" android:value="com.naranya.claroapps.database.ActiveRecords.AcquisitionRecord,                            com.naranya.claroapps.database.ActiveRecords.DownloadRecord,                            com.naranya.claroapps.database.ActiveRecords.InstallRecord"/>
+        <receiver android:name="com.tune.TuneTracker">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:label="@string/title_activity_permissions" android:name="com.naranya.claroapps.ui.PermissionsActivity" android:screenOrientation="portrait"/>
+        <service android:name="com.naranya.claroapps.services.RecivePushService"/>
+        <service android:name="com.naranya.claroapps.services.UpdateService"/>
+        <receiver android:name="com.naranya.claroapps.listeners.PushRegistratrionBroadcast">
+            <intent-filter>
+                <action android:name="com.naranya.claroapps.com.pushwoosh.REGISTER_BROAD_CAST_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.naranya.claroapps.services.PushRegisterServices"/>
+        <receiver android:name="com.naranya.claroapps.listeners.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.naranya.claroapps.listeners.PackageInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.naranya.claroapps.NewBaseActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.NoStatusBar"/>
+        <activity android:name="com.naranya.claroapps.HomeActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.NoStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="product" android:scheme="claroapps"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="home" android:scheme="claroapps"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.naranya.claroapps.ui.DetailActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoActionBar.NoStatusBar"/>
+        <activity android:name="com.naranya.claroapps.ui.ImageZoomActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name="com.naranya.claroapps.smo.PinProcessActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.naranya.claroapps.smo.ValidatePinActivity"/> ––
+<service android:name="com.naranya.claroapps.services.SmoService"/>
+        <activity android:label="@string/activity_name_app_manager" android:name="com.naranya.claroapps.ui.app.manager.AppManagerActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.naranya.claroapps.ui.BundleActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_section" android:name="com.naranya.claroapps.ui.SectionActivity" android:parentActivityName="com.naranya.claroapps.HomeActivity" android:screenOrientation="portrait"/>
+        <provider android:authorities="com.naranya.claroapps.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:name="com.pushwoosh.inapp.WebActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.pushwoosh.inapp.InAppRetrieverService"/>
+        <receiver android:enabled="true" android:name="com.pushwoosh.local.BootReceiver" android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.pushwoosh.location.GeoLocationService"/>
+        <receiver android:name="com.pushwoosh.local.AlarmReceiver"/>
+        <service android:enabled="true" android:exported="true" android:isolatedProcess="false" android:label="iBeacon" android:name="com.pushwoosh.thirdparty.radiusnetworks.ibeacon.service.IBeaconService"/>
+        <service android:enabled="true" android:name="com.pushwoosh.thirdparty.radiusnetworks.ibeacon.IBeaconIntentProcessor"/>
+        <service android:name="com.pushwoosh.beacon.PushBeaconService"/>
+        <activity android:launchMode="singleTask" android:name="com.karumi.dexter.DexterActivity" android:theme="@style/Theme.Transparent"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.naranya.claroapps.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+    </application>
+</manifest>

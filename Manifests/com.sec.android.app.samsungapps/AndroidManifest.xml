@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sec.android.app.samsungapps" platformBuildVersionCode="24" platformBuildVersionName="7.0">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <permission android:name="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY" android:protectionLevel="signature"/>
+    <permission android:name="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:protectionLevel="signature"/>
+    <permission android:name="com.sec.android.app.samsungapps.accesspermission.BILLING_ACTIVITY" android:protectionLevel="signature"/>
+    <permission android:name="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY" android:protectionLevel="signature"/>
+    <permission android:name="com.sec.android.provider.samsungapps.permission.READ" android:protectionLevel="signature"/>
+    <permission android:name="com.sec.android.provider.samsungapps.permission.WRITE" android:protectionLevel="signature"/>
+    <permission android:name="com.sec.android.app.samsungapps.accesspermission.COUNTRYSERACHEX_SERVICE" android:protectionLevel="normal"/>
+    <permission android:name="com.sec.android.app.samsungapps.accesspermission.PURCHASE_PROTECTION_SERVICE" android:protectionLevel="normal"/>
+    <uses-permission android:name="android.permission.SEND_SMS_NO_CONFIRMATION"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WIFI_LOCK"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.sec.android.provider.samsungapps.permission.WRITE"/>
+    <uses-permission android:name="com.sec.android.provider.samsungapps.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.una.astore.permission.WRITE"/>
+    <uses-permission android:name="com.sec.android.provider.una.astore.permission.READ"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.sec.spp.push.permission.ACCESS_SPP_SERVER"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.sec.android.fota.permission.PUSH"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="com.samsung.android.gearplugin.permission.ACCESS_GEAR_PLUGIN"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+    <uses-permission android:name="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+    <uses-permission android:name="com.sec.android.app.samsungapps.accesspermission.BILLING_ACTIVITY"/>
+    <uses-permission android:name="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.sec.android.wallet.permission"/>
+    <uses-permission android:name="sstream.app.StoryProvider.WRITE.PERMISSION"/>
+    <uses-permission android:name="com.samsung.android.permission.installApp"/>
+    <uses-permission android:name="android.permission.SET_PROCESS_LIMIT"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.sec.spp.permission.TOKEN_2e584d01f317fdee32cc8e855153d01df2a62f8194c5c4e621bf45bcc3807f066f637c5329f12f95158279f36aae6250df4a72e8d51fc6e578e248fcf11e8339654d20216c79a9d36fed33741d7190e77939da234b8157e48c3cdde7bc93bffdba1de18b6415d62b81b8d2dd41756f099ecb13fc4d975077a6d8cde99df4405b"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.samsung.android.app.cocktailbarservice.permission.ENABLE_EDGE_PANEL"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <application android:allowBackup="true" android:debuggable="false" android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/IDS_SAPPS_HEADER_GALAXY_APPS_HOMESCREEN" android:largeHeap="true" android:name="com.sec.android.app.samsungapps.SamsungApps" android:supportsRtl="true" android:theme="@style/SamsungAppsActionBarTheme">
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+        <meta-data android:name="com.samsung.android.bixby.pathRuleAppName" android:value="GalaxyApps"/>
+        <meta-data android:name="sstream.app.SSTREAM_IS_SUPPORTED" android:value="true"/>
+        <meta-data android:name="sstream.app.SSTREAM_ID" android:value="samsung.media"/>
+        <meta-data android:name="sstream.app.SSTREAM_ICON_SELECTED" android:resource="@drawable/samsungapps_220_color"/>
+        <meta-data android:name="sstream.app.SSTREAM_ICON_UNSELECTED" android:resource="@drawable/samsungapps_220_bw"/>
+        <meta-data android:name="sstream.app.SSTREAM_SOURCE_ICON" android:resource="@drawable/mux_ic_samsungapps"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.enable" android:value="true"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable" android:value="false"/>
+        <meta-data android:name="com.sec.android.doNotShowRecentKeyLongPressPopup" android:value="true"/>
+        <meta-data android:name="com.samsung.android.icon_container.has_icon_container" android:value="true"/>
+        <meta-data android:name="com.sec.android.app.blockdisabling" android:value="true"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.sec.android.app.samsungapps.Main" android:screenOrientation="unspecified" android:theme="@style/SamsungAppsTranslucentNoTitleBarTheme">
+            <intent-filter>
+                <data android:scheme="samsungapps"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/appquery/appDetail.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/appquery/categoryProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/appquery/sellerProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/appquery/productSetList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/appquery/gameHome.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/main/main.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/main/SearchResult.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/main/MainCategoryList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/main/PaidProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/main/FreeProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.samsungapps.com" android:pathPrefix="/main/NewProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/appquery/appDetail.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/mercury/topApps/topAppsList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/mercury/promotion/specialPromotion.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/mercury/topApps/getSellerList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/mercury/topApps/gameHome.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/main/main.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/main/SearchResult.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/main/MainCategoryList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/main/PaidProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/main/FreeProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="apps.samsung.com" android:pathPrefix="/main/NewProductList.as" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="betasamsungapps"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="normalbetasamsungapps"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/com.sec.android.app.samsungapps.detail"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="sstream"/>
+                <data android:host="storyitem"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="density|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:icon="@mipmap/icon" android:label="@string/IDS_SAPPS_HEADER_GALAXY_APPS_HOMESCREEN" android:name="com.sec.android.app.samsungapps.SamsungAppsMainActivity" android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.OdcUpdateProgressActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.CountrySearchActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_MBODY_VERSION_INFO_ETC" android:name="com.sec.android.app.samsungapps.AboutActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="density|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_TERMS_AND_CONDITIONS" android:name="com.sec.android.app.samsungapps.DisclaimerActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:resizeableActivity="true" android:theme="@style/theme_popup_disclaimer"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_GALAXY_APPS_HOME" android:name="com.sec.android.app.samsungapps.UncListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.pushclient.PushInfoAcitivty" android:noHistory="true" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="density|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_GALAXY_APPS_HOME" android:name="com.sec.android.app.samsungapps.slotpage.GalaxyAppsMainActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY" android:resizeableActivity="true"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.account.SamsungAccountOldSignInActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY" android:theme="@style/NoDisplay"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.NetworkErrorActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="density|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.NetworkDisconnectedActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.account.SamsungAccountNewSignInActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY" android:theme="@style/NoDisplay"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.account.SamsungAccountWebSignInActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.account.SamsungAccountWebConfirmPasswordActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.account.SamsungAccountWebMyProfileActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.account.SamsungAccountConfirmPasswordActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.account.SamsungAccountRequestTokenActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY" android:theme="@style/NoDisplay"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_REAL_NAME_VERIFICATION" android:name="com.sec.android.app.samsungapps.account.SamsungAccountWebRealNameVerificationActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.ACCOUNT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="" android:name="com.sec.android.app.samsungapps.ContentDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="" android:name="com.sec.android.app.samsungapps.GearDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_DETAILS" android:name="com.sec.android.app.samsungapps.DetailSecondPageActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"> &gt;
+</activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_SELLER_INFORMATION_ABB" android:name="com.sec.android.app.samsungapps.detail.DetailSecondPageActivities.sellerinfo.DetailSellerInfoActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"> &gt;
+</activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/IDS_SAPPS_BODY_USER_REVIEWS" android:name="com.sec.android.app.samsungapps.detail.DetailSecondPageActivities.review.DetailReviewActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"> &gt;
+</activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:launchMode="singleTop" android:name="com.sec.android.app.samsungapps.ReviewDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_BUTTON_VIEW_SCREENSHOTS" android:name="com.sec.android.app.samsungapps.ScreenShotViewPagerActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.RelatedAppProductListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_POP_APP_PERMISSIONS" android:name="com.sec.android.app.samsungapps.PermissionPopupActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.BILLING_ACTIVITY" android:theme="@style/Theme.Dialog.Permission"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_POP_APP_PERMISSIONS" android:name="com.sec.android.app.samsungapps.MultiplePermissionPopupActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.BILLING_ACTIVITY" android:theme="@style/Theme.Dialog.Permission"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_OPT2_SETTINGS" android:name="com.sec.android.app.samsungapps.SettingsListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.ReportAppPageActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.gear.GearCategoryActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.gear.GearTopActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.gear.WatchfaceActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.forgalaxy.ForGalaxyActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.forgalaxy.ForGalaxySubListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="density|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:label="@string/IDS_SAPPS_SK_SEARCH" android:name="com.sec.android.app.samsungapps.SearchResultActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.searchlist.SearchSettingListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.notipopup.ActivityPopupDlg" android:noHistory="true" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_TAB_WISH_LIST" android:name="com.sec.android.app.samsungapps.wishlist.WishListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY">
+&gt;
+</activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_OPT_PAYMENT_METHODS" android:name="com.sec.android.app.samsungapps.PaymentMethodsListActivityR" android:permission="com.sec.android.app.samsungapps.accesspermission.BILLING_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_BODY_VOUCHERS" android:name="com.sec.android.app.samsungapps.CouponListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.BILLING_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_OPT_ANNOUNCEMENTS" android:name="com.sec.android.app.samsungapps.NoticeListViewActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_NOTICE_DETAILS" android:name="com.sec.android.app.samsungapps.NoticeDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_BODY_OPEN_SOURCE_LICENCE" android:name="com.sec.android.app.samsungapps.OpenLicenseActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_BODY_OPEN_SOURCE_LICENCE" android:name="com.sec.android.app.samsungapps.SamsungAppsWebViewActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_OPT_HELP" android:name="com.sec.android.app.samsungapps.HelpListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.unfiedbilling.UnifiedBillingApkActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.unfiedbilling.UnifiedBillingWrapperActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:icon="@mipmap/icon" android:name="com.sec.android.app.samsungapps.downloadableapps.DownloadableAppsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="true" android:icon="@mipmap/icon" android:name="com.sec.android.app.samsungapps.viewpager.InterimActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:icon="@mipmap/icon" android:name="com.sec.android.app.samsungapps.interim.essentials.InterimEssentialsActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:icon="@mipmap/icon" android:name="com.sec.android.app.samsungapps.updatelist.UpdateListActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:icon="@mipmap/icon" android:label="@string/IDS_SAPPS_OPT2_ALL" android:name="com.sec.android.app.samsungapps.myapps.MyappsAllActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:icon="@mipmap/icon" android:label="App Manager" android:name="com.sec.android.app.samsungapps.appmanager.AppManagerActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="Paused App List" android:name="com.sec.android.app.samsungapps.pausedapplist.PausedAppListActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:icon="@mipmap/icon" android:label="@string/IDS_SAPPS_SK_UPDATE" android:name="com.sec.android.app.samsungapps.myapps.MyappsUpdateActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:icon="@mipmap/icon" android:label="@string/MIDS_SAPPS_HEADER_ORDER_HISTORY" android:name="com.sec.android.app.samsungapps.orderhistory.OrderHistoryListActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_DETAILS" android:name="com.sec.android.app.samsungapps.orderhistory.OrderHistoryAppsDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_DETAILS" android:name="com.sec.android.app.samsungapps.orderhistory.OrderHistoryItemDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_ST_BODY_SPOTLIGHT" android:name="com.sec.android.app.samsungapps.SpotlightActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.CONTENT_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/IDS_SAPPS_HEADER_DETAILS" android:name="com.sec.android.app.samsungapps.SpotlightDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.SpotlightTutorialActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY" android:theme="@style/SamsungAppsTranslucent"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.edgelist.EdgeTabActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.Knox1AppLauncher" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.category.CategoryActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.category.CategoryTabActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.redeem.ValuePackDetailActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.redeem.MyValuePackListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.redeem.ValuePackListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.staffpicks.StaffPicksSeeMoreActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:icon="@mipmap/icon" android:label="@string/MIDS_SAPPS_HEADER_STARTER_KIT_ABB" android:name="com.sec.android.app.samsungapps.slotpage.staffpicks.StartersKitSeeMoreActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.SimilarPopularAppsActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.slotpage.chart.ChartSeeMoreActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <service android:exported="false" android:name="com.sec.android.app.samsungapps.verizonupdater.UpdatesToAppsUpdateService"/>
+        <activity android:exported="false" android:name="com.sec.android.app.samsungapps.verizonupdater.UpdateToAppsActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:exported="false" android:name="com.sec.android.app.samsungapps.preloadupdate.UrgentUpdateActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/MIDS_SAPPS_MBODY_MY_APPS" android:name="com.sec.android.app.samsungapps.MyAppsActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:label="@string/MIDS_SAPPS_MBODY_MY_APPS" android:name="com.sec.android.app.samsungapps.PersonalActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.betatest.GearAppBetaTestActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.betatest.GearAppBetaTestListActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:exported="false" android:name="com.sec.android.app.samsungapps.betatest.PhoneAppBetaTestIntroActivity" android:permission="com.sec.android.app.samsungapps.accesspermission.GENERNAL_ACTIVITY"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:name="com.samsung.android.sdk.ppmt.PpmtPopupActivity" android:theme="@style/PpmtPopupTheme"/>
+        <provider android:authorities="com.sec.android.app.samsungapps.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <provider android:authorities="com.sec.android.provider.samsungapps" android:name="com.sec.android.app.samsungapps.SaProvider" android:readPermission="com.sec.android.provider.samsungapps.permission.READ" android:writePermission="com.sec.android.provider.samsungapps.permission.WRITE"/>
+        <service android:name="com.samsung.android.sdk.ppmt.PpmtService"/>
+        <service android:name="com.samsung.android.sdk.ppmt.PpmtDataService"/>
+        <service android:exported="false" android:name="com.sec.android.app.samsungapps.pushclient.PushService"/>
+        <service android:exported="false" android:name="com.sec.android.app.samsungapps.vlibrary3.personal.UpdateCntManager"/>
+        <service android:exported="false" android:name="com.sec.android.app.samsungapps.AppsService"/>
+        <service android:exported="false" android:name="com.sec.android.app.samsungapps.preloadupdate.PreloadUpdateService"/>
+        <service android:exported="false" android:name="com.sec.android.app.samsungapps.preloadupdate.EUpdateService"/>
+        <service android:exported="false" android:name="com.sec.android.app.samsungapps.autoupdateservice.AutoUpdateService"/>
+        <service android:name="com.sec.android.app.samsungapps.UpdateCheckSVC">
+            <intent-filter>
+                <action android:name="com.sec.android.app.samsungapps.UpdateCheckSVC"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.sec.android.app.samsungapps.downloadservice.SamsungAppsDownloadService">
+            <intent-filter>
+                <action android:name="com.sec.android.app.samsungapps.downloadservice.SamsungAppsDownloadService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.sec.android.app.samsungapps.api.SamsungAppsInstallService">
+            <intent-filter>
+                <action android:name="com.sec.android.app.samsungapps.api.SamsungAppsInstallService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.sec.android.app.samsungapps.openlib.CountrySearchExService" android:permission="com.sec.android.app.samsungapps.accesspermission.COUNTRYSERACHEX_SERVICE"/>
+        <service android:exported="true" android:name="com.sec.android.app.samsungapps.openlib.PurchaseProtectionService" android:permission="com.sec.android.app.samsungapps.accesspermission.PURCHASE_PROTECTION_SERVICE"/>
+        <service android:name="com.sec.android.app.samsungapps.jobscheduling.PollJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.sec.android.app.samsungapps.pushclient.PushMsgReceiver">
+            <intent-filter>
+                <action android:name="d384dae7306a9a75"/>
+                <action android:name="intent.action.pushservice.start"/>
+                <action android:name="intent.action.pushservice.end"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.samsung.android.sdk.ppmt.PpmtReceiver">
+            <intent-filter>
+                <action android:name="com.samsung.android.sdk.ppmt.EVENTS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sec.android.app.samsungapps.CallSettingsReceiver">
+            <intent-filter>
+                <action android:name="intent.action.samsungapps.settings"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sec.android.app.samsungapps.account.SamsungAccountReceiver">
+            <intent-filter>
+                <action android:name="com.sec.android.app.samsungapps.req.mcc"/>
+                <action android:name="com.sec.android.app.ad.onoff.setting.fromAPK"/>
+                <action android:name="com.samsung.account.SAMSUNGACCOUNT_SIGNOUT_COMPLETED"/>
+                <action android:name="com.samsung.account.SAMSUNGACCOUNT_SIGNIN_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.sec.android.app.samsungapps.account.SamsungAccountServiceReceiver"/>
+        <receiver android:name="com.sec.android.app.samsungapps.account.SamsungAccountServiceReceiver.AccountEventReceiver"/>
+        <receiver android:exported="false" android:name="com.sec.android.app.samsungapps.MyPackageReplacedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <data android:path="com.sec.android.app.samsungapps" android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sec.android.app.samsungapps.account.SamsungAccountNotiPushReceiver">
+            <intent-filter>
+                <action android:name="com.osp.app.signin.action.EMAIL_VALIDATION_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sec.android.app.samsungapps.AlarmReceiver"/>
+        <receiver android:name="com.sec.android.app.samsungapps.PreloadUpdateAlarmReceiver"/>
+        <receiver android:exported="false" android:name="com.sec.android.app.samsungapps.networkstatereceiver.NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sec.android.app.samsungapps.preloadupdate.FotaEventReceiver" android:permission="com.sec.android.fota.permission.PUSH">
+            <intent-filter>
+                <action android:name="sec.fota.intent.samsungapps.PUSH"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.sec.android.app.samsungapps.GearConnectionCheckReceiver">
+            <intent-filter>
+                <action android:name="com.samsung.android.pm.action.WEARABLE_DEVICE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.sec.android.app.samsungapps.jobscheduling.JobSchedulerReceiver">
+            <intent-filter>
+                <action android:name="com.samsung.intent.action.EMERGENCY_STATE_CHANGED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="true" android:name="com.samsung.android.sdk.bixby.BixbyAppService" android:permission="com.samsung.android.bixby.agent.permission.APP_SERVICE">
+            <intent-filter>
+                <action android:name="com.samsung.android.sdk.bixby.APP_SERVICE"/>
+            </intent-filter>
+        </service>
+        <uses-library android:name="secvision" android:required="false"/>
+        <uses-library android:name="saiv" android:required="false"/>
+        <meta-data android:name="SPDE.build.signature" android:value="3852448/12586651/phone-full-release/GalaxyApps-411110-4.2.10"/>
+        <meta-data android:name="SPDE.env.version" android:value="2.1.3/G24.3.7/24.3.3"/>
+    </application>
+</manifest>

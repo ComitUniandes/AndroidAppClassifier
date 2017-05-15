@@ -1,0 +1,164 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.microsoft.office.word.apk
+compressionType: false
+doNotCompress:
+- arsc
+- assets/c_1250.nls.7z
+- assets/c_1251.nls.7z
+- assets/c_1253.nls.7z
+- assets/c_1254.nls.7z
+- assets/c_1255.nls.7z
+- assets/c_1256.nls.7z
+- assets/c_1257.nls.7z
+- assets/c_1258.nls.7z
+- assets/c_1361.nls.7z
+- assets/c_20000.nls.7z
+- assets/c_20127.nls.7z
+- assets/c_20866.nls.7z
+- assets/c_20930.nls.7z
+- assets/c_20931.nls.7z
+- assets/c_20932.nls.7z
+- assets/c_20933.nls.7z
+- assets/c_20935.nls.7z
+- assets/c_20936.nls.7z
+- assets/c_20937.nls.7z
+- assets/c_20939.nls.7z
+- assets/c_20949.nls.7z
+- assets/c_20950.nls.7z
+- assets/c_21866.nls.7z
+- assets/c_28591.nls.7z
+- assets/c_28592.nls.7z
+- assets/c_28593.nls.7z
+- assets/c_28594.nls.7z
+- assets/c_28595.nls.7z
+- assets/c_28596.nls.7z
+- assets/c_28597.nls.7z
+- assets/c_28598.nls.7z
+- assets/c_28599.nls.7z
+- assets/c_28605.nls.7z
+- assets/c_708.nls.7z
+- assets/c_866.nls.7z
+- assets/c_874.nls.7z
+- assets/c_932.nls.7z
+- assets/c_936.nls.7z
+- assets/c_949.nls.7z
+- assets/c_950.nls.7z
+- 7z
+- assets/chartresandroid.dll.7z
+- assets/msoresandroid.dll.7z
+- assets/oartresandroid.dll.7z
+- assets/officeandroid.odf.7z
+- assets/sortdefault.nls.7z
+- assets/wresandroid.dll.7z
+- assets/PreviewFonts/flat_officeFontsPreview.ttf.7z
+- assets/applibs/libappcodemarkerandroid.so.7z
+- assets/applibs/libgnustl_shared.so.7z
+- assets/applibs/libicui18n56.so.7z
+- assets/applibs/libmscss7.so.7z
+- assets/applibs/libmscss7data.so.7z
+- assets/applibs/libmsspell7.so.7z
+- assets/applibs/libphotoprocess.so.7z
+- assets/applibs/libplat.so.7z
+- assets/applibs/libstg.so.7z
+- assets/applibs/libtextinputdriver.so.7z
+- assets/applibs/libwlibandroid.so.7z
+- assets/applibs/libwlibandroidearlyboot.so.7z
+- assets/chromeFonts/offsymand.ttf.7z
+- assets/chromeFonts/segoeui.ttf.7z
+- assets/chromeFonts/segoeuil.ttf.7z
+- assets/chromeFonts/segoeuisl.ttf.7z
+- assets/chromeFonts/seguisb.ttf.7z
+- assets/commonlibs/libchartandroid.so.7z
+- assets/commonlibs/libcsiandroid.so.7z
+- assets/commonlibs/libcsisoap.so.7z
+- assets/commonlibs/libd3d10warp.so.7z
+- assets/commonlibs/libdwrite.so.7z
+- assets/commonlibs/libiacom2android.so.7z
+- assets/commonlibs/libigxandroid.so.7z
+- assets/commonlibs/libivy.so.7z
+- assets/commonlibs/liblicensing.so.7z
+- assets/commonlibs/libmso20android.so.7z
+- assets/commonlibs/libmso30android.so.7z
+- assets/commonlibs/libmso40uiandroid.so.7z
+- assets/commonlibs/libmso50android.so.7z
+- assets/commonlibs/libmso98android.so.7z
+- assets/commonlibs/libmsoandroid.so.7z
+- assets/commonlibs/libmsohttp.so.7z
+- assets/commonlibs/libmsosvg.so.7z
+- assets/commonlibs/libmsxml.so.7z
+- assets/commonlibs/liboartandroid.so.7z
+- assets/commonlibs/librichedit.so.7z
+- assets/commonlibs/libsaext.so.7z
+- assets/commonlibs/libtellmeruntime.so.7z
+- assets/commonlibs/libxmllite.so.7z
+- assets/en-US/msointl30_android.dll.7z
+- assets/en-US/msointlandroid.dll.7z
+- assets/en-US/tellmeword.nrr.7z
+- assets/en-US/wintlandroid.dll.7z
+- assets/en-US/xlsrvintlandroid.dll.7z
+- assets/roaming/office/cs-cz/mso.acl.7z
+- assets/roaming/office/da-dk/mso.acl.7z
+- assets/roaming/office/de-de/mso.acl.7z
+- assets/roaming/office/el-gr/mso.acl.7z
+- assets/roaming/office/en-us/mso.acl.7z
+- assets/roaming/office/es-es/mso.acl.7z
+- assets/roaming/office/fi-fi/mso.acl.7z
+- assets/roaming/office/fr-fr/mso.acl.7z
+- assets/roaming/office/hr-hr/mso.acl.7z
+- assets/roaming/office/it-it/mso.acl.7z
+- assets/roaming/office/lt-lt/mso.acl.7z
+- assets/roaming/office/lv-lv/mso.acl.7z
+- assets/roaming/office/nb-no/mso.acl.7z
+- assets/roaming/office/nl-nl/mso.acl.7z
+- assets/roaming/office/pt-br/mso.acl.7z
+- assets/roaming/office/pt-pt/mso.acl.7z
+- assets/roaming/office/ru-ru/mso.acl.7z
+- assets/roaming/office/sl-si/mso.acl.7z
+- assets/roaming/office/sv-se/mso.acl.7z
+- docx
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '19'
+  targetSdkVersion: '24'
+sharedLibrary: false
+unknownFiles:
+  com/microsoft/office/csi/wopi/makejni.bat: '8'
+  com/microsoft/office/ui/controls/virtuallist/makejni.bat: '8'
+  drawable/offline_startup_app_icon_container.xml: '8'
+  layout/wg_offline_startup_blocked.xml: '8'
+  org/apache/http/entity/mime/version.properties: '8'
+  raw/intune_mam_manifest.xml: '8'
+  values-cs/strings.xml: '8'
+  values-da/strings.xml: '8'
+  values-de/strings.xml: '8'
+  values-el/strings.xml: '8'
+  values-es/strings.xml: '8'
+  values-fi/strings.xml: '8'
+  values-fr/strings.xml: '8'
+  values-hu/strings.xml: '8'
+  values-it/strings.xml: '8'
+  values-ja/strings.xml: '8'
+  values-ko/strings.xml: '8'
+  values-nb/strings.xml: '8'
+  values-nl/strings.xml: '8'
+  values-pl/strings.xml: '8'
+  values-pt/strings.xml: '8'
+  values-ro/strings.xml: '8'
+  values-ru/strings.xml: '8'
+  values-sv/strings.xml: '8'
+  values-tr/strings.xml: '8'
+  values-zh-rTW/strings.xml: '8'
+  values-zh/strings.xml: '8'
+  values/dimensions.xml: '8'
+  values/strings.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '2001400127'
+  versionName: 16.0.8027.1007

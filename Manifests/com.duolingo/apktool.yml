@@ -1,0 +1,36 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.duolingo.apk
+compressionType: false
+doNotCompress:
+- arsc
+- zip
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '15'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  androidannotations-api.properties: '8'
+  build-data.properties: '8'
+  logback.xml: '8'
+  fabric/com.amazonaws.aws-android-sdk-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.beta.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-ndk.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
+  fabric/com.mopub.sdk.android.mopub.properties: '8'
+  fabric/io.fabric.sdk.android.fabric.properties: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+  org/red5/io/flv/FLVMetaData.xsd: '8'
+  org/red5/io/flv/FLVMetaData_Template.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '465'
+  versionName: 3.47.0

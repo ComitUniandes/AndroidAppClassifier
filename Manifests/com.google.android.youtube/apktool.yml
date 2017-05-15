@@ -1,0 +1,25 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.google.android.youtube.apk
+compressionType: false
+doNotCompress:
+- arsc
+- webp
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  android-support-multidex.version.txt: '0'
+  build-data.properties: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '121656333'
+  versionName: 12.16.56

@@ -1,0 +1,42 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.android.chrome.apk
+compressionType: false
+doNotCompress:
+- arsc
+- pak
+- dat
+- bin
+- txt
+- lib/armeabi-v7a/crazy.libchrome.so
+- lib/armeabi-v7a/libchrome.1847.114.so
+- lib/armeabi-v7a/libchrome.1916.122.so
+- lib/armeabi-v7a/libchrome.1916.138.so
+- lib/armeabi-v7a/libchrome.1916.141.so
+- lib/armeabi-v7a/libchrome.1985.122.so
+- lib/armeabi-v7a/libchrome.1985.128.so
+- lib/armeabi-v7a/libchrome.1985.131.so
+- lib/armeabi-v7a/libchrome.1985.135.so
+- lib/armeabi-v7a/libchrome.2062.117.so
+- lib/armeabi-v7a/libchrome.2125.102.so
+- lib/armeabi-v7a/libchrome.2125.114.so
+- lib/armeabi-v7a/libchrome.2171.37.so
+- lib/armeabi-v7a/libchrome.2171.59.so
+- so
+- webp
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '302908301'
+  versionName: 58.0.3029.83

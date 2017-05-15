@@ -1,0 +1,31 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.davivienda.daviplataapp.apk
+compressionType: false
+doNotCompress:
+- arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '16'
+  targetSdkVersion: '23'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '0'
+  fabric/com.crashlytics.sdk.android.answers.properties: '0'
+  fabric/com.crashlytics.sdk.android.beta.properties: '0'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '0'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '0'
+  fabric/io.fabric.sdk.android.fabric.properties: '0'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '0'
+  org/spongycastle/x509/CertPathReviewerMessages.properties: '0'
+  org/spongycastle/x509/CertPathReviewerMessages_de.properties: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '290'
+  versionName: DaviPlata 1.1.19

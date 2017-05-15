@@ -1,0 +1,39 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.neuralprisma.apk
+compressionType: false
+doNotCompress:
+- arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '16'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '8'
+  publicsuffixes.gz: '8'
+  com/google/re2j/Exceptions.gwt.xml: '8'
+  com/google/re2j/Re2j.gwt.xml: '8'
+  com/google/re2j/Re2j_impl.gwt.xml: '8'
+  com/google/re2j/Unicode.gwt.xml: '8'
+  error_prone/Annotations.gwt.xml: '8'
+  fabric/com.crashlytics.sdk.android.answers.properties: '8'
+  fabric/com.crashlytics.sdk.android.beta.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics-core.properties: '8'
+  fabric/com.crashlytics.sdk.android.crashlytics.properties: '8'
+  fabric/io.fabric.sdk.android.fabric.properties: '8'
+  jsr305_annotations/Jsr305_annotations.gwt.xml: '8'
+  re2j/Re2j.gwt.xml: '8'
+  third_party/java_src/error_prone/project/annotations/Annotations.gwt.xml: '8'
+  third_party/java_src/error_prone/project/annotations/Google_internal.gwt.xml: '8'
+  third_party/java_src/re2j/Re2j.gwt.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '2000170'
+  versionName: 2.5.1.170

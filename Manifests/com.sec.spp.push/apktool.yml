@@ -1,0 +1,26 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.sec.spp.push.apk
+compressionType: false
+doNotCompress:
+- arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '7'
+  targetSdkVersion: '23'
+sharedLibrary: false
+unknownFiles:
+  temp.txt: '8'
+  SEC-INF/buildConfirm.crt: '8'
+  SEC-INF/buildinfo.xml: '8'
+  org/jboss/netty/container/spring/beans.xml: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '180100000'
+  versionName: 1.8.01

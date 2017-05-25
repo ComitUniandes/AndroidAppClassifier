@@ -56,7 +56,7 @@ public class AndroidApplicationClassifier {
 			System.out.println("Input the file name where the apks names can be found: ");
 			while((line=br.readLine())!= null)
 			{
-				File f = new File(basePath+line);
+				File f = new File(basePath+File.separator+line);
 				if(f.exists()){
 					if(f.isFile()){
 						directoriesPath = line.trim();
@@ -71,7 +71,7 @@ public class AndroidApplicationClassifier {
 				}
 			}
 			br.close();
-			MultipleLoader ml = new MultipleLoader(basePath, directoriesPath);
+			MultipleLoader ml = new MultipleLoader(basePath, directoriesPath, permissionLoader);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -87,9 +87,7 @@ public class AndroidApplicationClassifier {
 			String line;
 			while((line=br.readLine())!= null)
 			{
-				File f = new File(line);
-				if(line.contains(".xml"))
-				{
+				File f = new File(line+"AndroidManifest.xml");
 					if(f.exists()){
 						if(f.isFile()){
 							manifestPath = line.trim();
@@ -102,10 +100,7 @@ public class AndroidApplicationClassifier {
 						System.err.println("ERROR - This path can't be found");
 						System.out.println("Input the directory path where AndroidManifest.xml can be found: ");
 					}
-				}else{
-					System.err.println("ERROR - This path doesn't contain .xml extension");
-					System.out.println("Input the path where AndroidManifest.xml can be found: ");
-				}
+				
 				
 			}
 			System.out.println("Input the Application name: ");

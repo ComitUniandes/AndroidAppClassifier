@@ -1,0 +1,34 @@
+POLICY REPORT
+----------------------------------------------------------------------------------
+INFO
+----------------------------------------------------------------------------------
+Application Name: DiskDiggerPhotoRecovery
+Play Store Category: Tools
+Package-Process Name: com.defianttech.diskdigger
+Dangerous Permission Groups used by the application: 
+	STORAGE
+	NETWORK
+----------------------------------------------------------------------------------
+SUGGESTED DOMAIN TYPE
+----------------------------------------------------------------------------------
+Domain name: Tools_internet_storage_d
+You should create a SHARED DOMAIN TYPE
+The application is requesting access to some permissions.
+Acces to permissions of internet, write in external storage,
+ allocate space aggressive, download without notification o run in background, may classify 
+ yourapplication into a more specific domain.
+----------------------------------------------------------------------------------
+SUGGESTED OBJECTS TYPE IDENTIFIERS 
+----------------------------------------------------------------------------------
+Permission Group: STORAGE
+Type Name: diskdiggerphotorecovery_storage_t
+Security Objects Classes: filesystem;file;dir;fifo_file
+The request of any STORAGE permission implies the modification or creation 
+ of new files in the external storage.
+
+Permission Group: NETWORK
+Type Name: diskdiggerphotorecovery_network_t
+Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
+The permissions requested to access the network,
+ implies that udp or tcp sockets might be created to send or receive data.
+

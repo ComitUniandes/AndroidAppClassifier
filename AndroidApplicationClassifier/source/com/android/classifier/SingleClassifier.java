@@ -65,7 +65,7 @@ public class SingleClassifier {
 		permissionLoader = pPermissionLoader;
 		domain = "";
 		criticalGroups = new ArrayList<String>();
-		app = new AndroidManifest(pName, pCategory,"");
+		app = new AndroidManifest(pName.replaceAll("\\s", ""), pCategory,"");
 		loadXML();
 		identifyRequiredGroups();
 		indentifyTypes();
@@ -116,8 +116,8 @@ public class SingleClassifier {
 		System.out.println("1. Loading AndroidManifest.xml");
 
 				try {
-				
-					File f = new File(manifestPath);
+					System.out.println(manifestPath);
+					File f = new File(manifestPath+"AndroidManifest.xml");
 					DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 					DocumentBuilder db = dbf.newDocumentBuilder();
 					Document manifest = db.parse(f);
@@ -309,7 +309,7 @@ public class SingleClassifier {
 		
 		try {
 			System.out.println("4. Generating Policy Report");
-			File file = new File("HighLevelPolicy.txt");
+			File file = new File(manifestPath+app.getApplicationName()+"-HighLevelPolicy.txt");
 			PrintWriter pw = new PrintWriter(file.getAbsolutePath());
 			pw.println("POLICY REPORT");
 			

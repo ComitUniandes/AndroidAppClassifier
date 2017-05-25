@@ -1,0 +1,40 @@
+POLICY REPORT
+----------------------------------------------------------------------------------
+INFO
+----------------------------------------------------------------------------------
+Application Name: Blackboard Learn
+Play Store Category: Education
+Package-Process Name: com.blackboard.android
+Dangerous Permission Groups used by the application: 
+	CONTACTS
+	STORAGE
+	NETWORK
+	PHONE
+----------------------------------------------------------------------------------
+SUGGESTED DOMAIN TYPE
+----------------------------------------------------------------------------------
+Domain name: Education_internet_storage_d
+You should create a SHARED DOMAIN TYPE
+The application is requesting access to some permissions.
+Acces to permissions of internet, write in external storage,
+ allocate space aggressive, download without notification o run in background, may classify 
+ yourapplication into a more specific domain.
+Please notice that if you are requesting third party permissions,
+ you must share your Education_internet_storage_d with the processes or applications to be used
+----------------------------------------------------------------------------------
+SUGGESTED OBJECTS TYPE IDENTIFIERS 
+----------------------------------------------------------------------------------
+Permission Group: STORAGE
+Type Name: blackboard learn_storage_t
+Security Objects Classes: filesystem;file;dir;fifo_file
+The request of any STORAGE permission implies the modification or creation 
+ of new files in the external storage.
+
+Permission Group: NETWORK
+Type Name: blackboard learn_network_t
+Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
+The permissions requested to access the network,
+ implies that udp or tcp sockets might be created to send or receive data.
+
+Please notice that if you are requesting third party permissions,
+ you must share the type identifiers with the processes or applications to be used

@@ -1,0 +1,37 @@
+POLICY REPORT
+----------------------------------------------------------------------------------
+INFO
+----------------------------------------------------------------------------------
+Application Name: GoogleCalendar
+Play Store Category: Productivity
+Package-Process Name: com.google.android.calendar
+Dangerous Permission Groups used by the application: 
+	CONTACTS
+	LOCATION
+	NETWORK
+	PHONE
+	CALENDAR
+Hardware Feature Groups used by the application: 
+	LOCATION
+----------------------------------------------------------------------------------
+SUGGESTED DOMAIN TYPE
+----------------------------------------------------------------------------------
+Domain name: Productivity_internet_d
+You should create a SHARED DOMAIN TYPE
+The application is requesting access to some permissions.
+Acces to permissions of internet, write in external storage,
+ allocate space aggressive, download without notification o run in background, may classify 
+ yourapplication into a more specific domain.
+Please notice that if you are requesting third party permissions,
+ you must share your Productivity_internet_d with the processes or applications to be used
+----------------------------------------------------------------------------------
+SUGGESTED OBJECTS TYPE IDENTIFIERS 
+----------------------------------------------------------------------------------
+Permission Group: NETWORK
+Type Name: googlecalendar_network_t
+Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
+The permissions requested to access the network,
+ implies that udp or tcp sockets might be created to send or receive data.
+
+Please notice that if you are requesting third party permissions,
+ you must share the type identifiers with the processes or applications to be used

@@ -1,0 +1,47 @@
+com.android.chrome-Chrome-Communication
+com.android.vending-Google Play Store-none
+com.blackboard.android-Blackboard Learn-Education
+com.cabify.rider-Cabify-Maps & Navigation
+com.claroColombia.contenedor-Claro-Tools
+com.davivienda.daviplataapp-DaviPlata-Finance
+com.defianttech.diskdigger-DiskDigger Photo Recovery-Tools
+com.duolingo-Duolingo-Education
+com.dylvian.mango.activities-Mango-Lifestyle
+com.facebook.katana-Facebook-Social
+com.facebook.orca-Messenger-Communication
+com.google.android.apps.docs-Google Docs-Productivity
+com.google.android.apps.maps-Google Maps-Travel & Local
+com.google.android.apps.translate-Google Translate-Tools
+com.google.android.apps.unveil
+com.google.android.calendar-Google Calendar-Productivity
+com.google.android.gm
+com.google.android.gm.exchange
+com.google.android.googlequicksearchbox
+com.google.android.inputmethod.latin
+com.google.android.tts
+com.google.android.webview
+com.google.android.youtube-Youtube-Video Players & Editors
+com.infraware.office.link
+com.king.candycrushsodasaga-Candy Crush Soda Saga-Casual
+com.microsoft.office.excel-Microsoft Office Excel-Productivity
+com.microsoft.office.outlook-Microsoft Outlook-Productivity
+com.microsoft.office.word-Microsoft Office Word-Productivity
+com.microsoft.skydrive-Microsoft Skydrive-Productivity
+com.naranya.claroapps-Claro Apps-Tools
+com.neuralprisma-Prisma-Photography
+com.pinterest-Pinterest-Social
+com.Project100Pi.themusicplayer-Pi Music Player-Music & Audio
+com.rsupport.rs.activity.rsupport.aas2
+com.sec.android.app.samsungapps
+com.sec.android.app.voicenote
+com.sec.app.samsungprintservice
+com.sec.spp.push
+com.skype.raider-Skype-Communication
+com.spotify.music-Spotify-Music & Audio
+com.trello-Trello-Productivity
+com.ubercab-Uber-Maps & Navigation
+com.ubercab.eats-Uber Eats-Food & Drink
+com.venticake.retrica-Retrica-Photography
+com.waze-Waze-Maps & Navigation
+com.whatsapp-WhatsApp-Communication
+uk.co.aifactory.chessfree-Chess Free-Board

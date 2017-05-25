@@ -1,0 +1,69 @@
+POLICY REPORT
+----------------------------------------------------------------------------------
+INFO
+----------------------------------------------------------------------------------
+Application Name: WhatsApp
+Play Store Category: Communication
+Package-Process Name: com.whatsapp
+Critical Permission Groups used by the application: 
+	SETTINGS
+Dangerous Permission Groups used by the application: 
+	CONTACTS
+	LOCATION
+	STORAGE
+	NETWORK
+	PHONE
+	SMS
+	CAMERA
+	MICROPHONE
+Hardware Feature Groups used by the application: 
+	LOCATION
+	CAMERA
+	NFC
+	WI-FI
+	BLUETOOTH
+----------------------------------------------------------------------------------
+SUGGESTED DOMAIN TYPE
+----------------------------------------------------------------------------------
+Domain name: WhatsApp_d
+You should create a DEDICATED DOMAIN TYPE
+The application is requesting access at least to one critical permission and one dangerous permission.
+The combination of a critital permission and a dangeorous one can lead to a violation 
+ of the application data's integrity and confidentiality
+Please notice that if you are requesting third party permissions,
+ you must share your WhatsApp_d with the processes or applications to be used
+----------------------------------------------------------------------------------
+SUGGESTED OBJECTS TYPE IDENTIFIERS 
+----------------------------------------------------------------------------------
+Permission Group: STORAGE
+Type Name: whatsapp_storage_t
+Security Objects Classes: filesystem;file;dir;fifo_file
+The request of any STORAGE permission implies the modification or creation 
+ of new files in the external storage.
+
+Permission Group: NETWORK
+Type Name: whatsapp_network_t
+Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
+The permissions requested to access the network,
+ implies that udp or tcp sockets might be created to send or receive data.
+
+Permission Group: MICROPHONE
+Type Name: whatsapp_audio_t
+Security Objects Classes: file;dir;fifo_file
+The request of any MICROPHONE permission,
+ might lead to the creation and modification of voice recording files.
+
+Hardware Feature: NFC
+Type Name: whatsapp_nfc_t
+Security Objects Classes: bluetooth_socket;sock_file
+The permissions requested to access the NFC hardware features,
+ implies that sockets might be created to send or receive data
+
+Hardware Feature: BLUETOOTH
+Type Name: whatsapp_bluetooth_t
+Security Objects Classes: bluetooth_socket;sock_file
+The permissions requested to access the BLUETOOTH hardware features,
+ implies that sockets might be created to send or receive data
+
+Please notice that if you are requesting third party permissions,
+ you must share the type identifiers with the processes or applications to be used

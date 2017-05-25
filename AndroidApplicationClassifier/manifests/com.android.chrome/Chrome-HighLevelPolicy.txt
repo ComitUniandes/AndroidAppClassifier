@@ -1,0 +1,60 @@
+POLICY REPORT
+----------------------------------------------------------------------------------
+INFO
+----------------------------------------------------------------------------------
+Application Name: Chrome
+Play Store Category: Communication
+Package-Process Name: com.android.chrome
+Critical Permission Groups used by the application: 
+	INSTALL
+Dangerous Permission Groups used by the application: 
+	CONTACTS
+	LOCATION
+	STORAGE
+	NETWORK
+	CAMERA
+	MICROPHONE
+Hardware Feature Groups used by the application: 
+	LOCATION
+	CAMERA
+	TACTILE
+	AUDIO
+----------------------------------------------------------------------------------
+SUGGESTED DOMAIN TYPE
+----------------------------------------------------------------------------------
+Domain name: Chrome_d
+You should create a DEDICATED DOMAIN TYPE
+The application is requesting access at least to one critical permission and one dangerous permission.
+The combination of a critital permission and a dangeorous one can lead to a violation 
+ of the application data's integrity and confidentiality
+Please notice that if you are requesting third party permissions,
+ you must share your Chrome_d with the processes or applications to be used
+----------------------------------------------------------------------------------
+SUGGESTED OBJECTS TYPE IDENTIFIERS 
+----------------------------------------------------------------------------------
+Permission Group: STORAGE
+Type Name: chrome_storage_t
+Security Objects Classes: filesystem;file;dir;fifo_file
+The request of any STORAGE permission implies the modification or creation 
+ of new files in the external storage.
+
+Permission Group: NETWORK
+Type Name: chrome_network_t
+Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
+The permissions requested to access the network,
+ implies that udp or tcp sockets might be created to send or receive data.
+
+Permission Group: MICROPHONE
+Type Name: chrome_audio_t
+Security Objects Classes: file;dir;fifo_file
+The request of any MICROPHONE permission,
+ might lead to the creation and modification of voice recording files.
+
+Hardware Feature: AUDIO
+Type Name: chrome_audio_t
+Security Objects Classes: file;dir;fifo_file
+The permissions requested to access the AUDIO hardware features,
+ implies that audio files might be created or modified.
+
+Please notice that if you are requesting third party permissions,
+ you must share the type identifiers with the processes or applications to be used

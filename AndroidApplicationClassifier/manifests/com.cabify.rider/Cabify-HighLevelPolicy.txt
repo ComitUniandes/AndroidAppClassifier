@@ -1,0 +1,42 @@
+POLICY REPORT
+----------------------------------------------------------------------------------
+INFO
+----------------------------------------------------------------------------------
+Application Name: Cabify
+Play Store Category: Maps & Navigation
+Package-Process Name: com.cabify.rider
+Dangerous Permission Groups used by the application: 
+	LOCATION
+	STORAGE
+	NETWORK
+	CAMERA
+Hardware Feature Groups used by the application: 
+	CAMERA
+----------------------------------------------------------------------------------
+SUGGESTED DOMAIN TYPE
+----------------------------------------------------------------------------------
+Domain name: Maps & Navigation_internet_storage_d
+You should create a SHARED DOMAIN TYPE
+The application is requesting access to some permissions.
+Acces to permissions of internet, write in external storage,
+ allocate space aggressive, download without notification o run in background, may classify 
+ yourapplication into a more specific domain.
+Please notice that if you are requesting third party permissions,
+ you must share your Maps & Navigation_internet_storage_d with the processes or applications to be used
+----------------------------------------------------------------------------------
+SUGGESTED OBJECTS TYPE IDENTIFIERS 
+----------------------------------------------------------------------------------
+Permission Group: STORAGE
+Type Name: cabify_storage_t
+Security Objects Classes: filesystem;file;dir;fifo_file
+The request of any STORAGE permission implies the modification or creation 
+ of new files in the external storage.
+
+Permission Group: NETWORK
+Type Name: cabify_network_t
+Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
+The permissions requested to access the network,
+ implies that udp or tcp sockets might be created to send or receive data.
+
+Please notice that if you are requesting third party permissions,
+ you must share the type identifiers with the processes or applications to be used

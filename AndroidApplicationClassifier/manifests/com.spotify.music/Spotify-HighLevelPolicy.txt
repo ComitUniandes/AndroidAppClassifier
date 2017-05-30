@@ -41,8 +41,14 @@ Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
 The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
 
+Permission Group: PHONE
+Type Name: spotify_phone_t
+Security Objects Classes:  
+The request of any PHONE permission,
+ might lead to the creation and modification of phone objects.
+
 Permission Group: MICROPHONE
-Type Name: spotify_audio_t
+Type Name: spotify_microphone_t
 Security Objects Classes: file;dir;fifo_file
 The request of any MICROPHONE permission,
  might lead to the creation and modification of voice recording files.
@@ -50,7 +56,7 @@ The request of any MICROPHONE permission,
 Hardware Feature: BLUETOOTH
 Type Name: spotify_bluetooth_t
 Security Objects Classes: bluetooth_socket;sock_file
-The permissions requested to access the BLUETOOTH hardware features,
+The permissions requested to access the BLUETOOTH hardware feature,
  implies that sockets might be created to send or receive data
 
 Please notice that if you are requesting third party permissions,

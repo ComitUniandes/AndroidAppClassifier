@@ -68,7 +68,7 @@ public class SingleClassifier {
 		app = new AndroidManifest(pName.replaceAll("\\s", ""), pCategory,"");
 		loadXML();
 		identifyRequiredGroups();
-		indentifyTypes();
+		identifyTypes();
 		identifyDomain();
 		generateHighLevelPolicy();
 	}
@@ -117,7 +117,7 @@ public class SingleClassifier {
 
 				try {
 					System.out.println(manifestPath);
-					File f = new File(manifestPath+"AndroidManifest.xml");
+					File f = new File(manifestPath);
 					DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 					DocumentBuilder db = dbf.newDocumentBuilder();
 					Document manifest = db.parse(f);
@@ -251,7 +251,7 @@ public class SingleClassifier {
 
 	}
 	
-	public void indentifyTypes()
+	public void identifyTypes()
 	{
 		String name="";
 		String reason = "";
@@ -271,9 +271,12 @@ public class SingleClassifier {
 				classes = "filesystem;file;dir;fifo_file";
 				types.add(new TypeIdentifier(name, classes, reason, "STORAGE", TypeIdentifier.GROUP));
 			}else if(groups.get(i).equals("PHONE")){
-				
+				name = app.getApplicationName().toLowerCase()+"_phone_t";
+				reason = "The request of any PHONE permission,\n might lead to the creation and modification of phone objects.";
+				classes = " ";
+				types.add(new TypeIdentifier(name, classes, reason,"PHONE", TypeIdentifier.GROUP));
 			}else if(groups.get(i).equals("MICROPHONE")){
-				name = app.getApplicationName().toLowerCase()+"_audio_t";
+				name = app.getApplicationName().toLowerCase()+"_microphone_t";
 				reason = "The request of any MICROPHONE permission,\n might lead to the creation and modification of voice recording files.";
 				classes = "file;dir;fifo_file";
 				types.add(new TypeIdentifier(name, classes, reason,"MICROPHONE", TypeIdentifier.GROUP));
@@ -285,21 +288,24 @@ public class SingleClassifier {
 			classes = "";
 			if(hardwareFeatures.get(j).equals("AUDIO")){
 				name = app.getApplicationName().toLowerCase()+"_audio_t";
-				reason = "The permissions requested to access the AUDIO hardware features,\n implies that audio files might be created or modified.";
+				reason = "The permissions requested to access the AUDIO hardware feature,\n implies that audio files might be created or modified.";
 				classes = "file;dir;fifo_file";
 				types.add(new TypeIdentifier(name, classes, reason,"AUDIO", TypeIdentifier.HARDWARE_FEATURE));
 			}else if(hardwareFeatures.get(j).equals("BLUETOOTH")){
 				name = app.getApplicationName().toLowerCase()+"_bluetooth_t";
-				reason = "The permissions requested to access the BLUETOOTH hardware features,\n implies that sockets might be created to send or receive data";
+				reason = "The permissions requested to access the BLUETOOTH hardware feature,\n implies that sockets might be created to send or receive data";
 				classes = "bluetooth_socket;sock_file";
 				types.add(new TypeIdentifier(name, classes, reason, "BLUETOOTH", TypeIdentifier.HARDWARE_FEATURE));
 			}else if(hardwareFeatures.get(j).equals("NFC")){
 				name = app.getApplicationName().toLowerCase()+"_nfc_t";
-				reason = "The permissions requested to access the NFC hardware features,\n implies that sockets might be created to send or receive data";
-				classes = "bluetooth_socket;sock_file";
+				reason = "The permissions requested to access the NFC hardware feature,\n implies that sockets might be created to send or receive data";
+				classes = "nfc_socket;sock_file";
 				types.add(new TypeIdentifier(name, classes, reason, "NFC", TypeIdentifier.HARDWARE_FEATURE));
 			}else if(hardwareFeatures.get(j).equals("TELEPHONY")){
-				
+				name = app.getApplicationName().toLowerCase()+"_telephony_t";
+				reason = "The permissions requested to access the TELEPHONY hardware feature,\n implies that telephone might be used for an specific purpose";
+				classes = "";
+				types.add(new TypeIdentifier(name, classes, reason, "TELEPHONY", TypeIdentifier.HARDWARE_FEATURE));
 			}
 		}
 	}
@@ -309,7 +315,8 @@ public class SingleClassifier {
 		
 		try {
 			System.out.println("4. Generating Policy Report");
-			File file = new File(manifestPath+app.getApplicationName()+"-HighLevelPolicy.txt");
+			File file = new File(manifestPath);
+			file = new File(file.getParent()+File.separator+app.getApplicationName()+"-HighLevelPolicy.txt");
 			PrintWriter pw = new PrintWriter(file.getAbsolutePath());
 			pw.println("POLICY REPORT");
 			

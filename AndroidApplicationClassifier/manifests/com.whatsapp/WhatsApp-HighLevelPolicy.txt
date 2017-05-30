@@ -47,22 +47,28 @@ Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
 The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
 
+Permission Group: PHONE
+Type Name: whatsapp_phone_t
+Security Objects Classes:  
+The request of any PHONE permission,
+ might lead to the creation and modification of phone objects.
+
 Permission Group: MICROPHONE
-Type Name: whatsapp_audio_t
+Type Name: whatsapp_microphone_t
 Security Objects Classes: file;dir;fifo_file
 The request of any MICROPHONE permission,
  might lead to the creation and modification of voice recording files.
 
 Hardware Feature: NFC
 Type Name: whatsapp_nfc_t
-Security Objects Classes: bluetooth_socket;sock_file
-The permissions requested to access the NFC hardware features,
+Security Objects Classes: nfc_socket;sock_file
+The permissions requested to access the NFC hardware feature,
  implies that sockets might be created to send or receive data
 
 Hardware Feature: BLUETOOTH
 Type Name: whatsapp_bluetooth_t
 Security Objects Classes: bluetooth_socket;sock_file
-The permissions requested to access the BLUETOOTH hardware features,
+The permissions requested to access the BLUETOOTH hardware feature,
  implies that sockets might be created to send or receive data
 
 Please notice that if you are requesting third party permissions,

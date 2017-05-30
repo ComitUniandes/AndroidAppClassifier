@@ -43,10 +43,16 @@ The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
 
 Permission Group: MICROPHONE
-Type Name: googletranslate_audio_t
+Type Name: googletranslate_microphone_t
 Security Objects Classes: file;dir;fifo_file
 The request of any MICROPHONE permission,
  might lead to the creation and modification of voice recording files.
+
+Hardware Feature: TELEPHONY
+Type Name: googletranslate_telephony_t
+Security Objects Classes: 
+The permissions requested to access the TELEPHONY hardware feature,
+ implies that telephone might be used for an specific purpose
 
 Please notice that if you are requesting third party permissions,
  you must share the type identifiers with the processes or applications to be used

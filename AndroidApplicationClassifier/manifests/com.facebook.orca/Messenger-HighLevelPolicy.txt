@@ -48,8 +48,14 @@ Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
 The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
 
+Permission Group: PHONE
+Type Name: messenger_phone_t
+Security Objects Classes:  
+The request of any PHONE permission,
+ might lead to the creation and modification of phone objects.
+
 Permission Group: MICROPHONE
-Type Name: messenger_audio_t
+Type Name: messenger_microphone_t
 Security Objects Classes: file;dir;fifo_file
 The request of any MICROPHONE permission,
  might lead to the creation and modification of voice recording files.
@@ -57,14 +63,20 @@ The request of any MICROPHONE permission,
 Hardware Feature: AUDIO
 Type Name: messenger_audio_t
 Security Objects Classes: file;dir;fifo_file
-The permissions requested to access the AUDIO hardware features,
+The permissions requested to access the AUDIO hardware feature,
  implies that audio files might be created or modified.
 
 Hardware Feature: BLUETOOTH
 Type Name: messenger_bluetooth_t
 Security Objects Classes: bluetooth_socket;sock_file
-The permissions requested to access the BLUETOOTH hardware features,
+The permissions requested to access the BLUETOOTH hardware feature,
  implies that sockets might be created to send or receive data
+
+Hardware Feature: TELEPHONY
+Type Name: messenger_telephony_t
+Security Objects Classes: 
+The permissions requested to access the TELEPHONY hardware feature,
+ implies that telephone might be used for an specific purpose
 
 Please notice that if you are requesting third party permissions,
  you must share the type identifiers with the processes or applications to be used

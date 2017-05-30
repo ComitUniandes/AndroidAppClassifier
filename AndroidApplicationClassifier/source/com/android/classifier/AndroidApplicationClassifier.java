@@ -71,7 +71,7 @@ public class AndroidApplicationClassifier {
 				}
 			}
 			br.close();
-			MultipleLoader ml = new MultipleLoader(basePath, directoriesPath, permissionLoader);
+			MultipleClassifier ml = new MultipleClassifier(basePath, directoriesPath, permissionLoader);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -87,7 +87,7 @@ public class AndroidApplicationClassifier {
 			String line;
 			while((line=br.readLine())!= null)
 			{
-				File f = new File(line+"AndroidManifest.xml");
+				File f = new File(line);
 					if(f.exists()){
 						if(f.isFile()){
 							manifestPath = line.trim();

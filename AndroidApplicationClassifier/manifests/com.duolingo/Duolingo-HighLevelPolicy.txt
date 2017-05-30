@@ -40,7 +40,7 @@ The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
 
 Permission Group: MICROPHONE
-Type Name: duolingo_audio_t
+Type Name: duolingo_microphone_t
 Security Objects Classes: file;dir;fifo_file
 The request of any MICROPHONE permission,
  might lead to the creation and modification of voice recording files.
@@ -48,7 +48,7 @@ The request of any MICROPHONE permission,
 Hardware Feature: AUDIO
 Type Name: duolingo_audio_t
 Security Objects Classes: file;dir;fifo_file
-The permissions requested to access the AUDIO hardware features,
+The permissions requested to access the AUDIO hardware feature,
  implies that audio files might be created or modified.
 
 Please notice that if you are requesting third party permissions,

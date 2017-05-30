@@ -12,14 +12,7 @@ com.facebook.orca-Messenger-Communication
 com.google.android.apps.docs-Google Docs-Productivity
 com.google.android.apps.maps-Google Maps-Travel & Local
 com.google.android.apps.translate-Google Translate-Tools
-com.google.android.apps.unveil
 com.google.android.calendar-Google Calendar-Productivity
-com.google.android.gm
-com.google.android.gm.exchange
-com.google.android.googlequicksearchbox
-com.google.android.inputmethod.latin
-com.google.android.tts
-com.google.android.webview
 com.google.android.youtube-Youtube-Video Players & Editors
 com.infraware.office.link
 com.king.candycrushsodasaga-Candy Crush Soda Saga-Casual
@@ -31,11 +24,9 @@ com.naranya.claroapps-Claro Apps-Tools
 com.neuralprisma-Prisma-Photography
 com.pinterest-Pinterest-Social
 com.Project100Pi.themusicplayer-Pi Music Player-Music & Audio
-com.rsupport.rs.activity.rsupport.aas2
-com.sec.android.app.samsungapps
-com.sec.android.app.voicenote
-com.sec.app.samsungprintservice
-com.sec.spp.push
+com.sec.android.app.samsungapps-Samsung Apps-None
+com.sec.android.app.voicenote-Samsung Voice Recorder-Tools
+com.sec.app.samsungprintservice-Samsung Print Service-Productivity
 com.skype.raider-Skype-Communication
 com.spotify.music-Spotify-Music & Audio
 com.trello-Trello-Productivity

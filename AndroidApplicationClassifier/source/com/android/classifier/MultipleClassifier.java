@@ -19,7 +19,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-public class MultipleLoader {
+public class MultipleClassifier {
 	
 	private String basePath;
 	
@@ -27,7 +27,7 @@ public class MultipleLoader {
 	
 	private PermissionLoader permissionLoader;
 	
-	public MultipleLoader( String pBasePath, String pDirectoriesPath, PermissionLoader pPermissionLoader)
+	public MultipleClassifier( String pBasePath, String pDirectoriesPath, PermissionLoader pPermissionLoader)
 	{
 		basePath = pBasePath;
 		directoriesPath = pDirectoriesPath;
@@ -48,7 +48,8 @@ public class MultipleLoader {
 			{
 				String[] split = line.split("-");
 				if(split.length == 3){
-					sc = new SingleClassifier(basePath+File.separator+split[0]+File.separator, permissionLoader, split[1], split[2]);
+					
+					sc = new SingleClassifier(basePath+File.separator+split[0]+ File.separator+ "AndroidManifest.xml", permissionLoader, split[1], split[2]);
 				}
 				
 			}

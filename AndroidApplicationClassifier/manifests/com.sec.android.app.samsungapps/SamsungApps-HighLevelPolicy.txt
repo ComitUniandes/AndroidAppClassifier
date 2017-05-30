@@ -2,38 +2,47 @@ POLICY REPORT
 ----------------------------------------------------------------------------------
 INFO
 ----------------------------------------------------------------------------------
-Application Name: Microsoft Office Word
-Play Store Category: Productivity
-Package-Process Name: com.microsoft.office.word
+Application Name: SamsungApps
+Play Store Category: None
+Package-Process Name: com.sec.android.app.samsungapps
+Critical Permission Groups used by the application: 
+	INSTALL
+	SETTINGS
 Dangerous Permission Groups used by the application: 
 	CONTACTS
 	STORAGE
 	NETWORK
+	PHONE
 ----------------------------------------------------------------------------------
 SUGGESTED DOMAIN TYPE
 ----------------------------------------------------------------------------------
-Domain name: Productivity_internet_storage_d
-You should create a SHARED DOMAIN TYPE
-The application is requesting access to some permissions.
-Acces to permissions of internet, write in external storage,
- allocate space aggressive, download without notification o run in background, may classify 
- yourapplication into a more specific domain.
+Domain name: SamsungApps_d
+You should create a DEDICATED DOMAIN TYPE
+The application is requesting access at least to one critical permission and one dangerous permission.
+The combination of a critital permission and a dangeorous one can lead to a violation 
+ of the application data's integrity and confidentiality
 Please notice that if you are requesting third party permissions,
- you must share your Productivity_internet_storage_d with the processes or applications to be used
+ you must share your SamsungApps_d with the processes or applications to be used
 ----------------------------------------------------------------------------------
 SUGGESTED OBJECTS TYPE IDENTIFIERS 
 ----------------------------------------------------------------------------------
 Permission Group: STORAGE
-Type Name: microsoft office word_storage_t
+Type Name: samsungapps_storage_t
 Security Objects Classes: filesystem;file;dir;fifo_file
 The request of any STORAGE permission implies the modification or creation 
  of new files in the external storage.
 
 Permission Group: NETWORK
-Type Name: microsoft office word_network_t
+Type Name: samsungapps_network_t
 Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
 The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
+
+Permission Group: PHONE
+Type Name: samsungapps_phone_t
+Security Objects Classes:  
+The request of any PHONE permission,
+ might lead to the creation and modification of phone objects.
 
 Please notice that if you are requesting third party permissions,
  you must share the type identifiers with the processes or applications to be used

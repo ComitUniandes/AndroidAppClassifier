@@ -36,5 +36,11 @@ Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
 The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
 
+Permission Group: PHONE
+Type Name: blackboardlearn_phone_t
+Security Objects Classes:  
+The request of any PHONE permission,
+ might lead to the creation and modification of phone objects.
+
 Please notice that if you are requesting third party permissions,
  you must share the type identifiers with the processes or applications to be used

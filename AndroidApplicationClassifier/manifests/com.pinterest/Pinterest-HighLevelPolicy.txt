@@ -41,5 +41,11 @@ Security Objects Classes: socket;icmp_socket;tcp_socket;udp_socket;sock_file
 The permissions requested to access the network,
  implies that udp or tcp sockets might be created to send or receive data.
 
+Hardware Feature: TELEPHONY
+Type Name: pinterest_telephony_t
+Security Objects Classes: 
+The permissions requested to access the TELEPHONY hardware feature,
+ implies that telephone might be used for an specific purpose
+
 Please notice that if you are requesting third party permissions,
  you must share the type identifiers with the processes or applications to be used
